@@ -30,3 +30,13 @@ LAB05 implements the vectorized regularized SVM loss and gradient. Its notebook
 includes executed outputs, training and regularization experiments, and wrap-up
 answers. The local `LAB05/dlcv2026` utilities keep it self-contained. See
 [LAB05/README.md](LAB05/README.md) for run commands and validation results.
+
+## Data Loading, Validation, and Dataset Auditing
+
+The completed dataset-auditing assignment is kept separately so it does not
+conflict with the existing SVM Lab 05 folder:
+
+[LAB05_Data_Loading_Validation_Dataset_Auditing](LAB05_Data_Loading_Validation_Dataset_Auditing/README.md)
+
+It contains the audit script, PyTorch Dataset/DataLoader, verified audit report,
+DataLoader test output, dependencies, dataset summary, and short report.
