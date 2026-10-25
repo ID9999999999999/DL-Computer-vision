@@ -1,0 +1,47 @@
+{
+  "config": {
+    "seed": 2473986,
+    "image_size": 224,
+    "batch_size": 16,
+    "epochs": 15,
+    "patience": 4,
+    "dense_units": 128,
+    "dropout": 0.3,
+    "keras_learning_rate": 0.001,
+    "yolo_learning_rate": 0.0001,
+    "threshold": 0.5,
+    "latency_warmup": 20,
+    "latency_runs": 100,
+    "cpu_threads": 4,
+    "acceptance": {
+      "accuracy": 0.9,
+      "f1_bad": 0.9,
+      "recall_bad": 0.95,
+      "latency_ms": 50,
+      "artifact_mib": 100
+    }
+  },
+  "config_sha256": "98656c53081de4214d982cf40c36fa6811479a13aabba7186349931cb5301ea1",
+  "manifest_sha256": "72fdc4a15c18dcec4ac171de79ed744c69f3562b9afee84f62f509be3763bf12",
+  "dataset": "/content/lab06_data/demo_quality_dataset",
+  "created_utc": "2026-10-25T14:35:25Z",
+  "old_split": {
+    "train": 1230,
+    "validation": 228,
+    "test": 342
+  },
+  "new_split": {
+    "train": 1260,
+    "val": 270,
+    "test": 270
+  },
+  "positive_class": "bad",
+  "label_mapping": {
+    "good": 0,
+    "bad": 1
+  },
+  "selection": "validation only; fastest passing model, otherwise highest validation F1 (provisional)",
+  "test_policy": "fixed 0.5 threshold, no test-driven tuning or selection",
+  "augmentation": "none; preserve synthetic quality defects and whole document",
+  "latency": "CPU, batch=1, full RGB PIL image already in RAM through resize/preprocess + forward + output; excludes disk decode, includes tensor conversion and CPU host output"
+}

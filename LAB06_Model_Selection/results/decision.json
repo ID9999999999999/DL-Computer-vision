@@ -1,0 +1,6 @@
+{
+  "candidate": "yolov8n",
+  "validation_acceptance_passed": true,
+  "test_acceptance_passed": true,
+  "selection_data": "validation only"
+}

@@ -1,0 +1,10 @@
+{
+  "model": "yolov8n",
+  "regime": "full ImageNet fine-tuning; nano/small variants",
+  "training_seconds": 232.29209373799995,
+  "parameters": 1440850,
+  "checkpoint": "/content/drive/MyDrive/Lab06_results/yolov8n/weights/best.pt",
+  "selection": "Ultralytics validation fitness (not test)",
+  "device": "0",
+  "note": "Frameworks and optimization regimes differ. This is a practical pipeline comparison, not a controlled backbone-only ablation."
+}
