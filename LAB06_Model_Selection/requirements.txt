@@ -1,0 +1,11 @@
+# Recommended: a fresh Python 3.11 environment. CPU is the common evaluation target.
+# Exact versions actually used are recorded by the runner in environment.txt.
+tensorflow>=2.16,<2.22
+ultralytics>=8.3,<9
+torch>=2.2,<3
+torchvision>=0.17,<1
+numpy>=1.26,<3
+Pillow>=10,<13
+scikit-learn>=1.4,<2
+matplotlib>=3.8,<4
+jupyterlab>=4,<5

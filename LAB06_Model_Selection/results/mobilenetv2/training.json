@@ -1,0 +1,10 @@
+{
+  "model": "mobilenetv2",
+  "regime": "frozen ImageNet base, train head",
+  "training_seconds": 247.94569651100005,
+  "parameters": 2422081,
+  "trainable_parameters": 164097,
+  "epochs_run": 15,
+  "selection": "lowest validation loss",
+  "checkpoint": "/content/drive/MyDrive/Lab06_results/mobilenetv2/best.keras"
+}
