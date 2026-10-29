@@ -1,0 +1,35 @@
+{
+  "status": "Completed supervised engineering pilot; NOT independent test evidence",
+  "best_epoch": 2,
+  "validation": {
+    "loss": 0.25204162042716455,
+    "macro_f1": 0.9653524492234169,
+    "accuracy": 0.9655172413793104,
+    "confusion_matrix": [
+      [
+        15,
+        0
+      ],
+      [
+        1,
+        13
+      ]
+    ]
+  },
+  "parameter_count": 11177538,
+  "parameter_update_max_abs": {
+    "conv1.weight": 0.002263735979795456,
+    "fc.weight": 0.0012264996767044067
+  },
+  "checkpoint_reload_logit_max_abs_error": 0.0,
+  "runtime_seconds": 93.06658095400053,
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "numpy": "2.5.2"
+  },
+  "checkpoint_sha256": "1d8c22121278890a09393b65ed8d69a1bc0b621f2851d37821e98f7f65253185",
+  "manifest_sha256": "e32d88936d7a586a8b50691487052b8455b94bbd4c57cb089f4710cf9dc3a145",
+  "config_sha256": "0fd7d77dd821ba99107198e6920c179ff7924e7be16101670b509dc3971fa665"
+}

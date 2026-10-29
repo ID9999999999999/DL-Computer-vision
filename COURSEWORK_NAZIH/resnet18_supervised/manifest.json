@@ -1,0 +1,794 @@
+[
+  {
+    "path": "motor_comparison/data/Motor/Good/009/A000_I01.png",
+    "object": "009",
+    "group": "009",
+    "label": 0,
+    "sha256": "54ff5c2249feee6fc60d9c47b1365b7df9304b19a7ca9d3d0f53f9317465e18f",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/020/A000_I01.png",
+    "object": "020",
+    "group": "020",
+    "label": 0,
+    "sha256": "24841c8df60780fcc6a9e9a046eebfc3d881173fbb7de64a297766e5ee1147db",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/029/A000_I01.png",
+    "object": "029",
+    "group": "029",
+    "label": 0,
+    "sha256": "120f4bfecf3f217709a96ea55a2a1b36ebe8ac21435163fdfb95bff977c6c2e1",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/028/A000_I01.png",
+    "object": "028",
+    "group": "028",
+    "label": 0,
+    "sha256": "3b3d248049d2cc5ad1581ad91a10e243b70a5b6a3f1ccd1b88456c77a80ddc89",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/011/A000_I01.png",
+    "object": "011",
+    "group": "011",
+    "label": 0,
+    "sha256": "4b7215d84ab6dd1545d5fb2bf467e7f11bc96be1c9650658d8f0b52274faaa9f",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/000/A000_I01.png",
+    "object": "000",
+    "group": "000",
+    "label": 0,
+    "sha256": "e57989bf9d04278d0fe0369c4b946dad4e7030c1aa05ac819c67a1987a53f75e",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/016/A000_I01.png",
+    "object": "016",
+    "group": "016",
+    "label": 0,
+    "sha256": "b420fdc704d2747f7d2dcbb14cb004920c230e6552e6cf560b0a260b9352b5a8",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/042/A000_I01.png",
+    "object": "042",
+    "group": "042",
+    "label": 0,
+    "sha256": "07181a26f0973288507a8c6837d4984196ff97a6ac85b2646cdb67b63b04471c",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/048/A000_I01.png",
+    "object": "048",
+    "group": "048",
+    "label": 0,
+    "sha256": "a983f6406a7847e5ca328f062fb52c5fb233a7c3418aa0e8cf8013dd20a98110",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/024/A000_I01.png",
+    "object": "024",
+    "group": "024",
+    "label": 0,
+    "sha256": "e7b7ad05e7a676b51503468762046916b9f3afb3505a59100eaa92a27bd3ba44",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/031/A000_I01.png",
+    "object": "031",
+    "group": "031",
+    "label": 0,
+    "sha256": "0da6d44babe4295869eea8273c6def4f8bf84a0dbb216e99d4f902cba0db4d48",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/041/A000_I01.png",
+    "object": "041",
+    "group": "041",
+    "label": 0,
+    "sha256": "acf32558ec0c31d7e8e5e69f442e8b72731e9431fa7181636461e886a6ac8fe3",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/033/A000_I01.png",
+    "object": "033",
+    "group": "033",
+    "label": 0,
+    "sha256": "dfea3daf54b875ec60ad71137f1dfccddc6fe722b91b629dcd632ea6232bf609",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/004/A000_I01.png",
+    "object": "004",
+    "group": "004",
+    "label": 0,
+    "sha256": "e08d8fbec1d5830d809e3d0a4e1aadfcde4d5aea5063a2ff1a8f5e967f041a50",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/030/A000_I01.png",
+    "object": "030",
+    "group": "030",
+    "label": 0,
+    "sha256": "31551e5adbbb64976293b310946e1b0fbf084040e10d0c929467f5874933577b",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/010/A000_I01.png",
+    "object": "010",
+    "group": "010",
+    "label": 0,
+    "sha256": "53f3216279cdc6888784be805566e155cd2cb4b51e9118e890027594faaf024c",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/038/A000_I01.png",
+    "object": "038",
+    "group": "038",
+    "label": 0,
+    "sha256": "ecfcd03be4c32ca659b16da2237f5e6b4fc3cd9b14df8122001f2788801e945d",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/012/A000_I01.png",
+    "object": "012",
+    "group": "012",
+    "label": 0,
+    "sha256": "775ea9ad0a1024b1a53ba224ac053d479b6abf5e9a2f5c5a16ee36627362dafd",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/021/A000_I01.png",
+    "object": "021",
+    "group": "021",
+    "label": 0,
+    "sha256": "a08d65ca7c1282de909244a2b97440dbf5beec435205a28687488bfb73ee9313",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/035/A000_I01.png",
+    "object": "035",
+    "group": "035",
+    "label": 0,
+    "sha256": "0c2279e2f78a3ea91a1521066e47f70ac8394c81caa424628a2081f263613f46",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/019/A000_I01.png",
+    "object": "019",
+    "group": "019",
+    "label": 0,
+    "sha256": "c82de723623f56b11f08c1dda016e541eec2e6fad62410a8c0681f24c0655d37",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/045/A000_I01.png",
+    "object": "045",
+    "group": "045",
+    "label": 0,
+    "sha256": "7e0f961cf63538678929cef03c6cdc53e1269f0494507cdb8bcec2f828e5745d",
+    "split": "train"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/025/A000_I01.png",
+    "object": "025",
+    "group": "025",
+    "label": 0,
+    "sha256": "6c5d35c303404347de29fc5331ea296e3647b22a25c795539855f90b3e612cbd",
+    "split": "validation"
+  },
+  {
+    "path": "motor_comparison/data/Motor/Good/026/A000_I01.png",
+    "object": "026",
+    "group": "026",
+    "label": 0,
+    "sha256": "760dcba6d2403fcaa7a355a0c174b43564a0d20fa721c624fc532609d73db567",
+    "split": "validation"
+  },
+  {
+    "path": "motor_classification/data/Motor/Good/018/A000_I01.png",
+    "object": "018",
+    "group": "018",
+    "label": 0,
+    "sha256": "b0b77e5b1d0f41b1dd7d953e6d1cc61ab44392855ca8e6dc31fad45654737e56",
+    "split": "train"
+  },
+  {
+    "path": "motor_classification/data/Motor/Good/003/A000_I01.png",
+    "object": "003",
+    "group": "003",
+    "label": 0,
+    "sha256": "0180c8c1175a6ebfb0afce4116118def8cda4f6644ca89720e59665411118b46",
+    "split": "train"
+  },
+  {
+    "path": "motor_classification/data/Motor/Good/023/A000_I01.png",
+    "object": "023",
+    "group": "023",
+    "label": 0,
+    "sha256": "b391c9b12462a575dbafbae5484494997b7a884dd32fa9e56c140cebc750b411",
+    "split": "train"
+  },
+  {
+    "path": "motor_classification/data/Motor/Good/039/A000_I01.png",
+    "object": "039",
+    "group": "039",
+    "label": 0,
+    "sha256": "e9fa0fe5baeeb214d5648be8c109e6ebd40e74414a5838d190295b4fc31c75b9",
+    "split": "train"
+  },
+  {
+    "path": "motor_classification/data/Motor/Good/022/A000_I01.png",
+    "object": "022",
+    "group": "022",
+    "label": 0,
+    "sha256": "6e861ed774cdb92b30250358893c7f2d1e114b34454f6b4de65b5b1cbf781e38",
+    "split": "validation"
+  },
+  {
+    "path": "motor_classification/data/Motor/Good/043/A000_I01.png",
+    "object": "043",
+    "group": "043",
+    "label": 0,
+    "sha256": "e6c61ad031ec24c18ff982eb3b2f28e02a0e64014a61533f454104fb32880a73",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/001/A000_I01.png",
+    "object": "001",
+    "group": "001",
+    "label": 0,
+    "sha256": "88b63a4fae3197cad0a79973b1df2205db0b2d60c31a6664f0a10c8828cdc3fa",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/002/A000_I01.png",
+    "object": "002",
+    "group": "002",
+    "label": 0,
+    "sha256": "bbe3923a3e0284ca698c8bff16052121f3189268987c3cfb03f978b96c78314c",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/005/A000_I01.png",
+    "object": "005",
+    "group": "005",
+    "label": 0,
+    "sha256": "a363b17660b3433628dda14470c2b842840ddaac099d44093c4f602ae7da0f46",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/006/A000_I01.png",
+    "object": "006",
+    "group": "006",
+    "label": 0,
+    "sha256": "a7d68cadcdafff048a37b0832919550ada7cf8ac71c99065f4774e526e91fc81",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/007/A000_I01.png",
+    "object": "007",
+    "group": "007",
+    "label": 0,
+    "sha256": "b2a7bcc22122f82531a33c60b8660f04ad1ef02108f7328037f4fb58dd55d53c",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/008/A000_I01.png",
+    "object": "008",
+    "group": "008",
+    "label": 0,
+    "sha256": "054e60da39783b3cd257862b7027bb0928ffd0eac7c62f9f8afd219e2ea201c7",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/013/A000_I01.png",
+    "object": "013",
+    "group": "013",
+    "label": 0,
+    "sha256": "298c7ebdd987670a88b39b4bd9814ac59d223cbde75f70dc76d6306966b2fb0b",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/014/A000_I01.png",
+    "object": "014",
+    "group": "014",
+    "label": 0,
+    "sha256": "3ba3940472d604128a2c73843ce6d9a2874e63678d973e65c6fdad19e6e506f8",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/015/A000_I01.png",
+    "object": "015",
+    "group": "015",
+    "label": 0,
+    "sha256": "04ac4c1f6092dc444e063bc76284aa6cf2557f6548a1c8fcf14b15e7d48aa74a",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/017/A000_I01.png",
+    "object": "017",
+    "group": "017",
+    "label": 0,
+    "sha256": "6e992c06cd626d53b33587d21647a3eda386deec440958a17be6967be0c20453",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/027/A000_I01.png",
+    "object": "027",
+    "group": "027",
+    "label": 0,
+    "sha256": "b7ca0f30e68c9905bd909d2fefed881ee517d2ec48d8a0b82f0c262a6f70c892",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/032/A000_I01.png",
+    "object": "032",
+    "group": "032",
+    "label": 0,
+    "sha256": "d1d2c42b3b308ef7fdc898fdcd30a45f5beb99f62585ba313acfa19c0c144f43",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/034/A000_I01.png",
+    "object": "034",
+    "group": "034",
+    "label": 0,
+    "sha256": "82bad0819da25b891b00896ec7fe73f7c75af096ef25f4c26f85e5df5a0cee7a",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/036/A000_I01.png",
+    "object": "036",
+    "group": "036",
+    "label": 0,
+    "sha256": "4e2af871bfc39792ec87d6e905ba9ad537c2e48ebbcf6525ae8f4065392feb76",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/037/A000_I01.png",
+    "object": "037",
+    "group": "037",
+    "label": 0,
+    "sha256": "438eb3e64b06dd1ebe566cd08a4f5dc74c3a8fa458e9ea2ec9759569d5f29699",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/040/A000_I01.png",
+    "object": "040",
+    "group": "040",
+    "label": 0,
+    "sha256": "014c4ab5c3ddcb485c30803c3efbce08c2bce5ba1f7187f953c775f074c75b75",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/044/A000_I01.png",
+    "object": "044",
+    "group": "044",
+    "label": 0,
+    "sha256": "efabbae3e2a72aec063c61e9437d5e2cd949a5726937394f431feb48bbc5ddc5",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/046/A000_I01.png",
+    "object": "046",
+    "group": "046",
+    "label": 0,
+    "sha256": "38855335b54e325c50d16be4e6ddb8412ccdcca648e29651f5a0bf7c1c2fbea0",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/047/A000_I01.png",
+    "object": "047",
+    "group": "047",
+    "label": 0,
+    "sha256": "638a57273f1deeab0e178c81c7a5054cd3d77bfb9e159c6e76a6a6a6fc7e1292",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/Good/049/A000_I01.png",
+    "object": "049",
+    "group": "049",
+    "label": 0,
+    "sha256": "b50ef3df55bb14ddbe7bc32659965041159b7abba22f64373bbb6c7c6584db7b",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_1_000/A000_I01.png",
+    "object": "hole_1_000",
+    "group": "000",
+    "label": 1,
+    "sha256": "f8708dc4993954a188d7856b2b35f918249e3c5f024e187a69180c180484f0ee",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_1_001/A000_I01.png",
+    "object": "hole_1_001",
+    "group": "001",
+    "label": 1,
+    "sha256": "3275c475ad14f3c941a77e048c7fcde0d66e244c79bce75a9fe2c92ce27f7298",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_1_002/A000_I01.png",
+    "object": "hole_1_002",
+    "group": "002",
+    "label": 1,
+    "sha256": "db1286385d8cdb5c8472d4251a195f067e941a09caeb500421929e9e3eb33853",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_1_003/A000_I01.png",
+    "object": "hole_1_003",
+    "group": "003",
+    "label": 1,
+    "sha256": "8d76545e790b57288497e7f16a20fa4356797423d217bb43fe3bc2e8a8e55ea0",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_1_004/A000_I01.png",
+    "object": "hole_1_004",
+    "group": "004",
+    "label": 1,
+    "sha256": "5c772cb4d2beb9d18cb3214fd6c142940bcadbbbd7d1bb82f00201f019dda019",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_005/A000_I01.png",
+    "object": "damage_1_005",
+    "group": "005",
+    "label": 1,
+    "sha256": "a43542a572c8db7422320b4904e93c8b79d47d31c8caadaa17ace1efc70e462b",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_006/A000_I01.png",
+    "object": "damage_1_006",
+    "group": "006",
+    "label": 1,
+    "sha256": "0b403c5e2c9ca2bc186cdd254696bf4975f48efb79f78d94cf64192955fd58df",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_007/A000_I01.png",
+    "object": "damage_1_007",
+    "group": "007",
+    "label": 1,
+    "sha256": "ee1cc486a5a00f21784c68bf68935216054c2a3a817b5012fd0c0f812282aaa1",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_008/A000_I01.png",
+    "object": "damage_1_008",
+    "group": "008",
+    "label": 1,
+    "sha256": "51d8d737fa29b6a55589e097f9814ded710c025e64a776241cf56df17140da4b",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_009/A000_I01.png",
+    "object": "damage_1_009",
+    "group": "009",
+    "label": 1,
+    "sha256": "c871a9be768d112b02d9fc92d61cf410a035344ca66a6826c3c232ac158d0d31",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_2_010/A000_I01.png",
+    "object": "hole_2_010",
+    "group": "010",
+    "label": 1,
+    "sha256": "3325ed80629c1052b0d6f6e42d43c5d681e72eabbb063fa6685aae1532fdfa32",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_2_011/A000_I01.png",
+    "object": "hole_2_011",
+    "group": "011",
+    "label": 1,
+    "sha256": "570862d535fc87b242932073101f9e83d79d6411de00883a968b37bfb7ded801",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_2_012/A000_I01.png",
+    "object": "hole_2_012",
+    "group": "012",
+    "label": 1,
+    "sha256": "339ebbd5d138ced8a89abee99d6822de4a4cf40cfde229e85844d56e86e07783",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_2_013/A000_I01.png",
+    "object": "hole_2_013",
+    "group": "013",
+    "label": 1,
+    "sha256": "188fef91236080557d499c2a0df16ab8e03dd63cdc1b05d79d1d33cb9a63d8e6",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/hole_3_014/A000_I01.png",
+    "object": "hole_3_014",
+    "group": "014",
+    "label": 1,
+    "sha256": "7f5e847ee9c98d0fc419ffee075f8186ba4f2f427111c12858663582eb2266d0",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_015/A000_I01.png",
+    "object": "damage_2_015",
+    "group": "015",
+    "label": 1,
+    "sha256": "86b6089e5a13caee9756aef6dee8b1adcb2e1d3bd55498ccab76beee3e053270",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_016/A000_I01.png",
+    "object": "damage_2_016",
+    "group": "016",
+    "label": 1,
+    "sha256": "9c52921e88ae362454f41adf9f15b43eb3ec1eb0e467ade980c9aa3b46cfac75",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_017/A000_I01.png",
+    "object": "damage_2_017",
+    "group": "017",
+    "label": 1,
+    "sha256": "81bdf92f3813a1ea3420b9ac7c6e6eb70dc11f02d9cecc160a6c8177be9677d5",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_018/A000_I01.png",
+    "object": "damage_2_018",
+    "group": "018",
+    "label": 1,
+    "sha256": "46c63e65f56ed46acc6ce04050d83530270187355222a4e9c234a5258fdeb4b5",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_019/A000_I01.png",
+    "object": "damage_2_019",
+    "group": "019",
+    "label": 1,
+    "sha256": "4b95498ae4383b6fd93628e78a28ae2ff0f896b42a78d7ebccaa11e9063444f5",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_hole_1_020/A000_I01.png",
+    "object": "damage_1_hole_1_020",
+    "group": "020",
+    "label": 1,
+    "sha256": "41f437b38ec62a60e0fe9e9a72d4791c20cae045e0a4ae03959df0913ed39571",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_hole_1_021/A000_I01.png",
+    "object": "damage_1_hole_1_021",
+    "group": "021",
+    "label": 1,
+    "sha256": "6e86566f6a30651a1c675bbe65fbd92fd187211d024b2c674512aa25d7c113dc",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_hole_2_022/A000_I01.png",
+    "object": "damage_1_hole_2_022",
+    "group": "022",
+    "label": 1,
+    "sha256": "f4cb125432fb155dc64949143fdb4791646f2bc59b2630b6cfad6667226aaf42",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_hole_1_023/A000_I01.png",
+    "object": "damage_2_hole_1_023",
+    "group": "023",
+    "label": 1,
+    "sha256": "faa4bbb107d8e2706aa8580d0ea509b8fe38854e0b5ca9dc6f9a81ac72020244",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_hole_2_024/A000_I01.png",
+    "object": "damage_2_hole_2_024",
+    "group": "024",
+    "label": 1,
+    "sha256": "5fc867f28f8f3aaeb05d1c94e801086867abd56edf0d41f6eb5dd7a5e4beb63a",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_025/A000_I01.png",
+    "object": "damage_2_025",
+    "group": "025",
+    "label": 1,
+    "sha256": "a3bd7e4d37f2743c61c2e482a3c10029677a22f15c5889158651c8a39b5a5b24",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_026/A000_I01.png",
+    "object": "damage_2_026",
+    "group": "026",
+    "label": 1,
+    "sha256": "c108d5935de46193e987b44a1affd23ad60b310bafd7bd846363ecb46703f09c",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_027/A000_I01.png",
+    "object": "damage_1_027",
+    "group": "027",
+    "label": 1,
+    "sha256": "bc2f5bd3c1ff1b85407e8ba894630faacf6c76248f263b54a45a0cc08cd94202",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_028/A000_I01.png",
+    "object": "damage_1_028",
+    "group": "028",
+    "label": 1,
+    "sha256": "76d73c342c9b5321454ac9e175dd18f67a57d5f12b1a1d33fa3e269c0b3a85f5",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_029/A000_I01.png",
+    "object": "damage_1_029",
+    "group": "029",
+    "label": 1,
+    "sha256": "65a3c39121ebb7ed3a5df3a533cc0d4fefab7434ee0bdb07cc0fb982a1b3879a",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_031/A000_I01.png",
+    "object": "damage_1_031",
+    "group": "031",
+    "label": 1,
+    "sha256": "3c1a2f3b954b2dea48b595ca0545c1badc2f62e65694cced268cd4f474872b95",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_032/A000_I01.png",
+    "object": "damage_2_032",
+    "group": "032",
+    "label": 1,
+    "sha256": "ce31b41f9e6e3b005abfd528b8e50c74ca195e080efe77ce05a82a499fb26542",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_1_033/A000_I01.png",
+    "object": "damage_1_033",
+    "group": "033",
+    "label": 1,
+    "sha256": "6969f8c7110967839f35c15b0649023287bdb008e1abfe85c530dbf757a037e7",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_2_034/A000_I01.png",
+    "object": "bending_2_034",
+    "group": "034",
+    "label": 1,
+    "sha256": "8fe7301fd0255451ede50ba215e247d81523172c0f056d6a0edb046379e9d77b",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_damage_1_035/A000_I01.png",
+    "object": "bending_1_damage_1_035",
+    "group": "035",
+    "label": 1,
+    "sha256": "17043224e86213069792a5df05cbf04f261086cfeaf8d0d344c6973042ec97c1",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_036/A000_I01.png",
+    "object": "bending_1_036",
+    "group": "036",
+    "label": 1,
+    "sha256": "d0fb4424fb8ba0459e16ff2fbc61043e4c8a5b6d221ba9ca9d5724895ca9f06c",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_damage_1_037/A000_I01.png",
+    "object": "bending_1_damage_1_037",
+    "group": "037",
+    "label": 1,
+    "sha256": "ea868c3abc1b412eec46ea9f2821a8ee8e1b88854cf0b8bce4c1cddd4e004c46",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_damage_1_038/A000_I01.png",
+    "object": "bending_1_damage_1_038",
+    "group": "038",
+    "label": 1,
+    "sha256": "67d950c887eb0a0ff830f8b6b94427ee9b80ae07bc526f5d6b4f743836e4bc77",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_2_039/A000_I01.png",
+    "object": "bending_2_039",
+    "group": "039",
+    "label": 1,
+    "sha256": "07bc40b10b96880fae92b020c9b48937413c3c4a433b7ca8ae78a851f48de327",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_damage_1_040/A000_I01.png",
+    "object": "bending_1_damage_1_040",
+    "group": "040",
+    "label": 1,
+    "sha256": "5d5a5669bbf42c546f2168d10d539b5eba55bac2f9ce80f19a195d6d8316ec2e",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_2_041/A000_I01.png",
+    "object": "bending_2_041",
+    "group": "041",
+    "label": 1,
+    "sha256": "f7c8826204481d9491d825d089796e76d152537ebe44d7179a5f17b945bcb8b3",
+    "split": "validation"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_042/A000_I01.png",
+    "object": "bending_1_042",
+    "group": "042",
+    "label": 1,
+    "sha256": "7c00636339a722d9ad60cf73002ccda45bb6cb993d4bdfa3cdfe71568686cc46",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_043/A000_I01.png",
+    "object": "damage_2_043",
+    "group": "043",
+    "label": 1,
+    "sha256": "5bad8f7e38aeb152c1800bf27e7d8847427709d19eadafaec1ed150af3a6ebc6",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_044/A000_I01.png",
+    "object": "bending_1_044",
+    "group": "044",
+    "label": 1,
+    "sha256": "9fef0ae68b6513344e853f35549dad880b7c6b3a096a4d760e481e4d8d87edd8",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_045/A000_I01.png",
+    "object": "bending_1_045",
+    "group": "045",
+    "label": 1,
+    "sha256": "620952efc343cac81ec0058292d752d5193aa292a6694969431052f3dc42d9b7",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/damage_2_046/A000_I01.png",
+    "object": "damage_2_046",
+    "group": "046",
+    "label": 1,
+    "sha256": "0ca961e5b3ee4cace95572b19877a235e38d370286a91f49fc8d9161a895e412",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_2_047/A000_I01.png",
+    "object": "bending_2_047",
+    "group": "047",
+    "label": 1,
+    "sha256": "52620b5fd14dfd7ce94961500506821858f05547a60391d83d549af31d323d8e",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_048/A000_I01.png",
+    "object": "bending_1_048",
+    "group": "048",
+    "label": 1,
+    "sha256": "60372de27bd233661dd200a793279b3e93360a12c0d5c9462250f1bbc7b67950",
+    "split": "train"
+  },
+  {
+    "path": "motor_final/data/Motor/NG/bending_1_damage_1_049/A000_I01.png",
+    "object": "bending_1_damage_1_049",
+    "group": "049",
+    "label": 1,
+    "sha256": "c2d4630c844071e9a49d837358080b57811f57ddcd5fef516f4160e50e5c7d89",
+    "split": "train"
+  }
+]

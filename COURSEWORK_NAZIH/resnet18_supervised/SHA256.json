@@ -1,0 +1,14 @@
+{
+  "validation_predictions.csv": "d95eba3b1a663d6eec0bea2c570250d21e4f7cab91355a3aa75317d4b39e125e",
+  "train.py": "d769f5450995ae7f18ebfb92193c01d0a3569625cbcf408e7b8c5f5da3a1bda3",
+  "history.json": "4ddb8bd496e77a54446109bb2077ee9763ec514f370bf0ee37033de15f61bf10",
+  "Pilot_Report_EN.md": "d9ba52a6959bd8a6fce27ead8aa2c2693ee6c90f416f3a4676a5289d4a2c3dee",
+  "config.json": "0fd7d77dd821ba99107198e6920c179ff7924e7be16101670b509dc3971fa665",
+  "report.py": "9d2bdbdf329924ded763abdedabe7df809591220ef344dc7115d93cc07520fb8",
+  "result.json": "027156957e8fa16e7c996868c23b26bcd48ddd0838ab1f69df0163821bba05ed",
+  "best_model.pt": "1d8c22121278890a09393b65ed8d69a1bc0b621f2851d37821e98f7f65253185",
+  "DECISION.md": "b2a083013ce2ab49984ce4dbb900407bd0a17510944e606cdcc5f2ad7db67b2c",
+  "metric_verification.json": "d55b6f2159291c3982daf75d99e2e5d0d09d4f94d93508de0bfa90191bd8bcbd",
+  "prepare.py": "0b19aab4c256f4ad83b7d83952baa6820f24e72826351371926d4e76ce7beee9",
+  "manifest.json": "e32d88936d7a586a8b50691487052b8455b94bbd4c57cb089f4710cf9dc3a145"
+}

@@ -1,0 +1,30 @@
+{
+  "independent_sklearn_agreement": true,
+  "classification_report": {
+    "Normal": {
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1-score": 0.967741935483871,
+      "support": 15.0
+    },
+    "Defective": {
+      "precision": 1.0,
+      "recall": 0.9285714285714286,
+      "f1-score": 0.9629629629629629,
+      "support": 14.0
+    },
+    "accuracy": 0.9655172413793104,
+    "macro avg": {
+      "precision": 0.96875,
+      "recall": 0.9642857142857143,
+      "f1-score": 0.9653524492234169,
+      "support": 29.0
+    },
+    "weighted avg": {
+      "precision": 0.9676724137931034,
+      "recall": 0.9655172413793104,
+      "f1-score": 0.9654348453013636,
+      "support": 29.0
+    }
+  }
+}
