@@ -1,0 +1,196 @@
+%PDF-1.4
+%Research file
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 2314 >>
+stream
+0.15 0.23 0.34 rg
+BT /F2 19 Tf 46 792 Td (COURSE WORK NAZIH) Tj ET
+0.33 0.37 0.42 rg
+BT /F1 9 Tf 46 769 Td (01 / COMPLETE RESEARCH ROADMAP - 29 OCTOBER 2026) Tj ET
+0.7 0.72 0.73 RG 0.8 w 46 758 m 548 758 l S
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 735 Td (OBJECTIVE) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 717 Td (Industrial Motor: one-image decision, Normal \(0\) or Defective \(1\).) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 703 Td (Dataset: public M2AD Motor. Course: Deep Learning for Computer Vision.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 670 Td (PHASE A - ORIGINAL EXPLORATION) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 652 Td (Started with M2AD Motor as a metal quality / anomaly-detection case.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 638 Td (Checked the Motor images, masks, illumination pairing, and test boundaries.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 624 Td (Initial Ring examples were only a technical smoke test, not Motor evidence.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 591 Td (PHASE B - ANOMALY METHODS) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 573 Td (Ran frozen ResNet18 feature-based reference and a documented adaptation) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 559 Td (of the core AnomalyDINO computational idea.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 545 Td (Used normal Motor reference samples; checked whether scores and code worked.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 531 Td (This was anomaly scoring, not a trained two-class supervised classifier.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 498 Td (PHASE C - TWO ILLUMINATIONS) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 480 Td (Tested two views of the same part under different lighting.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 466 Td (Compared mean-score fusion, max-score fusion and joined features.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 452 Td (Added a learned residual between the illumination representations.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 438 Td (Checked it on 6 normal parts; raised the maximum score for 2 of 6.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 424 Td (This could increase false alarms: not yet evidence of improvement.) Tj ET
+0.6 0.62 0.63 RG 0.5 w 46 42 m 548 42 l S
+BT /F1 8 Tf 46 28 Td (Course Work Nazih - developmental research record) Tj ET
+BT /F1 8 Tf 515 28 Td (1/3) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 2115 >>
+stream
+0.15 0.23 0.34 rg
+BT /F2 19 Tf 46 792 Td (WHAT THE OLD EXPERIMENTS SHOWED) Tj ET
+0.33 0.37 0.42 rg
+BT /F1 9 Tf 46 769 Td (02 / ACTUAL RESULTS AND WHAT THEY MEAN) Tj ET
+0.7 0.72 0.73 RG 0.8 w 46 758 m 548 758 l S
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 735 Td (HISTORICAL FINAL ANOMALY EVALUATION) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 717 Td (Max fusion: Average Precision \(AP\) = 94.12%.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 703 Td (Mean fusion: AP = 95.20%.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 689 Td (Max plus residual: AP = 95.23%.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 675 Td (Compared with Max: +1.11 percentage points, confidence interval) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 661 Td (-0.64 to +3.22 points, so statistically unproven superiority.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 647 Td (The localization score was slightly worse than for Max fusion.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 614 Td (IMPORTANT SCIENTIFIC LIMITS) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 596 Td (AP is not classifier accuracy; a ranked anomaly score is not by itself) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 582 Td (a Normal / Defective class decision.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 568 Td (Old Motor evaluation images were exposed to research decisions.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 554 Td (We cannot call a new split of those same images a blind final test.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 521 Td (PROFESSOR'S REQUIREMENTS RECHECKED) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 503 Td (The project should classify one image, with at least TWO classes.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 489 Td (It requires a baseline, one central paper idea, same-data comparison,) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 475 Td (metrics, failure cases, reproducible code and final B-BRICS report.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 461 Td (The anomaly experiments remain supplementary, not discarded.) Tj ET
+0.6 0.62 0.63 RG 0.5 w 46 42 m 548 42 l S
+BT /F1 8 Tf 46 28 Td (Course Work Nazih - developmental research record) Tj ET
+BT /F1 8 Tf 515 28 Td (2/3) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2769 >>
+stream
+0.15 0.23 0.34 rg
+BT /F2 19 Tf 46 792 Td (THE CORRECTED SUPERVISED PROJECT) Tj ET
+0.33 0.37 0.42 rg
+BT /F1 9 Tf 46 769 Td (03 / CURRENT BASELINE, NEW IDEA, AND NEXT ACTION) Tj ET
+0.7 0.72 0.73 RG 0.8 w 46 758 m 548 758 l S
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 735 Td (PHASE D - VERIFIED SUPERVISED BASELINE) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 717 Td (Selected single-image Motor A000 / I01 with labels 0 Normal and 1 Defective.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 703 Td (Trained all ResNet18 parameters using Cross-Entropy on labelled images.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 689 Td (Pilot: 99 images total; 70 train and 29 validation.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 675 Td (Training classes: 35 Normal / 35 Defective.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 661 Td (Validation classes: 15 Normal / 14 Defective.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 647 Td (Validation accuracy: 28/29 = 96.55%; macro-F1 = 96.54%.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 633 Td (These are development results, NOT independent test metrics.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 600 Td (PHASE E - CONTROLLED PAPER EXPERIMENT) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 582 Td (Selected PolyLoss \(Leng et al., ICLR 2022\), Poly-1 correction:) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 568 Td (Loss = CrossEntropy + epsilon * \(1 - probability_of_true_class\).) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 554 Td (Set epsilon = 1.0; keep same ResNet18, initial weights, split,) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 540 Td (optimizer and training budget. The only changed factor is the loss.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 526 Td (Code is prepared. Poly-1 training has NOT been completed.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 493 Td (NEXT STEPS) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 475 Td (1. Open 03_ALL_CODE.ipynb in a Colab GPU runtime.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 461 Td (2. Fetch the original 99 images and verify every SHA256.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 447 Td (3. Run Cross-Entropy and Poly-1 matched training; record actual metrics.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 433 Td (4. Audit physical specimen independence and get a proper holdout.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 419 Td (5. Later write the final report and slides, not now.) Tj ET
+0.1 0.22 0.30 rg
+BT /F2 11.2 Tf 46 386 Td (SCHEDULE) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 368 Td (30 Oct plan / 6 Nov baseline / 13 Nov paper comparison.) Tj ET
+0.19 0.23 0.28 rg
+BT /F1 9.6 Tf 48 354 Td (20 Nov metrics / 27 Nov report draft / 4 Dec final defense.) Tj ET
+0.6 0.62 0.63 RG 0.5 w 46 42 m 548 42 l S
+BT /F1 8 Tf 46 28 Td (Course Work Nazih - developmental research record) Tj ET
+BT /F1 8 Tf 515 28 Td (3/3) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R] /Count 3 >>
+endobj
+10 0 obj
+<< /Type /Catalog /Pages 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000024 00000 n 
+0000000094 00000 n 
+0000000169 00000 n 
+0000002534 00000 n 
+0000002670 00000 n 
+0000004836 00000 n 
+0000004972 00000 n 
+0000007792 00000 n 
+0000007928 00000 n 
+0000007997 00000 n 
+trailer
+<< /Size 11 /Root 10 0 R >>
+startxref
+8047
+%%EOF
