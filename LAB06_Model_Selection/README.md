@@ -48,3 +48,16 @@ This additive update preserves the original experiment evidence. See [repair aud
 The newly added `results.json` records were **derived from saved measurements, not retrained**. Actual training differed from the instructor's later specified epochs, batch size, patience and YOLO input size; see audit. The four-slide PPTX is provided separately from the original 8-slide deck.
 
 [**Corrected four-slide PPTX**](presentation/Lab06_Presentation_4slides.pptx) — teacher's specified four-slide format, with original result plots and real synthetic failure examples. Original longer PPTX remains unchanged.
+
+## Task 5A — completed partial fine-tuning (8 November 2026)
+
+This is a genuine separate training run using the original MobileNetV2 frozen checkpoint and the **same original 70/15/15 source-grouped manifest**. We trained with Adam LR 1e-5, selected the top 30 backbone layers with BatchNorm frozen, effective batch 32 (four microbatches of 8), max 50 epochs and patience 5. Early stopping ran **20 epochs**, preserving the best checkpoint from epoch **15**. Test accuracy **99.63%** and macro F1 **0.9963**: **no improvement over frozen**. The working environment used Keras 3's PyTorch CPU backend, not the original TensorFlow GPU backend. The pretrained backbone layers outside the top 30 were verified unchanged.
+
+- [Actual experiment report and delta table](reports/bonus_finetune_delta.md)
+- [Actual results.json](results/mobilenetv2_finetune_top30/results.json)
+- [Training curves](results/mobilenetv2_finetune_top30/curves.png) and [confusion matrix](results/mobilenetv2_finetune_top30/confusion_matrix.png)
+- [Executable training script](scripts/train_task5a.py) and [Colab notebook](Task5A_FineTuning_Reproducible.ipynb)
+- [Training log](results/mobilenetv2_finetune_top30/train.log) and [verification record](docs/Task5A_Verification.json)
+- [New private Google Drive experiment folder](https://drive.google.com/drive/folders/1krJ2b7SXPcHBnkDQHajKBq5ZEC1fAYAP) — contains best.keras, original image error, JSON, scripts, plots and complete ZIP. The original frozen checkpoint remains in Drive unchanged.
+
+**Not the dataset-exchange exercise:** this Task 5A run uses our own original dataset. Receiving and fine-tuning on a classmate's dataset remains a separate task.

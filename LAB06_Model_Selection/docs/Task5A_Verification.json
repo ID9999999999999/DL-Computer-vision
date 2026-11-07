@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-08",
+  "dataset_verified": true,
+  "original_checkpoint_hash_verified": true,
+  "train_val_test_group_disjoint": true,
+  "fine_tuning_completed": true,
+  "epochs_run": 20,
+  "best_epoch": 15,
+  "report_complete": true,
+  "checkpoint_complete": true,
+  "labels_good_bad_verified": true,
+  "test_used_for_training": false,
+  "protocol_deviations": {
+    "keras_backend": "torch CPU instead of original tensorflow GPU",
+    "physical_batch": "8-image microbatches accumulated four times; effective 32-image optimizer batch",
+    "batchnorm": "BN layers among final 30 kept frozen"
+  },
+  "result": "NO_CHANGE in accuracy or macro F1",
+  "separate_dataset_exchange_still_pending": true
+}

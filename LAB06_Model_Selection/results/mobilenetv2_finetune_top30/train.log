@@ -1,0 +1,29 @@
+Verified exact source-grouped 70/15/15 split, 300 disjoint sources and 1800 image hashes.
+loaded train 1260
+loaded val 270
+loaded test 270
+TRAINABLE 1674817 TOTAL 2422081 BN kept frozen ['block_13_project_BN', 'block_14_expand_BN', 'block_14_depthwise_BN', 'block_14_project_BN', 'block_15_expand_BN', 'block_15_depthwise_BN', 'block_15_project_BN', 'block_16_expand_BN', 'block_16_depthwise_BN', 'block_16_project_BN', 'Conv_1_bn'] backend torch
+Training starting (memory-safe PyTorch autograd): effective batch=32 = 4x8 accumulation, max epochs=50, patience=5, lr=1e-5
+EPOCH 01 loss=0.02343 accuracy=0.99365 val_loss=0.02065 val_accuracy=0.99259 best=1 bad_epochs=0
+EPOCH 02 loss=0.02715 accuracy=0.98810 val_loss=0.07268 val_accuracy=0.97037 best=1 bad_epochs=1
+EPOCH 03 loss=0.03783 accuracy=0.98889 val_loss=0.02561 val_accuracy=0.99259 best=1 bad_epochs=2
+EPOCH 04 loss=0.01571 accuracy=0.99603 val_loss=0.01657 val_accuracy=0.99259 best=4 bad_epochs=0
+EPOCH 05 loss=0.01472 accuracy=0.99683 val_loss=0.04669 val_accuracy=0.98519 best=4 bad_epochs=1
+EPOCH 06 loss=0.02534 accuracy=0.98810 val_loss=0.01910 val_accuracy=0.99259 best=4 bad_epochs=2
+EPOCH 07 loss=0.01012 accuracy=0.99841 val_loss=0.01676 val_accuracy=0.99259 best=4 bad_epochs=3
+EPOCH 08 loss=0.00909 accuracy=0.99762 val_loss=0.01890 val_accuracy=0.99259 best=4 bad_epochs=4
+EPOCH 09 loss=0.01004 accuracy=0.99841 val_loss=0.01475 val_accuracy=0.99630 best=9 bad_epochs=0
+EPOCH 10 loss=0.01300 accuracy=0.99524 val_loss=0.02005 val_accuracy=0.99259 best=9 bad_epochs=1
+EPOCH 11 loss=0.00600 accuracy=0.99921 val_loss=0.02743 val_accuracy=0.99259 best=9 bad_epochs=2
+EPOCH 12 loss=0.00593 accuracy=0.99841 val_loss=0.01278 val_accuracy=0.99259 best=12 bad_epochs=0
+EPOCH 13 loss=0.00888 accuracy=0.99841 val_loss=0.02028 val_accuracy=0.99259 best=12 bad_epochs=1
+EPOCH 14 loss=0.00674 accuracy=0.99841 val_loss=0.01295 val_accuracy=0.99259 best=12 bad_epochs=2
+EPOCH 15 loss=0.00660 accuracy=0.99921 val_loss=0.01017 val_accuracy=0.99630 best=15 bad_epochs=0
+EPOCH 16 loss=0.00638 accuracy=0.99921 val_loss=0.04508 val_accuracy=0.98889 best=15 bad_epochs=1
+EPOCH 17 loss=0.01152 accuracy=0.99683 val_loss=0.02390 val_accuracy=0.99259 best=15 bad_epochs=2
+EPOCH 18 loss=0.01144 accuracy=0.99683 val_loss=0.02240 val_accuracy=0.99259 best=15 bad_epochs=3
+EPOCH 19 loss=0.02225 accuracy=0.99444 val_loss=0.04433 val_accuracy=0.98148 best=15 bad_epochs=4
+EPOCH 20 loss=0.00693 accuracy=0.99921 val_loss=0.01419 val_accuracy=0.99259 best=15 bad_epochs=5
+EARLY STOP at epoch 20 best validation loss epoch 15
+Training finished in 614.6544365229993 sec, epochs 20
+FINAL RESULT {"accuracy": 0.9962962962962963, "macro_f1": 0.9962962454903359, "test_errors": 1, "epochs": 20, "checkpoint": "/mnt/data/task5a_work/results/mobilenetv2_finetune_top30/best.keras", "report": "/mnt/data/task5a_work/reports/bonus_finetune_delta.md"}

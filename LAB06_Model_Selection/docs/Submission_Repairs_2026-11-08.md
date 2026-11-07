@@ -27,3 +27,7 @@ Do not edit archived metrics or claim that the trained models satisfied a differ
 ## Original evidence
 
 `results/run.log`, `results/protocol.json`, every `evaluation.json`, `training.json`, raw probabilities, curves, plots, original report, GitHub commits and previously created slide deck remain untouched. All standardized JSON records carry a provenance statement; error images remain private in [Individual_Errors_Lab06](https://drive.google.com/drive/folders/1D157EQQNOM6LMtnOGUvuvVyjS0v8PuOv). The four-slide PPTX contains the three actual synthetic error images. The original repository does **not** contain raw input images or original executed Colab training notebook. 
+
+## Post-repair update: Task 5A completed after this audit (8 November 2026)
+
+A separate authentic MobileNetV2 partial fine-tuning experiment was completed; see [Task 5A report](../reports/bonus_finetune_delta.md). It used the instructor's Task 5A numerical LR, 50 max epochs, patience 5, seed 2473986 and original split; effective batch 32 was implemented with gradient accumulation of microbatches of 8 and the 30 chosen layers' BatchNorm remained frozen. Keras with PyTorch backend was used instead of the original TensorFlow/T4. Epochs run: 20, best: 15. Accuracy 99.63% and macro F1 0.9963 were unchanged versus frozen. The earlier Task 2–4 training-protocol deviations above remain historical facts; do not change them. Classmate dataset exchange is still pending.

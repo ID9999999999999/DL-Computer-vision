@@ -1,0 +1,11 @@
+[
+  {
+    "image_id": "bad_passport_glare_082_v1",
+    "image": "results/mobilenetv2_finetune_top30/errors/bad_passport_glare_082_v1.jpg",
+    "source_id": "preprocessed_passport_passport_00068",
+    "true": 1,
+    "pred": 0,
+    "p_bad": 0.0007694036467000842,
+    "defect_type": "glare"
+  }
+]
