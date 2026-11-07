@@ -39,3 +39,10 @@ MobileNetV2 achieves 99.63% test accuracy with one error out of 270 images. The 
 | `tests/` | Protocol and selection tests |
 
 Model selection uses validation metrics and cost only. Test characterization uses fixed threshold 0.5 and never triggers reselection. The original automatically generated report remains as `results/Final_Report_Original.md`. The revised report adds interpretations and links without changing measured results.
+
+
+## Submission corrections — 8 November 2026
+
+This additive update preserves the original experiment evidence. See [repair audit](docs/Submission_Repairs_2026-11-08.md), [corrected reports](reports/README.md), [comparison with executed epochs](results/comparison_with_epochs.csv), [four-slide script](presentation/Presentation_4slides.md), [individual error archive](results/yolov8n/errors/README.md) and [Git tagging instructions](docs/TAGGING.md).
+
+The newly added `results.json` records were **derived from saved measurements, not retrained**. Actual training differed from the instructor's later specified epochs, batch size, patience and YOLO input size; see audit. The four-slide PPTX is provided separately from the original 8-slide deck.
