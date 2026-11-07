@@ -1,0 +1,4 @@
+image_id,original_relative_path,split,defect_type,y_true,y_pred,probability_bad,private_drive_copy_url
+bad_inn_glare_272_v2,bad/bad_inn_glare_272_v2.jpg,test,glare,1,0,0.37703588604927063,https://drive.google.com/file/d/1myb2jWbB1X7c8EzVU540F9pvk2up9PI1/view
+bad_inn_glare_282_v3,bad/bad_inn_glare_282_v3.jpg,test,glare,1,0,0.4929010272026062,https://drive.google.com/file/d/1s3t4apAS4h3JEGkVoUQkpA8sDsjvE150/view
+bad_inn_glare_292_v1,bad/bad_inn_glare_292_v1.jpg,test,glare,1,0,0.2530094385147095,https://drive.google.com/file/d/1YV8Lxj4fWow8X5dbHB4876ByGgxiClNQ/view

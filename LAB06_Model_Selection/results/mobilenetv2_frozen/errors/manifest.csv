@@ -1,0 +1,2 @@
+image_id,original_relative_path,split,defect_type,y_true,y_pred,probability_bad,private_drive_copy_url
+bad_passport_glare_082_v1,bad/bad_passport_glare_082_v1.jpg,test,glare,1,0,0.0028048574458807707,https://drive.google.com/file/d/1yCyq72aJweFHDTYkjB93Rxn1jOq276M9/view
