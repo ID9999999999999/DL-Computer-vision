@@ -46,3 +46,5 @@ Model selection uses validation metrics and cost only. Test characterization use
 This additive update preserves the original experiment evidence. See [repair audit](docs/Submission_Repairs_2026-11-08.md), [corrected reports](reports/README.md), [comparison with executed epochs](results/comparison_with_epochs.csv), [four-slide script](presentation/Presentation_4slides.md), [individual error archive](results/yolov8n/errors/README.md) and [Git tagging instructions](docs/TAGGING.md).
 
 The newly added `results.json` records were **derived from saved measurements, not retrained**. Actual training differed from the instructor's later specified epochs, batch size, patience and YOLO input size; see audit. The four-slide PPTX is provided separately from the original 8-slide deck.
+
+[**Corrected four-slide PPTX**](presentation/Lab06_Presentation_4slides.pptx) — teacher's specified four-slide format, with original result plots and real synthetic failure examples. Original longer PPTX remains unchanged.
