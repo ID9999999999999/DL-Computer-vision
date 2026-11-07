@@ -1,5 +1,5 @@
 # LAB 06 - COMPLETE MASTER CHECKLIST
-**Prof. Bakhta | Document Quality Classification | 8 November 2026**
+**Document Quality Classification | 8 November 2026**
 
 **TOTAL:** 152 requirements / audit items - GREEN 74 | YELLOW 19 | RED 59
 
@@ -288,7 +288,7 @@
 - 🟢 **S02** - Provide corrected standardized reports and model comparisons in GitHub.
 - 🟢 **S03** - Make corrected four-slide presentation available in repo and Drive.
 - 🟢 **S04** - Organize a single navigable Drive master folder 00-09.
-  - *Evidence / note:* LAB06_BAKHTA_MASTER_2026-11-08.
+  - *Evidence / note:* LAB06_MASTER_2026-11-08.
 - 🟢 **S05** - Make README and master map link GitHub, dataset and heavy checkpoints.
   - *Evidence / note:* docs/MASTER_PROJECT_MAP.md and Drive START_HERE index.
 - 🟢 **S06** - Provide Task 5A final ZIP + weights in Google Drive.
@@ -306,7 +306,7 @@
 ---
 ## Outstanding blockers / actions (not a claim of mandatory bonus work)
 
-1. Exchange Dataset A for Dataset B and clarify exact adaptation instructions with Prof. Bakhta.
+1. Exchange Dataset A for Dataset B and clarify exact adaptation instructions with the instructor.
 2. Run the new Dataset B experiment only after verifying its labels, split, source overlap and permissions.
 3. Create the historical Git tags after checking genuine original commits.
 4. Verify the instructor presentation, questions and official hand-in/acceptance.
