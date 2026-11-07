@@ -61,3 +61,10 @@ This is a genuine separate training run using the original MobileNetV2 frozen ch
 - [New private Google Drive experiment folder](https://drive.google.com/drive/folders/1krJ2b7SXPcHBnkDQHajKBq5ZEC1fAYAP) — contains best.keras, original image error, JSON, scripts, plots and complete ZIP. The original frozen checkpoint remains in Drive unchanged.
 
 **Not the dataset-exchange exercise:** this Task 5A run uses our own original dataset. Receiving and fine-tuning on a classmate's dataset remains a separate task.
+
+
+## ONE PROJECT ENTRY POINT — Organized Drive master (8 November 2026)
+
+Open [LAB06_BAKHTA_MASTER_2026-11-08](https://drive.google.com/drive/folders/105nt1H9wJsG-32jFrBHRqTDyB01USqta) first. It contains numbered folders 00–09, a `START_HERE_MASTER_INDEX.md`, original teacher instructions (copies), the curated four-slide deck, completed Task 5A package and an official-submission staging folder. Original datasets, models and past records were not moved or deleted.
+
+See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete map. Dataset exchange with a classmate, GitHub tags, oral defense and final instructor acceptance are still pending.
