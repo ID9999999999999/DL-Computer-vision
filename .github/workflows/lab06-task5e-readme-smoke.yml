@@ -1,0 +1,46 @@
+name: Lab06 Task5E Own Package README Reproduction
+
+on:
+  push:
+    branches:
+      - lab06-model-selection-2473986-20261025
+    paths:
+      - .github/workflows/lab06-task5e-readme-smoke.yml
+      - LAB06_Model_Selection/scripts/task5e_self_repro_smoke.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce-our-readme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install README-required inference library and download helper
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'ultralytics>=8.3,<9' 'gdown>=5'
+      - name: Get our existing, already-shared package
+        run: |
+          gdown 'https://drive.google.com/uc?id=1z6TeWfS5vy6tc0PDvZFl_3F2CIyvzINk' -O /tmp/our_package.zip
+          mkdir -p /tmp/our_lab06_package
+          unzip -q /tmp/our_package.zip -d /tmp/our_lab06_package
+      - name: Run README-style predict.py on four synthetic document samples
+        run: |
+          python LAB06_Model_Selection/scripts/task5e_self_repro_smoke.py
+      - name: Save reproducibility evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab06-task5e-our-readme-smoke
+          path: |
+            /tmp/lab06_task5e/predictions.csv
+            /tmp/lab06_task5e/summary.json
+            /tmp/lab06_task5e/stdout.txt
+            /tmp/lab06_task5e/stderr.txt
+          if-no-files-found: warn
