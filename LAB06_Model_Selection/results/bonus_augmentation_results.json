@@ -1,0 +1,416 @@
+{
+  "task": "5C",
+  "date": "2026-11-09",
+  "status": "genuine CPU training; original checkpoint continued, not from ImageNet",
+  "seed": 2473986,
+  "original_checkpoint_sha256": "c820e22debf8d3fe3c3ca41f7c10f55d9e7db0b2246fb90c92a8548a70a514f7",
+  "source_images_hashes_verified": 1800,
+  "source_groups": {
+    "train": 210,
+    "val": 45,
+    "test": 45
+  },
+  "train_val_test": {
+    "train": 1260,
+    "val": 270,
+    "test": 270
+  },
+  "model": "YOLOv8n-cls",
+  "setup": {
+    "max_epochs": 15,
+    "patience": 4,
+    "batch": 16,
+    "lr": 0.0001,
+    "optimizer": "Adam",
+    "weight_decay": 0.0005,
+    "image_size": 224,
+    "cpu_threads": 4,
+    "early_stop_selection": "validation cross-entropy loss, tie by val accuracy"
+  },
+  "augmentation": {
+    "shape": "white filled ellipse",
+    "alpha_range_0_255": [
+      150,
+      230
+    ],
+    "ellipses_per_augmented_image": [
+      1,
+      2
+    ],
+    "p_glare_on_bad_glare": 0.75,
+    "p_glare_on_other_bad": 0.35,
+    "p_glare_on_good": 0.0,
+    "ellipse_width_fraction": [
+      0.18,
+      0.56
+    ],
+    "ellipse_height_fraction": [
+      0.07,
+      0.3
+    ],
+    "seed": 2473986,
+    "splits_augmented": [
+      "train"
+    ]
+  },
+  "baseline": {
+    "validation": {
+      "n": 270,
+      "accuracy": 0.9925925925925926,
+      "macro_f1": 0.9925921861281826,
+      "precision_bad": 1.0,
+      "recall_bad": 0.9851851851851852,
+      "f1_bad": 0.9925373134328358,
+      "per_class": {
+        "good": {
+          "precision": 0.9854014598540146,
+          "recall": 1.0,
+          "f1": 0.9926470588235294,
+          "support": 135
+        },
+        "bad": {
+          "precision": 1.0,
+          "recall": 0.9851851851851852,
+          "f1": 0.9925373134328358,
+          "support": 135
+        }
+      },
+      "confusion_matrix": [
+        [
+          135,
+          0
+        ],
+        [
+          2,
+          133
+        ]
+      ],
+      "errors": 2
+    },
+    "test": {
+      "n": 270,
+      "accuracy": 0.9888888888888889,
+      "macro_f1": 0.9888875169774046,
+      "precision_bad": 1.0,
+      "recall_bad": 0.9777777777777777,
+      "f1_bad": 0.9887640449438202,
+      "per_class": {
+        "good": {
+          "precision": 0.9782608695652174,
+          "recall": 1.0,
+          "f1": 0.989010989010989,
+          "support": 135
+        },
+        "bad": {
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1": 0.9887640449438202,
+          "support": 135
+        }
+      },
+      "confusion_matrix": [
+        [
+          135,
+          0
+        ],
+        [
+          3,
+          132
+        ]
+      ],
+      "errors": 3
+    },
+    "test_by_defect": {
+      "blur": {
+        "n": 164,
+        "bad_count": 29,
+        "good_count": 135,
+        "f1_bad_vs_common_good": 1.0,
+        "recall_defect": 1.0,
+        "false_accepts": 0,
+        "false_rejects_good": 0
+      },
+      "exposure": {
+        "n": 162,
+        "bad_count": 27,
+        "good_count": 135,
+        "f1_bad_vs_common_good": 1.0,
+        "recall_defect": 1.0,
+        "false_accepts": 0,
+        "false_rejects_good": 0
+      },
+      "glare": {
+        "n": 163,
+        "bad_count": 28,
+        "good_count": 135,
+        "f1_bad_vs_common_good": 0.9433962264150944,
+        "recall_defect": 0.8928571428571429,
+        "false_accepts": 3,
+        "false_rejects_good": 0
+      },
+      "occlusion": {
+        "n": 161,
+        "bad_count": 26,
+        "good_count": 135,
+        "f1_bad_vs_common_good": 1.0,
+        "recall_defect": 1.0,
+        "false_accepts": 0,
+        "false_rejects_good": 0
+      },
+      "skew": {
+        "n": 160,
+        "bad_count": 25,
+        "good_count": 135,
+        "f1_bad_vs_common_good": 1.0,
+        "recall_defect": 1.0,
+        "false_accepts": 0,
+        "false_rejects_good": 0
+      }
+    }
+  },
+  "arms": {
+    "control": {
+      "best_epoch": 1,
+      "epochs_run": 5,
+      "seconds": 62.81650376319885,
+      "train_overlay_events": 0,
+      "val_loss_at_best": 0.021201706066279222,
+      "validation": {
+        "n": 270,
+        "accuracy": 0.9925925925925926,
+        "macro_f1": 0.9925921861281826,
+        "precision_bad": 1.0,
+        "recall_bad": 0.9851851851851852,
+        "f1_bad": 0.9925373134328358,
+        "per_class": {
+          "good": {
+            "precision": 0.9854014598540146,
+            "recall": 1.0,
+            "f1": 0.9926470588235294,
+            "support": 135
+          },
+          "bad": {
+            "precision": 1.0,
+            "recall": 0.9851851851851852,
+            "f1": 0.9925373134328358,
+            "support": 135
+          }
+        },
+        "confusion_matrix": [
+          [
+            135,
+            0
+          ],
+          [
+            2,
+            133
+          ]
+        ],
+        "errors": 2
+      },
+      "test": {
+        "n": 270,
+        "accuracy": 0.9925925925925926,
+        "macro_f1": 0.9925921861281826,
+        "precision_bad": 1.0,
+        "recall_bad": 0.9851851851851852,
+        "f1_bad": 0.9925373134328358,
+        "per_class": {
+          "good": {
+            "precision": 0.9854014598540146,
+            "recall": 1.0,
+            "f1": 0.9926470588235294,
+            "support": 135
+          },
+          "bad": {
+            "precision": 1.0,
+            "recall": 0.9851851851851852,
+            "f1": 0.9925373134328358,
+            "support": 135
+          }
+        },
+        "confusion_matrix": [
+          [
+            135,
+            0
+          ],
+          [
+            2,
+            133
+          ]
+        ],
+        "errors": 2
+      },
+      "by_defect_test": {
+        "blur": {
+          "n": 164,
+          "bad_count": 29,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 1.0,
+          "recall_defect": 1.0,
+          "false_accepts": 0,
+          "false_rejects_good": 0
+        },
+        "exposure": {
+          "n": 162,
+          "bad_count": 27,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 1.0,
+          "recall_defect": 1.0,
+          "false_accepts": 0,
+          "false_rejects_good": 0
+        },
+        "glare": {
+          "n": 163,
+          "bad_count": 28,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 0.9629629629629629,
+          "recall_defect": 0.9285714285714286,
+          "false_accepts": 2,
+          "false_rejects_good": 0
+        },
+        "occlusion": {
+          "n": 161,
+          "bad_count": 26,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 1.0,
+          "recall_defect": 1.0,
+          "false_accepts": 0,
+          "false_rejects_good": 0
+        },
+        "skew": {
+          "n": 160,
+          "bad_count": 25,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 1.0,
+          "recall_defect": 1.0,
+          "false_accepts": 0,
+          "false_rejects_good": 0
+        }
+      },
+      "checkpoint_size_bytes": 5839907
+    },
+    "glare": {
+      "best_epoch": 1,
+      "epochs_run": 5,
+      "seconds": 66.10116767883301,
+      "train_overlay_events": 1358,
+      "val_loss_at_best": 0.02266329338653358,
+      "validation": {
+        "n": 270,
+        "accuracy": 0.9925925925925926,
+        "macro_f1": 0.9925921861281826,
+        "precision_bad": 1.0,
+        "recall_bad": 0.9851851851851852,
+        "f1_bad": 0.9925373134328358,
+        "per_class": {
+          "good": {
+            "precision": 0.9854014598540146,
+            "recall": 1.0,
+            "f1": 0.9926470588235294,
+            "support": 135
+          },
+          "bad": {
+            "precision": 1.0,
+            "recall": 0.9851851851851852,
+            "f1": 0.9925373134328358,
+            "support": 135
+          }
+        },
+        "confusion_matrix": [
+          [
+            135,
+            0
+          ],
+          [
+            2,
+            133
+          ]
+        ],
+        "errors": 2
+      },
+      "test": {
+        "n": 270,
+        "accuracy": 0.9888888888888889,
+        "macro_f1": 0.9888875169774046,
+        "precision_bad": 1.0,
+        "recall_bad": 0.9777777777777777,
+        "f1_bad": 0.9887640449438202,
+        "per_class": {
+          "good": {
+            "precision": 0.9782608695652174,
+            "recall": 1.0,
+            "f1": 0.989010989010989,
+            "support": 135
+          },
+          "bad": {
+            "precision": 1.0,
+            "recall": 0.9777777777777777,
+            "f1": 0.9887640449438202,
+            "support": 135
+          }
+        },
+        "confusion_matrix": [
+          [
+            135,
+            0
+          ],
+          [
+            3,
+            132
+          ]
+        ],
+        "errors": 3
+      },
+      "by_defect_test": {
+        "blur": {
+          "n": 164,
+          "bad_count": 29,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 1.0,
+          "recall_defect": 1.0,
+          "false_accepts": 0,
+          "false_rejects_good": 0
+        },
+        "exposure": {
+          "n": 162,
+          "bad_count": 27,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 1.0,
+          "recall_defect": 1.0,
+          "false_accepts": 0,
+          "false_rejects_good": 0
+        },
+        "glare": {
+          "n": 163,
+          "bad_count": 28,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 0.9629629629629629,
+          "recall_defect": 0.9285714285714286,
+          "false_accepts": 2,
+          "false_rejects_good": 0
+        },
+        "occlusion": {
+          "n": 161,
+          "bad_count": 26,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 0.9803921568627451,
+          "recall_defect": 0.9615384615384616,
+          "false_accepts": 1,
+          "false_rejects_good": 0
+        },
+        "skew": {
+          "n": 160,
+          "bad_count": 25,
+          "good_count": 135,
+          "f1_bad_vs_common_good": 1.0,
+          "recall_defect": 1.0,
+          "false_accepts": 0,
+          "false_rejects_good": 0
+        }
+      },
+      "checkpoint_size_bytes": 5840355
+    }
+  },
+  "limitation": "PyTorch checkpoint-equivalent local trainer, not an Ultralytics full trainer replay; both arms continue from original best checkpoint. Test used once for reporting after selecting each arm using validation. Original test had been historically inspected before the study."
+}

@@ -1,0 +1,4 @@
+arm,source_model,train_augmentation,epochs_run,best_epoch,test_n,accuracy,macro_f1,good_f1,bad_f1,glare_recall,glare_false_accepts,occlusion_recall,errors,notes
+original,original selected YOLOv8n best.pt,none,historic,historic,270,0.9888888888888889,0.9888875169774046,0.989010989010989,0.9887640449438202,0.8928571428571429,3,1.0,3,reference historical model
+control,original selected YOLOv8n best.pt,none,5,1,270,0.9925925925925926,0.9925921861281826,0.9926470588235294,0.9925373134328358,0.9285714285714286,2,1.0,2,"controlled continuation, teacher protocol differs"
+glare_augmented,original selected YOLOv8n best.pt,white ellipses alpha 150-230 only bad Train images,5,1,270,0.9888888888888889,0.9888875169774046,0.989010989010989,0.9887640449438202,0.9285714285714286,2,0.9615384615384616,3,"controlled continuation, teacher protocol differs"

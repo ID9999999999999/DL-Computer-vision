@@ -16,6 +16,7 @@
 | 07_DATASET_EXCHANGE_PENDING | Our YOLOv8n sharing package and the peer-model-on-our-Test evaluation (2026-11-09); peer's actual Dataset B is still not received |
 | 08_FINAL_SUBMISSION | Curated presentation and submission checklist; not formally handed in |
 | 09_ARCHIVE_AND_ORIGINALS | Source pointers and originals preservation records |
+| 10_BONUS_TASK_5C_AUGMENTATION | Real two-arm CPU fine-tuning, per-defect analysis, exact checkpoints and reproducibility ZIP |
 
 ## Source-of-truth links
 
@@ -67,3 +68,13 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 - [Updated Markdown checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md) — verified **85 green / 22 yellow / 45 red**, counting optional bonus tasks.
 - [Updated ten-page PDF in Drive](https://drive.google.com/file/d/1WcQMktdHFhZoAA6aFcGUDLVGKWnFhD60/view); [Markdown copy in Drive](https://drive.google.com/file/d/1QVYsMvIponyR7Tel9B8dKKsrSjkY14ey/view). The 8 Nov snapshot remains intact.
 - [Full zipped submission REVIEW package including FOUR ORIGINAL CHECKPOINTS (SHA-256 verified), the Task 5A checkpoint package, Word memo, four slides, experiment evidence and scripts](https://drive.google.com/file/d/1l6LKs3tCjIoetjxnl5uklINYCaLteAO0/view). **Prepared for review, NOT submitted or accepted.**
+
+
+## Task 5C completed experiment addendum (9 November 2026)
+
+- [Full experiment in Google Drive](https://drive.google.com/file/d/1HyxDmT2yJ7xX_wN4R76b0F8jREVrqfjM/view).
+- [Report](../reports/bonus_augmentation.md) and [validation-vs-test honest audit](TASK5C_2026-11-09_AUDIT.md).
+- 2 arms start from identical previously trained YOLOv8n; real continued fine-tuning on original Dataset A; original dataset/manifest and historical checkpoints untouched.
+- Control: **268/270**, macro-F1 0.9926; train-only stronger glare: **267/270**, macro-F1 0.9889. Glare recall both 26/28, augmentation no benefit versus matched continuation, and occlusion declined.
+- Task 5C formal protocol exact-retrain criterion remains **partial** because this is CPU/PyTorch continued training from a trained checkpoint, not an Ultralytics retrain from ImageNet and not 50/32/5/640.
+- 8 Nov 152-item master checklist is an historical snapshot; later work documented as an addendum, not retroactively inserted into original results.

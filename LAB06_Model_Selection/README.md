@@ -102,3 +102,12 @@ See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete ma
 - [Updated Markdown checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md) — verified **85 green / 22 yellow / 45 red**, counting optional bonus tasks.
 - [Updated ten-page PDF in Drive](https://drive.google.com/file/d/1WcQMktdHFhZoAA6aFcGUDLVGKWnFhD60/view); [Markdown copy in Drive](https://drive.google.com/file/d/1QVYsMvIponyR7Tel9B8dKKsrSjkY14ey/view). The 8 Nov snapshot remains intact.
 - [Full zipped submission REVIEW package including FOUR ORIGINAL CHECKPOINTS (SHA-256 verified), the Task 5A checkpoint package, Word memo, four slides, experiment evidence and scripts](https://drive.google.com/file/d/1l6LKs3tCjIoetjxnl5uklINYCaLteAO0/view). **Prepared for review, NOT submitted or accepted.**
+
+
+## Optional Task 5C — train-only glare augmentation (9 November 2026)
+
+**Executed:** two matched continued-training arms initialized from the **same original YOLOv8n** checkpoint, on the original 1,260/270/270 source-grouped images. The control (no new augmentation) scored **268/270** on held-out Test (macro-F1 **0.9926**); targeted stronger glare on BAD training images scored **267/270** (macro-F1 **0.9889**). Both achieved glare recall **26/28**; the glare arm gained no additional glare recall and missed one more occluded image. These are real CPU training/evaluation results, not a claimed improvement. Same seed 2473986; max 15 epochs, actual 5, best epoch 1, batch 16, patience 4, RGB 224; **not full original-ImageNet restart nor exact later 50/32/5/640 teacher protocol**.
+
+- [Task 5C technical report](reports/bonus_augmentation.md) | [new comparison rows](results/bonus_augmentation_comparison.csv) | [per-defect deltas](results/bonus_augmentation_per_defect_delta.csv) | [training and verification scripts](scripts/task5c_glare_train.py).
+- [Complete original checkpoint + two new trained state_dicts, plots, SHA-verified manifest, histories and reproducibility package](https://drive.google.com/file/d/1HyxDmT2yJ7xX_wN4R76b0F8jREVrqfjM/view)
+- [Requirement-status addendum](docs/TASK5C_2026-11-09_AUDIT.md).

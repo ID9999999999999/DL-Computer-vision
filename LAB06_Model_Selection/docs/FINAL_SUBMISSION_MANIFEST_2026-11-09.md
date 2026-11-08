@@ -27,3 +27,10 @@
 
 ## Final integrity rule
 Do not alter raw image datasets, old checkpoints, original measured metrics or existing historical commit metadata. The files in this staging area are navigational or supplementary; the private Drive folders hold heavy artifacts. Do not treat staging as official instructor submission.
+
+
+## New verified Task 5C evidence — 9 November 2026
+
+- [Executed augmentation report](../reports/bonus_augmentation.md), [class/defect deltas](../results/bonus_augmentation_per_defect_delta.csv), [full reproducibility ZIP](https://drive.google.com/file/d/1HyxDmT2yJ7xX_wN4R76b0F8jREVrqfjM/view).
+- Two new trained checkpoints and 1,800 original image SHA-256 integrity checks included. Matched no-overlay control accuracy 99.26%; glare augmentation 98.89%; glare recall equal 26/28. **No improvement** attributable to augmentation.
+- Teacher protocol difference remains openly labeled; this is controlled checkpoint continuation, not fresh ImageNet-start Ultralytics training.
