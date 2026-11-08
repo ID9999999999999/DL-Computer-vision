@@ -38,8 +38,15 @@ Synthetic images are not a replacement for real mobile capture with diverse came
 
 ## Intended deployment guardrails
 
-Use a user-retake/verification path for low confidence and edge cases. Monitor false accepts (bad classified as good) separately from false rejects. Threshold tuning requires validation-only analysis and independent deployment-domain checks. Size/latency may change on a different machine; no TFLite/ONNX performance is claimed.
+Use a user-retake/verification path for low confidence and edge cases. Monitor false accepts (bad classified as good) separately from false rejects. Threshold tuning requires validation-only analysis and independent deployment-domain checks. Size/latency may change on a different machine. A separate ONNX CPU forward-only export benchmark has been executed (9 November 2026); it has **not** yet measured accuracy preservation on the private held-out Test, and is not an edge-device benchmark.
 
 ## Provenance
 
 Actual measurement sources: `results/yolov8n/evaluation.json`, `results/yolov8n/results.json`, `results/yolov8n/training.json`, original model checkpoint in Drive. This card documents existing evidence, not new model training.
+
+
+## Later evidence addendum — 9 November 2026
+
+**Task 5C:** a continued-training matched control achieved 268/270 on the same held-out Test, while targeted train-only glare augmentation achieved 267/270. Both achieved glare recall 26/28, so targeted augmentation supplied no added gain against the matched control. These checkpoints do not replace the original archived model. See [Task 5C report](bonus_augmentation.md).
+
+**Task 5D:** a separately validated ONNX export of the original checkpoint measured 2.965 ms forward-only versus PyTorch 8.651 ms on a 4-thread GitHub Actions CPU with 20 warm-ups and 100 timed runs; ONNX size 5.501 MiB versus original PT 2.826 MiB. On 12 synthetic tensors, class predictions agreed, but **the original 270-image Test has not yet been used for paired accuracy testing of ONNX**. Do not claim zero accuracy drop or production/edge readiness. See [Task 5D measured memo](bonus_deployment_memo.md) and [verified artifact](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view).
