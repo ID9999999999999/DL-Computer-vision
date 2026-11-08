@@ -1,3 +1,5 @@
+> **Current Drive organization (9 Nov 2026):** [START HERE](https://docs.google.com/document/d/1Pv5PZu81vR2gaNotgyRmq1Q3MaGgj3PtHheSu2wBfYU/edit) / [RESUME LATER](https://docs.google.com/document/d/1QT9NeGwCxnpNiH2KiIMf6Peiipf8th8AfVnRJwM5eKQ/edit) / [current folder map](DRIVE_FOLDERS_2026-11-09.md). Organized folders 10–13 now correspond to Bonus 5B–5E. Earlier summary paragraphs are historical and do not override this handoff.
+
 # Lab06 — Canonical Project Map
 
 **Unified Drive project folder:** https://drive.google.com/drive/folders/105nt1H9wJsG-32jFrBHRqTDyB01USqta
@@ -16,7 +18,7 @@
 | 07_DATASET_EXCHANGE_PENDING | Our YOLOv8n sharing package and the peer-model-on-our-Test evaluation (2026-11-09); peer's actual Dataset B is still not received |
 | 08_FINAL_SUBMISSION | Curated presentation and submission checklist; not formally handed in |
 | 09_ARCHIVE_AND_ORIGINALS | Source pointers and originals preservation records |
-| 10_BONUS_TASK_5C_AUGMENTATION | Real two-arm CPU fine-tuning, per-defect analysis, exact checkpoints and reproducibility ZIP |
+| 11_BONUS_TASK_5C_AUGMENTATION | Real two-arm CPU fine-tuning, per-defect analysis, exact checkpoints and reproducibility ZIP |
 
 ## Source-of-truth links
 

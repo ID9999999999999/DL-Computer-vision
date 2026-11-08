@@ -1,3 +1,8 @@
+> **STOP POINT (9 November 2026): organization complete; experiments paused.**
+> Start at [one current Drive index](https://docs.google.com/document/d/1Pv5PZu81vR2gaNotgyRmq1Q3MaGgj3PtHheSu2wBfYU/edit) and [resume-later handoff](https://docs.google.com/document/d/1QT9NeGwCxnpNiH2KiIMf6Peiipf8th8AfVnRJwM5eKQ/edit).
+> Current source-of-truth checklist: [100 completed / 25 partial / 27 open](docs/FULL_CHECKLIST_CURRENT_2026-11-09.md) of 152; latest [review ZIP](https://drive.google.com/file/d/1ZAp0JdWW_DruPzZrG9ll96Z-Idjr1-4D/view) is **not** an official submission. [Folder map](docs/DRIVE_FOLDERS_2026-11-09.md).
+> Older ZIPs/checklists have been archived, no original data/models/results modified.
+
 # Lab 06: Model selection for document quality classification
 
 Seed **2473986**. Experiment completed in Colab on 25 October 2026.
