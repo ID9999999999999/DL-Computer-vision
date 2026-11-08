@@ -1,18 +1,15 @@
-# Task 5E — E01–E08 audit, 9 November 2026
-
-| Item | State | Link / reason |
+# Task 5E — requirement audit (9 November 2026)
+| ID | State | Evidence |
 |---|---|---|
-| E01 Peer permission + README | Partial | Peer archive and README received; redistribution permission not separately confirmed |
-| E02 Peer README-only rerun | Open | Original `predict.py` not run; prior 211/270 is adapter-based |
-| E03 Gap analysis | Done | [Audit note](../reports/bonus_audit_note.md), concrete seed, split, version, image omissions |
-| E04 Audit report | Done | [Complete audit note](../reports/bonus_audit_note.md) |
-| E05 Model Card intended use + dataset | Done | [Model card](../reports/model_card.md) |
-| E06 Metrics, latency, size and limitations | Done | [Model card](../reports/model_card.md) |
-| E07 Ethics and synthetic-to-real | Done | [Model card](../reports/model_card.md) |
-| E08 Submit/explain findings | Partial | Reports committed to GitHub; instructor receipt/defense not verified |
+| E01 | 🟡 Partial | Original peer archive/README received; explicit permission to redistribute peer checkpoint publicly not independently established |
+| E02 | 🟡 Partial | **Unchanged peer `predict.py` executed successfully on our 270 Test, exit 0, all predictions verified**. Peer original test/training not supplied, so own-domain original experiment not fully reproduced |
+| E03 | ✅ Done | Missing original peer dataset/manifest, versions and training code documented |
+| E04 | ✅ Done | [Final reproducibility audit](../reports/bonus_audit_note.md) |
+| E05 | ✅ Done | [Own model card](../reports/model_card.md): intended use + data |
+| E06 | ✅ Done | Model card covers original metrics, latency, size and limitations |
+| E07 | ✅ Done | Model card covers ethics/privacy and synthetic-to-real gaps |
+| E08 | 🟡 Partial | Both reports prepared and committed; instructor receipt/defense unverified |
 
-**Outcome: 5 done / 2 partial / 1 open.**
+**5 done / 3 partial / 0 entirely open; not a claim of original peer full training reproduction or teacher acceptance.**
 
-Independent achievement: [OUR model-sharing README actual clean-environment smoke test](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42516928052), [CSV and logs ZIP](https://drive.google.com/file/d/1EF69RHSmcHTv20Ym_JW7U4EbzmFF1BGS/view). It produced four rows from four deliberately synthetic images and is not a peer checkpoint audit or scientific accuracy test.
-
-Remaining strict peer requirement: authorization to use the peer original test images and rerun unchanged `predict.py` per README on a working environment, without adaptation or modifying the archive.
+[Actual peer original-script run evidence](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view) and [earlier cross-test](https://drive.google.com/file/d/1CsRe-t3hDA8IH1ar4pQs8-zKg16JtKTF/view).

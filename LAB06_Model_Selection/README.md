@@ -112,18 +112,12 @@ See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete ma
 - [Complete original checkpoint + two new trained state_dicts, plots, SHA-verified manifest, histories and reproducibility package](https://drive.google.com/file/d/1HyxDmT2yJ7xX_wN4R76b0F8jREVrqfjM/view)
 - [Requirement-status addendum](docs/TASK5C_2026-11-09_AUDIT.md).
 
+## Task 5D — complete real ONNX/270-image parity test (9 Nov)
 
-## Task 5D real export and forward CPU results — 9 November 2026
+Both source PyTorch and ONNX scored **267/270 (98.89% accuracy; macro-F1 0.9889)** on identical source-hash-verified, original private Test images, **0/270 differing predictions and zero accuracy drop**. Same host forward-only CPU mean: **6.104ms PT / 2.451ms ONNX**, with 20 warm-ups and 100 timed calls per backend. ONNX is larger (**5.501 MiB vs PT 2.826 MiB**). End-to-end and edge-device performance remain unmeasured. [Real paired-Test ONNX+CSV+JSON+source ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view) | [final measured memo](reports/bonus_deployment_memo.md).
 
-- [Executed ONNX model and raw CPU JSON ZIP on Drive](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view) | [Successful Actions run](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42515991510).
-- Checkpoint SHA verified; ONNX graph checked. Source 2.826 MiB / 8.651 ms, ONNX 5.501 MiB / 2.965 ms. Measurements are forward-only on one 4-thread CI CPU with 20 warm-ups and 100 timed calls.
-- 12 synthetic tensor pairs showed 0 classification disagreements. **Not a held-out Test accuracy result.**
-- [Detailed deployment report](reports/bonus_deployment_memo.md) | [Task 5D requirement audit](docs/TASK5D_ONNX_2026-11-09_AUDIT.md).
-- **Task 5D remains partial:** complete 270-image Test accuracy comparison still pending; Dataset A stays private.
+## Task 5E — literal peer README inference reproduced (9 Nov)
 
+Original classmate `predict.py` was run unchanged using Ultralytics on **our** original 270-image Test. Result **211/270 (78.15%)** and 0/270 per-image class discrepancies versus the earlier adapter-based evaluation; exit code **0**. Their original own-domain test images/training remain unavailable, so their reported original score was **not** independently reproduced. [Original-script log and metrics ZIP](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view) | [peer audit report](reports/bonus_audit_note.md) | [own model card](reports/model_card.md).
 
-## Task 5E reproducibility evidence — 9 November 2026
-
-- [Successful clean-environment README-style test of OUR sharing package](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42516928052) and [raw CSV + summary + stdout evidence](https://drive.google.com/file/d/1EF69RHSmcHTv20Ym_JW7U4EbzmFF1BGS/view): 4 synthetic images, 4 output CSV rows, exit code 0 and verified source checkpoint SHA.
-- [Updated peer audit report](reports/bonus_audit_note.md) and [updated own model card](reports/model_card.md).
-- **Peer model literal README reproducibility remains not executed**. Previous peer 211/270 result was produced via a PyTorch compatibility adapter on our Dataset A (not via original peer CLI), and the peer's original Test images are missing. See [Task 5E audit](docs/TASK5E_2026-11-09_AUDIT.md).
+**Unresolved elsewhere:** reverse-direction exchange (our model on classmate Dataset B), historical training-protocol deviations, Week7/8 Git tags, original executed Colab training notebook, official teacher acceptance and oral defense. The dated 152-check audit snapshot has not been silently rewritten.

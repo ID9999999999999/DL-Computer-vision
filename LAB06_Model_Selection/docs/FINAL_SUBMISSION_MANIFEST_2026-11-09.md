@@ -35,17 +35,8 @@ Do not alter raw image datasets, old checkpoints, original measured metrics or e
 - Two new trained checkpoints and 1,800 original image SHA-256 integrity checks included. Matched no-overlay control accuracy 99.26%; glare augmentation 98.89%; glare recall equal 26/28. **No improvement** attributable to augmentation.
 - Teacher protocol difference remains openly labeled; this is controlled checkpoint continuation, not fresh ImageNet-start Ultralytics training.
 
+## Final 9 November addenda: Task 5D and Task 5E
 
-## Task 5D export/CPU progress (9 November 2026)
-
-- [Actual ONNX+raw CPU benchmark ZIP in Drive](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view); [successful CI run](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42515991510).
-- [Measured memo](../reports/bonus_deployment_memo.md), [requirement audit](TASK5D_ONNX_2026-11-09_AUDIT.md).
-- Source 2.826 MiB, 8.651 ms forward-only; ONNX 5.501 MiB, 2.965 ms. ONNX parity checked on synthetic tensors only.
-- **Still pending:** held-out Test accuracy and actual drop on 270 original private images.
-
-
-## Task 5E audit evidence — 9 November 2026
-
-- [Peer reproducibility audit](../reports/bonus_audit_note.md), [own YOLOv8n model card](../reports/model_card.md), [requirement-by-requirement Task 5E status](TASK5E_2026-11-09_AUDIT.md).
-- [Actually executed our-model README reproducibility workflow](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42516928052) and [raw verified CI artifact](https://drive.google.com/file/d/1EF69RHSmcHTv20Ym_JW7U4EbzmFF1BGS/view); no classmate data publicly uploaded.
-- **Peer's original README command was not executed end-to-end on its original held-out data.** Own-package smoke test must not be substituted for that requirement. Teacher sign-off remains unverified.
+- **Task 5D technically complete:** ONNX and original PT both **267/270, macro-F1 0.9889, accuracy drop 0** on original private, SHA-verified Test. Paired same-host forward-only CPU mean **6.104 vs 2.451 ms**, 20 warm-ups/100 measurements. [Full ONNX and reproducibility evidence ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view). [Measured report](../reports/bonus_deployment_memo.md).
+- **Task 5E README inference executed:** classmate's unmodified original script on our Test produced **211/270** and matched earlier adapter results for all 270 images. [Real logs/CSV and audit ZIP](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view). [Audit memo](../reports/bonus_audit_note.md). **The classmate's original held-out images and training script remain absent**, so full original-experiment reproduction is not claimed.
+- Still pending: peer reverse-side Test of our checkpoint on Dataset B, course-protocol differences, original executed Colab training notebook, historical tags and teacher submission/defense. **Staging is not official instructor submission.**

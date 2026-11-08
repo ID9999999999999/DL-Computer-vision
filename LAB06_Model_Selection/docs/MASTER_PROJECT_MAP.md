@@ -79,12 +79,10 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 - Task 5C formal protocol exact-retrain criterion remains **partial** because this is CPU/PyTorch continued training from a trained checkpoint, not an Ultralytics retrain from ImageNet and not 50/32/5/640.
 - 8 Nov 152-item master checklist is an historical snapshot; later work documented as an addendum, not retroactively inserted into original results.
 
+## Task 5D — completed paired Test after earlier cloud export
 
-## Task 5D (9 Nov 2026) — partial real execution
+[Final ONNX + 270-image paired evaluation ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view). Original PT and ONNX both **267/270 correct**, macro-F1 **0.9889**, zero individual prediction differences and zero accuracy drop. CPU same-host forward-only means **6.104 ms PT / 2.451 ms ONNX**, measured after 20 warm-ups over 100 timed calls each. The earlier 8.651/2.965ms values were on a *different GitHub cloud CPU* and are retained only as separate provenance. Teacher acceptance not evidenced.
 
-[Real ONNX artifact and CPU benchmark ZIP](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view); original/checkpoint integrity verified; forward-only CPU mean 8.651 ms PyTorch vs 2.965 ms ONNX; ONNX 5.501 MiB vs PT 2.826 MiB. Held-out private Test accuracy before/after export **not yet measured**; see [deployment report](../reports/bonus_deployment_memo.md).
+## Task 5E — literal peer code executed
 
-
-## Task 5E reproducibility status (9 Nov 2026)
-
-Our model exchange ZIP was actually executed in a clean GitHub Actions Linux/Python environment on **4 synthetic demonstration images**, with `predict.py` writing 4 CSV rows and exit code 0; logs and output ZIP: https://drive.google.com/file/d/1EF69RHSmcHTv20Ym_JW7U4EbzmFF1BGS/view. **Not a real accuracy evaluation and not a peer-model README reproduction**. The classmate's unchanged zip is available in the original conversation; permission for public redistribution and the classmate's own original Test images have not been verified. The earlier peer 211/270 metric used a compatibility adapter. See [Task 5E audit](../reports/bonus_audit_note.md) and [model card](../reports/model_card.md).
+[Verified unchanged classmate `predict.py` execution logs/CSV](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view) on our original 270-image Test: **211/270**, 59 false alarms, no false accepts; 0 prediction differences against older adapter. This is a README inference reproduction on our data, **not the peer's own original test/training reproduction**. The reverse evaluation of our model on the peer's Dataset B is still pending; [final audit](../reports/bonus_audit_note.md).
