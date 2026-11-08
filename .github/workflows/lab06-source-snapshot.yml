@@ -1,0 +1,32 @@
+name: Lab06 Immutable Submission Source Snapshot
+on:
+  push:
+    branches:
+      - lab06-model-selection-2473986-20261025
+    paths:
+      - .github/workflows/lab06-source-snapshot.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Create original-source archive from commit (no dataset or private weights)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/lab06
+          git archive --format=zip --prefix=LAB06_Model_Selection/ HEAD:LAB06_Model_Selection > /tmp/lab06/Lab06_GitHub_Source_Results_2026-11-09.zip
+          git rev-parse HEAD > /tmp/lab06/SOURCE_COMMIT_SHA.txt
+          unzip -t /tmp/lab06/Lab06_GitHub_Source_Results_2026-11-09.zip | tail -1
+          printf 'Source includes project code, reports, checklist, analysis and plots; heavy checkpoints and image dataset remain external.\n' > /tmp/lab06/README.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lab06-source-snapshot-20261109
+          path: /tmp/lab06/
+          if-no-files-found: error
+          retention-days: 14
