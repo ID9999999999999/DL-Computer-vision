@@ -121,3 +121,11 @@ Both source PyTorch and ONNX scored **267/270 (98.89% accuracy; macro-F1 0.9889)
 Original classmate `predict.py` was run unchanged using Ultralytics on **our** original 270-image Test. Result **211/270 (78.15%)** and 0/270 per-image class discrepancies versus the earlier adapter-based evaluation; exit code **0**. Their original own-domain test images/training remain unavailable, so their reported original score was **not** independently reproduced. [Original-script log and metrics ZIP](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view) | [peer audit report](reports/bonus_audit_note.md) | [own model card](reports/model_card.md).
 
 **Unresolved elsewhere:** reverse-direction exchange (our model on classmate Dataset B), historical training-protocol deviations, Week7/8 Git tags, original executed Colab training notebook, official teacher acceptance and oral defense. The dated 152-check audit snapshot has not been silently rewritten.
+
+
+## Final 9 November evidence audit and Git tags
+
+- [Recounted 152-item checklist](docs/FULL_CHECKLIST_CURRENT_2026-11-09.md): **100 green / 25 yellow / 27 red**, after Tasks 5C, 5D, 5E and tag verification. Older snapshot totals are historical.
+- [Verified annotated Week 7 and Week 8 tags](docs/TAGGING.md) created on the authentic October 25 commit. Both phases were originally committed together, so both tags point to one SHA (not backdated).
+- [Task 5D measured results add-on](results/task5d_deployment_addon.json), preserving original result files.
+- Still missing: classmate's independent Dataset B reciprocal results, exact instructor protocol matching for original Tasks 2-4, original executed Colab session evidence, in-class defense, and formal teacher acceptance.

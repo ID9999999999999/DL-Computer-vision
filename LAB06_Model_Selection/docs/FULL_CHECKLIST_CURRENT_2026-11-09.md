@@ -1,7 +1,7 @@
 # LAB 06 - COMPLETE MASTER CHECKLIST
 **Document Quality Classification | revised 9 November 2026**
 
-**TOTAL:** 152 requirements / audit items - GREEN 85 | YELLOW 22 | RED 45
+**TOTAL:** 152 requirements / audit items - GREEN 100 | YELLOW 25 | RED 27
 
 - 🟢 **GREEN:** completed with evidence
 - 🟡 **YELLOW:** completed differently or partially; a note immediately beneath explains the deviation
@@ -9,7 +9,7 @@
 
 **Source distinction:** Tasks 1-4 and Task 5A-5E come from the instructor's written documents. Tasks 5A-5E are labeled *bonus* there. Dataset exchange is a **separate, reported verbal instruction**; its exact scope is not confirmed by a written brief.
 
-**Key outcome (9 Nov):** Tasks 1–4 have real archived runs with disclosed protocol deviations; Task 5A ran on our original data (99.63% before/after). Task 1 Word memo, teacher-named YOLO training wrapper, JSON-derived comparison, model card and optional validation-only threshold audit have now been prepared. Classmate model was evaluated on our test, but **the classmate's images and their test of our model are still missing**. Official acceptance is unknown. The 8 November snapshot remains archived separately.
+**Key outcome (9 Nov, updated after execution):** Tasks 1–4 have real archived runs with disclosed protocol deviations; Task 5A ran on our original data (99.63% before/after). Task 1 Word memo, teacher-named YOLO training wrapper, JSON-derived comparison, model card and optional validation-only threshold audit have now been prepared. Classmate model was evaluated on our test, but **the classmate's images and their test of our model are still missing**. Official acceptance is unknown. The 8 November snapshot remains archived separately.
 
 ## Quick links
 - [Master Drive folder](https://drive.google.com/drive/folders/105nt1H9wJsG-32jFrBHRqTDyB01USqta)
@@ -225,45 +225,60 @@
   - 🟡 **Difference:** All files are prepared in GitHub, but no teacher receipt or grade is available.
 
 ## 07 | TASK 5C: Error-Driven Augmentation
-*WRITTEN BONUS: Task 5C; not performed*  |  8 items: 🟢 1 / 🟡 0 / 🔴 7
+*WRITTEN BONUS: Task 5C; executed, one method deviation* | 8 items: 🟢 7 / 🟡 1 / 🔴 0
 
 - 🟢 **C01** - Identify the dominant actual failure (glare).
-  - *Evidence / note:* Already identified in Task 4; this alone does not complete Task 5C.
-- 🔴 **C02** - Create stronger train-only glare and/or motion-blur augmentations.
-- 🔴 **C03** - Keep validation and test data unchanged.
-  - *Evidence / note:* No Task 5C augmentation experiment has yet been run.
-- 🔴 **C04** - Retrain best candidate with same seed and fixed protocol.
-- 🔴 **C05** - Store augmentation configuration in results.json.
-- 🔴 **C06** - Compare per-defect F1 before and after augmentation.
-- 🔴 **C07** - Explain whether another defect class was harmed.
-- 🔴 **C08** - Submit augmentation code, new results row and bonus_augmentation.md.
+  - *Evidence:* Original YOLOv8n missed 3/28 glare examples.
+- 🟢 **C02** - Create stronger train-only glare and/or motion-blur augmentations.
+  - *Evidence:* Train-only white ellipse alpha 150-230 on defective training images.
+- 🟢 **C03** - Keep validation and test data unchanged.
+  - *Evidence:* SHA-256 verification of all original 1,800 images; no val/test augmentation.
+- 🟡 **C04** - Retrain best candidate with same seed and fixed protocol.
+  - 🟡 **Difference:** Genuine two-arm continued fine-tuning from identical trained YOLOv8n checkpoint, seed 2473986, not a fresh ImageNet-start retrain under the later 50/32/5/640 prescription.
+- 🟢 **C05** - Store augmentation configuration in results.json.
+  - *Evidence:* `results/bonus_augmentation_results.json`.
+- 🟢 **C06** - Compare per-defect F1 before and after augmentation.
+  - *Evidence:* Per-defect deltas, control 268/270 vs glare 267/270; glare recall 26/28 in both arms.
+- 🟢 **C07** - Explain whether another defect class was harmed.
+  - *Evidence:* Occlusion recall dropped 26/26 to 25/26 with the glare arm; no augmentation benefit.
+- 🟢 **C08** - Submit augmentation code, new results row and bonus_augmentation.md.
+  - *Evidence:* [Task 5C report](../reports/bonus_augmentation.md), [full experiment archive](https://drive.google.com/file/d/1HyxDmT2yJ7xX_wN4R76b0F8jREVrqfjM/view).
 
 ## 08 | TASK 5D: Deployment Export and Edge Benchmark
-*WRITTEN BONUS: Task 5D; not performed*  |  7 items: 🟢 0 / 🟡 0 / 🔴 7
+*WRITTEN BONUS: Task 5D; real original Test parity and CPU benchmark completed* | 7 items: 🟢 7 / 🟡 0 / 🔴 0
 
-- 🔴 **D01** - Export selected model to TFLite or ONNX.
-- 🔴 **D02** - Optionally quantize and note quantization risks.
-- 🔴 **D03** - Measure model sizes before/after export.
-- 🔴 **D04** - Benchmark CPU with 20 warm-up + 100 timed runs.
-  - *Evidence / note:* Earlier native-model timing exists, but no exported model benchmark exists.
-- 🔴 **D05** - Compare accuracy before/after export or state measured zero drop.
-- 🔴 **D06** - Write justified server-versus-edge deployment memo.
-  - *Evidence / note:* Task 4 gives a conceptual plan; Task 5D-specific measured memo is not completed.
-- 🔴 **D07** - Deliver exported files, benchmark table, addon metrics and bonus_deployment_memo.md.
+- 🟢 **D01** - Export selected model to TFLite or ONNX.
+  - *Evidence:* Original YOLOv8n to FP32 ONNX, ONNX checker validated; SHA recorded.
+- 🟢 **D02** - Optionally quantize and note quantization risks.
+  - *Evidence:* No optional quantization performed; trade-offs and risk of changed confidences documented.
+- 🟢 **D03** - Measure model sizes before/after export.
+  - *Evidence:* Original PT 2.826 MiB; ONNX 5.501 MiB (export is larger).
+- 🟢 **D04** - Benchmark CPU with 20 warm-up + 100 timed runs.
+  - *Evidence:* Same local CPU host, 4 threads, batch 1, forward-only 6.104 ms PyTorch and 2.451 ms ONNX; excludes preprocessing and IO.
+- 🟢 **D05** - Compare accuracy before/after export or state measured zero drop.
+  - *Evidence:* Verified 270 original source-hashed Test images; 267/270 each, macro-F1 0.9889 each, 0/270 classification disagreements, accuracy drop exactly 0 in this Test.
+- 🟢 **D06** - Write justified server-versus-edge deployment memo.
+  - *Evidence:* ONNX candidate for CPU server; no real edge-device or end-to-end result; see [Task 5D memo](../reports/bonus_deployment_memo.md).
+- 🟢 **D07** - Deliver exported files, benchmark table, addon metrics and bonus_deployment_memo.md.
+  - *Evidence:* [Complete ONNX + Test predictions + timing logs ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view), [results addon](../results/task5d_deployment_addon.json), [report](../reports/bonus_deployment_memo.md).
 
 ## 09 | TASK 5E: Peer Reproducibility Audit and Model Card
-*WRITTEN BONUS: Task 5E; model card finished, peer audit partial*  |  8 items: 🟢 4 / 🟡 1 / 🔴 3
+*WRITTEN BONUS: Task 5E; peer inference rerun executed, original peer training data still missing* | 8 items: 🟢 5 / 🟡 3 / 🔴 0
 
-*9 Nov evidence:* [model card](../reports/model_card.md), [audit note](../reports/bonus_audit_note.md). The peer checkpoint was evaluated using a compatibility adapter, **not** a literal installation-and-rerun of its supplied README, so the strict E02 remains red.
-
-- 🔴 **E01** - Get classmate permission and their README/experiment.
-- 🔴 **E02** - Rerun one classmate experiment using their README only.
+- 🟡 **E01** - Get classmate permission and their README/experiment.
+  - 🟡 **Difference:** Peer ZIP, README, original checkpoint and predict.py were supplied, but explicit permission for wider redistribution is not independently documented.
+- 🟡 **E02** - Rerun one classmate experiment using their README only.
+  - 🟡 **Difference:** Actually executed classmate's **unchanged** predict.py with Ultralytics on *our* independent 270-image Test: 211/270, matching prior adapter 270/270 class decisions. Did not reproduce their original training/within-domain test because their original Test is missing.
 - 🟢 **E03** - Record concrete reproduction gaps and assumptions (seed, split, schema, versions).
-- 🟡 **E04** - Write reports/bonus_audit_note.md.
+  - *Evidence:* Missing peer original images, manifest/source hashes, pinned versions, full training code/logs documented.
+- 🟢 **E04** - Write reports/bonus_audit_note.md.
+  - *Evidence:* [Executed peer audit](../reports/bonus_audit_note.md) with exact results and limitations.
 - 🟢 **E05** - Write a model card for own chosen model: intended use and data.
 - 🟢 **E06** - Include metrics, latency, size and generalization limitations in model card.
 - 🟢 **E07** - Include ethics/privacy and synthetic-to-real gap in model card.
-- 🔴 **E08** - Submit reports/model_card.md and explain audit findings.
+  - *Evidence:* [Our model card](../reports/model_card.md), updated with real Task 5D ONNX Test parity.
+- 🟡 **E08** - Submit reports/model_card.md and explain audit findings.
+  - 🟡 **Difference:** Both artifacts are committed and packaged for review, but live defense and instructor acknowledgment are not evidenced.
 
 ## 10 | Dataset Exchange and New Classmate Fine-Tuning
 *REPORTED VERBAL INSTRUCTION: scope not confirmed in writing*  |  14 items: 🟢 1 / 🟡 0 / 🔴 13
@@ -298,8 +313,8 @@
 - 🟢 **S05** - Make README and master map link GitHub, dataset and heavy checkpoints.
   - *Evidence / note:* docs/MASTER_PROJECT_MAP.md and Drive START_HERE index.
 - 🟢 **S06** - Provide Task 5A final ZIP + weights in Google Drive.
-- 🔴 **S07** - Create verified Week 7/Week 8 Git tags.
-  - *Evidence / note:* Not created: requires identifying historical commits and tag write capability.
+- 🟢 **S07** - Create verified Week 7/Week 8 Git tags.
+  - *Evidence:* [lab06-week7-verified](https://github.com/ID9999999999999/DL-Computer-vision/releases/tag/lab06-week7-verified) and [lab06-week8-verified](https://github.com/ID9999999999999/DL-Computer-vision/releases/tag/lab06-week8-verified), both annotated on original October 25 commit `d004cb9`. Both phases were archived together in one original commit; **not** two contemporaneous weekly commits. [Successful audit action](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42533227071).
 - 🟡 **S08** - Confirm that each deliverable matches exact teacher folder paths/names.
   - 🟡 **Difference:** Most compatibility paths and reports were added; physical weights remain in Drive by design, and some original script paths differ.
 - 🟡 **S09** - Prepare a clean final hand-in bundle once teacher clarifies exchange scope.
@@ -315,7 +330,7 @@
 
 1. Finish reciprocal peer test: our model on classmate independent Dataset B; optionally obtain original Dataset B images and confirm whether adaptation is actually required.
 2. Run the new Dataset B experiment only after verifying its labels, split, source overlap and permissions.
-3. Create historical Git tags only after checking actual original commits (current connector cannot create tag refs).
+3. Week 7/Week 8 tags were created and verified on the same original 25 October commit; do not claim there were separate historical week-specific commits.
 4. Verify the instructor presentation, questions and official hand-in/acceptance.
 5. Treat Tasks 5B-5E as optional bonuses unless the instructor explicitly assigns them.
 
@@ -329,7 +344,15 @@
 - Task 3: newly authored exact-name training launcher; original YOLO checkpoints remain 224/16/15/4, and no 640-pixel training is claimed.
 - Task 4: direct-from-results.json generator and four-model comparison now generated; no historical result values changed.
 - Optional Task 5B: 17 validation-only threshold points, CSV and precision–recall chart. Candidate threshold 0.10 is exploratory; historical 0.5 unchanged.
-- Optional Task 5E: model card finished; peer audit note prepared but full README-only rerun still unverified.
+- Optional Task 5E: own model card complete; unchanged peer inference README rerun executed on our Test, while peer's original training/holdout remains unavailable.
 - Submission: new staging ZIP and evidence map, not official submission.
 - Peer exchange: 270-image test of the classmate checkpoint on our data completed; no peer Dataset B or reciprocal result received.
 - Task 5C and 5D remain optional and not performed.
+## Final evidence-audit update: 9 November 2026 (after Tasks 5C, 5D, 5E and tagging)
+
+- Recalculated directly from the **152 individual checklist markers**: **100 green, 25 yellow, 27 red**. The initial 8-Nov and early 9-Nov snapshots remain archived.
+- Task 5C: **7 green / 1 yellow**, with no claimed improvement from glare augmentation and one transparent protocol difference.
+- Task 5D: **7 green**, including actual 270-image PyTorch/ONNX Test parity and 20+100 CPU forward benchmark.
+- Task 5E: **5 green / 3 yellow**, peer original predict.py executed on our data, but training/holdout, permission scope and defense are still unverified.
+- Week 7/8 tags: verified on the same Oct 25 combined-experiment commit, created as evidence labels in November, not backdated.
+- Remaining major dependencies: classmate Dataset B reciprocal evaluation, original Task 2-4 training-settings deviations and potential teacher-requested reruns, actual defense/official submission and acceptance.

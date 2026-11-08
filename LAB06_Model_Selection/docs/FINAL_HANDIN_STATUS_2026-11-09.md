@@ -31,6 +31,11 @@ Show the four-slide presentation and GitHub branch to the instructor, link the D
 
 ## Current 152-point audit — 9 November 2026
 
-- [Updated Markdown checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md) — verified **85 green / 22 yellow / 45 red**, counting optional bonus tasks.
+- [Updated Markdown checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md) — verified **100 green / 25 yellow / 27 red**, counting optional bonus tasks.
 - [Updated ten-page PDF in Drive](https://drive.google.com/file/d/1WcQMktdHFhZoAA6aFcGUDLVGKWnFhD60/view); [Markdown copy in Drive](https://drive.google.com/file/d/1QVYsMvIponyR7Tel9B8dKKsrSjkY14ey/view). The 8 Nov snapshot remains intact.
 - [Full zipped submission REVIEW package including FOUR ORIGINAL CHECKPOINTS (SHA-256 verified), the Task 5A checkpoint package, Word memo, four slides, experiment evidence and scripts](https://drive.google.com/file/d/1l6LKs3tCjIoetjxnl5uklINYCaLteAO0/view). **Prepared for review, NOT submitted or accepted.**
+
+
+## 9 November final verification addendum
+
+The **152-item checklist is now 100 green / 25 yellow / 27 red**, recounted from individual markers; the earlier 85/22/45 statistics are superseded. Both Week 7/Week 8 Git tags are **created and verified** on the same authentic October 25 experiment commit; see [TAGGING](TAGGING.md). Tasks 5D ONNX native-vs-exported accuracy parity and CPU benchmark have been **executed on 270 original Test images**; the unchanged peer inference README script was run for Task 5E, but the peer's original training/holdout and reciprocal Dataset B test remain unavailable. No teacher acceptance is implied.

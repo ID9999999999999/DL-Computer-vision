@@ -65,7 +65,7 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 
 ## Current 152-point audit — 9 November 2026
 
-- [Updated Markdown checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md) — verified **85 green / 22 yellow / 45 red**, counting optional bonus tasks.
+- [Updated Markdown checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md) — verified **100 green / 25 yellow / 27 red**, counting optional bonus tasks.
 - [Updated ten-page PDF in Drive](https://drive.google.com/file/d/1WcQMktdHFhZoAA6aFcGUDLVGKWnFhD60/view); [Markdown copy in Drive](https://drive.google.com/file/d/1QVYsMvIponyR7Tel9B8dKKsrSjkY14ey/view). The 8 Nov snapshot remains intact.
 - [Full zipped submission REVIEW package including FOUR ORIGINAL CHECKPOINTS (SHA-256 verified), the Task 5A checkpoint package, Word memo, four slides, experiment evidence and scripts](https://drive.google.com/file/d/1l6LKs3tCjIoetjxnl5uklINYCaLteAO0/view). **Prepared for review, NOT submitted or accepted.**
 
@@ -86,3 +86,11 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 ## Task 5E — literal peer code executed
 
 [Verified unchanged classmate `predict.py` execution logs/CSV](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view) on our original 270-image Test: **211/270**, 59 false alarms, no false accepts; 0 prediction differences against older adapter. This is a README inference reproduction on our data, **not the peer's own original test/training reproduction**. The reverse evaluation of our model on the peer's Dataset B is still pending; [final audit](../reports/bonus_audit_note.md).
+
+
+## Final verified 9-November checklist and Git tags
+
+- [Updated 152-item checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md): **100 green / 25 yellow / 27 red**, recounted from the individual status markers after the 5C, 5D and 5E experiments.
+- [Verified historical evidence tag record](TAGGING.md) — both `lab06-week7-verified` and `lab06-week8-verified` reference the **same original 25 October commit**, as the two phases were first uploaded together.
+- [Task 5D addon results row](../results/task5d_deployment_addon.json); actual ONNX/Test evidence in [private Drive ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view).
+- [Task 5E original peer README execution audit](../reports/bonus_audit_note.md); peer Dataset B reverse evaluation is still pending.

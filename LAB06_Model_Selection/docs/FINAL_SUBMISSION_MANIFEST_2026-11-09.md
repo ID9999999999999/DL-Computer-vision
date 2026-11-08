@@ -40,3 +40,12 @@ Do not alter raw image datasets, old checkpoints, original measured metrics or e
 - **Task 5D technically complete:** ONNX and original PT both **267/270, macro-F1 0.9889, accuracy drop 0** on original private, SHA-verified Test. Paired same-host forward-only CPU mean **6.104 vs 2.451 ms**, 20 warm-ups/100 measurements. [Full ONNX and reproducibility evidence ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view). [Measured report](../reports/bonus_deployment_memo.md).
 - **Task 5E README inference executed:** classmate's unmodified original script on our Test produced **211/270** and matched earlier adapter results for all 270 images. [Real logs/CSV and audit ZIP](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view). [Audit memo](../reports/bonus_audit_note.md). **The classmate's original held-out images and training script remain absent**, so full original-experiment reproduction is not claimed.
 - Still pending: peer reverse-side Test of our checkpoint on Dataset B, course-protocol differences, original executed Colab training notebook, historical tags and teacher submission/defense. **Staging is not official instructor submission.**
+
+
+## 9 Nov final evidence / tags / checklist
+
+- [Verified 152-item checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md): **100 green, 25 yellow, 27 red**, recomputed from the item lines.
+- [Historical Week 7 and Week 8 verified tags](TAGGING.md) point to the **same original October 25 commit**, since original phase artifacts were uploaded together.
+- [Task 5D deployment addon JSON](../results/task5d_deployment_addon.json), [real-Test ONNX evidence ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view).
+- [Task 5E literal peer inference audit](../reports/bonus_audit_note.md) on our 270-image Test, [raw evidence](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view). Original peer holdout unavailable.
+- Official submission, defense and teacher acceptance remain unverified; do not present staged files as accepted.
