@@ -6,7 +6,7 @@ Seed **2473986**. Experiment completed in Colab on 25 October 2026.
 
 1. Read [the final report](results/Final_Report.md).
 2. Open [Review_Results.ipynb](Review_Results.ipynb) for executed verification and plots. It uses saved outputs and requires no GPU, images or model downloads.
-3. Present [Lab06_Presentation.pptx](presentation/Lab06_Presentation.pptx). The first eight slides take about five minutes. Three appendix slides support questions. Speaker notes contain the English script.
+3. Present [Lab06_Presentation_4slides.pptx](presentation/Lab06_Presentation_4slides.pptx) (four-slide instructor format) with the [current 5-minute script](presentation/Final_4_Slide_Script.md). The longer deck remains an archive. Speaker notes contain the English script.
 4. Read [Model_Selection_Memo.md](docs/Model_Selection_Memo.md) for the pre-run choices and architecture references.
 
 ## Reproduce the experiment
@@ -67,4 +67,16 @@ This is a genuine separate training run using the original MobileNetV2 frozen ch
 
 Open [LAB06_MASTER_2026-11-08](https://drive.google.com/drive/folders/105nt1H9wJsG-32jFrBHRqTDyB01USqta) first. It contains numbered folders 00–09, a `START_HERE_MASTER_INDEX.md`, original teacher instructions (copies), the curated four-slide deck, completed Task 5A package and an official-submission staging folder. Original datasets, models and past records were not moved or deleted.
 
-See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete map. Dataset exchange with a classmate, GitHub tags, oral defense and final instructor acceptance are still pending.
+See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete map. **Peer model exchange and testing on our held-out Dataset A have been completed** (9 Nov 2026); the classmate's independent Dataset B images/our-model-on-B results are still pending. Git tags, oral defense, and final instructor acceptance remain unverified. See [cross-dataset report](reports/cross_dataset_evaluation_2026-11-09.md).
+
+
+## Submission-ready navigation (9 November 2026)
+
+- [Submission manifest and honest open items](docs/FINAL_SUBMISSION_MANIFEST_2026-11-09.md)
+- [Four-slide speaking script](presentation/Final_4_Slide_Script.md)
+- [Model card of selected YOLOv8n classifier](reports/model_card.md)
+- [Our model package for peer](https://drive.google.com/file/d/1z6TeWfS5vy6tc0PDvZFl_3F2CIyvzINk/view)
+- [Peer model tested on our Test, complete evidence](https://drive.google.com/file/d/1CsRe-t3hDA8IH1ar4pQs8-zKg16JtKTF/view)
+- [Final submission Drive staging folder](https://drive.google.com/drive/folders/16ioAY5oTkkspCM5iKLnHtJ3XEbKKb_ml)
+
+**Compliance note:** the Tasks 2–4 protocol differences are preserved, not corrected by editing history. Tags and teacher submission cannot be claimed completed. The Task 5A notebook is a reproducible workflow, not an uploaded executed Colab notebook.

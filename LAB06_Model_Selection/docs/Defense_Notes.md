@@ -31,4 +31,4 @@ Fifteen epochs are an upper budget, not a guarantee of convergence. The small nu
 
 ## What remains outside this package
 
-The package does not claim that experiments have already run, that the targets have been achieved, that a repository commit exists, or that the five-minute presentation has been delivered. Read your real report before submitting and be able to explain each decision in your own words.
+Historical caveat, now superseded in part: the real model experiments were completed on 25 October 2026 and are recorded in `results/`; Task 5A fine-tuning was completed on 8 November 2026; peer-on-our-test evaluation was completed on 9 November 2026. The four-slide PPTX is prepared, but oral delivery, teacher acceptance, and required Git tags are still not verified. The existing longer speaking script covers the archived longer deck; use `presentation/Final_4_Slide_Script.md` for the current four-slide presentation.
