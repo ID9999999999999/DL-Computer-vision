@@ -27,3 +27,10 @@
 ## Safe submission procedure
 
 Show the four-slide presentation and GitHub branch to the instructor, link the Drive master, upload Task 1 Word file where required, and explicitly call out deviations/remaining pending peer test. Record the actual teacher acknowledgment once it occurs; do not mark it complete in advance.
+
+
+## Current 152-point audit — 9 November 2026
+
+- [Updated Markdown checklist](FULL_CHECKLIST_CURRENT_2026-11-09.md) — verified **85 green / 22 yellow / 45 red**, counting optional bonus tasks.
+- [Updated ten-page PDF in Drive](https://drive.google.com/file/d/1WcQMktdHFhZoAA6aFcGUDLVGKWnFhD60/view); [Markdown copy in Drive](https://drive.google.com/file/d/1QVYsMvIponyR7Tel9B8dKKsrSjkY14ey/view). The 8 Nov snapshot remains intact.
+- [Full zipped submission REVIEW package including FOUR ORIGINAL CHECKPOINTS (SHA-256 verified), the Task 5A checkpoint package, Word memo, four slides, experiment evidence and scripts](https://drive.google.com/file/d/1l6LKs3tCjIoetjxnl5uklINYCaLteAO0/view). **Prepared for review, NOT submitted or accepted.**

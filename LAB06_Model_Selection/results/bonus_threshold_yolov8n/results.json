@@ -38,5 +38,7 @@
     "f1_bad": 1,
     "cost_5x_FN_plus_1x_FP": 0
   },
-  "provenance": "Computed from existing validation predictions only. Original test metrics/model choice unchanged. Do not treat proposed threshold as deployed or real-world approved."
+  "provenance": "Computed from existing validation predictions only. Original test metrics/model choice unchanged. Do not treat proposed threshold as deployed or real-world approved.",
+  "chosen_threshold": 0.1,
+  "chosen_threshold_status": "exploratory validation-only choice, not the historical model's deployed/reference threshold"
 }
