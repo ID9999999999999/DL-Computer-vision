@@ -83,3 +83,8 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 ## Task 5D (9 Nov 2026) — partial real execution
 
 [Real ONNX artifact and CPU benchmark ZIP](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view); original/checkpoint integrity verified; forward-only CPU mean 8.651 ms PyTorch vs 2.965 ms ONNX; ONNX 5.501 MiB vs PT 2.826 MiB. Held-out private Test accuracy before/after export **not yet measured**; see [deployment report](../reports/bonus_deployment_memo.md).
+
+
+## Task 5E reproducibility status (9 Nov 2026)
+
+Our model exchange ZIP was actually executed in a clean GitHub Actions Linux/Python environment on **4 synthetic demonstration images**, with `predict.py` writing 4 CSV rows and exit code 0; logs and output ZIP: https://drive.google.com/file/d/1EF69RHSmcHTv20Ym_JW7U4EbzmFF1BGS/view. **Not a real accuracy evaluation and not a peer-model README reproduction**. The classmate's unchanged zip is available in the original conversation; permission for public redistribution and the classmate's own original Test images have not been verified. The earlier peer 211/270 metric used a compatibility adapter. See [Task 5E audit](../reports/bonus_audit_note.md) and [model card](../reports/model_card.md).

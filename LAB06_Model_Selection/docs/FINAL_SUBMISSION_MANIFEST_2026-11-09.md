@@ -42,3 +42,10 @@ Do not alter raw image datasets, old checkpoints, original measured metrics or e
 - [Measured memo](../reports/bonus_deployment_memo.md), [requirement audit](TASK5D_ONNX_2026-11-09_AUDIT.md).
 - Source 2.826 MiB, 8.651 ms forward-only; ONNX 5.501 MiB, 2.965 ms. ONNX parity checked on synthetic tensors only.
 - **Still pending:** held-out Test accuracy and actual drop on 270 original private images.
+
+
+## Task 5E audit evidence — 9 November 2026
+
+- [Peer reproducibility audit](../reports/bonus_audit_note.md), [own YOLOv8n model card](../reports/model_card.md), [requirement-by-requirement Task 5E status](TASK5E_2026-11-09_AUDIT.md).
+- [Actually executed our-model README reproducibility workflow](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42516928052) and [raw verified CI artifact](https://drive.google.com/file/d/1EF69RHSmcHTv20Ym_JW7U4EbzmFF1BGS/view); no classmate data publicly uploaded.
+- **Peer's original README command was not executed end-to-end on its original held-out data.** Own-package smoke test must not be substituted for that requirement. Teacher sign-off remains unverified.

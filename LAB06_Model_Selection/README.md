@@ -120,3 +120,10 @@ See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete ma
 - 12 synthetic tensor pairs showed 0 classification disagreements. **Not a held-out Test accuracy result.**
 - [Detailed deployment report](reports/bonus_deployment_memo.md) | [Task 5D requirement audit](docs/TASK5D_ONNX_2026-11-09_AUDIT.md).
 - **Task 5D remains partial:** complete 270-image Test accuracy comparison still pending; Dataset A stays private.
+
+
+## Task 5E reproducibility evidence — 9 November 2026
+
+- [Successful clean-environment README-style test of OUR sharing package](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42516928052) and [raw CSV + summary + stdout evidence](https://drive.google.com/file/d/1EF69RHSmcHTv20Ym_JW7U4EbzmFF1BGS/view): 4 synthetic images, 4 output CSV rows, exit code 0 and verified source checkpoint SHA.
+- [Updated peer audit report](reports/bonus_audit_note.md) and [updated own model card](reports/model_card.md).
+- **Peer model literal README reproducibility remains not executed**. Previous peer 211/270 result was produced via a PyTorch compatibility adapter on our Dataset A (not via original peer CLI), and the peer's original Test images are missing. See [Task 5E audit](docs/TASK5E_2026-11-09_AUDIT.md).
