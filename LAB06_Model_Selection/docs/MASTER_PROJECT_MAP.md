@@ -94,3 +94,12 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 - [Verified historical evidence tag record](TAGGING.md) — both `lab06-week7-verified` and `lab06-week8-verified` reference the **same original 25 October commit**, as the two phases were first uploaded together.
 - [Task 5D addon results row](../results/task5d_deployment_addon.json); actual ONNX/Test evidence in [private Drive ZIP](https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view).
 - [Task 5E original peer README execution audit](../reports/bonus_audit_note.md); peer Dataset B reverse evaluation is still pending.
+
+
+## Final consolidated academic review archive — 9 November 2026
+
+**Canonical, checksum-verified 78,526,618-byte package:** [Lab06_COMPLETE_SUBMISSION_REVIEW_FINAL_2026-11-09.zip](https://drive.google.com/file/d/1ZAp0JdWW_DruPzZrG9ll96Z-Idjr1-4D/view). ZIP SHA-256: `47962e1536ff6ce5fad1bf1074cb9dcfea6612b5ce674b7fca3155fef0069dd1`. It contains all four original model checkpoints, the executed Task 5A, 5C, 5D and 5E evidence packages, Task 1 Word memo, four-slide presentation, latest source/results snapshot and a 24-file SHA-256 manifest. The nested source snapshot is from commit `b5e2f5c2937dcd3fee249b5eaa13a78931443b0f`; later link updates to this file are navigational only.
+
+**Final 152-point checklist:** [PDF](https://drive.google.com/file/d/1WcQMktdHFhZoAA6aFcGUDLVGKWnFhD60/view), [Markdown](https://drive.google.com/file/d/1QVYsMvIponyR7Tel9B8dKKsrSjkY14ey/view): **100 completed / 25 partial / 27 open**. Full backup in the ZIP. Original Dataset A images (about 399 MB) are referenced but not bundled.
+
+**Open dependencies:** classmate's independent Dataset B reciprocal evaluation, original training settings (15/16/4/224 vs later 50/32/5/640), original executed Colab training notebook verification, and the instructor's oral presentation / acknowledgment. Two verified Week7/8 tags point to one authentic Oct 25 commit; no backdating. **Archive creation is not formal submission or acceptance.**
