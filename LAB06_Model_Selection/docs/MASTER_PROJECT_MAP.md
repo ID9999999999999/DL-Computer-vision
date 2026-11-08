@@ -52,3 +52,11 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 - Derived comparison CSV in `results/comparison_from_json.csv` uses only four saved standardized results.json sources.
 - Optional Task 5B validation-only threshold sweep, model card, and partial peer audit added.
 - [Final hand-in readiness and blockers](FINAL_HANDIN_STATUS_2026-11-09.md) is the current working status.
+
+## Additional submission preparation (9 November 2026)
+
+- [Staged final ZIP (9 files)](https://drive.google.com/file/d/1dvrnRlEyXgiUDFyVZraOaWU-iyNSlX3o/view): four-slide PPTX, Task 1 Word memo, figures, peer evaluation, 8 Nov checklist snapshot, START_HERE, checksums.
+- [Task 1 Word memo in Drive](https://drive.google.com/file/d/1XmGj5Tse1OaRENXPBHbm1G0jrAvIjULp/view) is **prepared but not proven submitted**.
+- [Task 5B threshold analysis](../reports/bonus_threshold_memo.md) computed entirely from the existing 270 validation probabilities: 0.50 -> 268/270 correct; validation F1 optimum 0.10 -> 270/270 correct. **No test tuning or changed historic metrics**.
+- [Model card](../reports/model_card.md), [current 4-slide script](../presentation/Final_4_Slide_Script.md), and [submission manifest](FINAL_SUBMISSION_MANIFEST_2026-11-09.md) are now available.
+- Historical Git tags, original executed Colab notebook, teacher sign-off and dataset B reverse evaluation remain unverified. Bonus 5B implementation is not evidence of instructor acceptance.
