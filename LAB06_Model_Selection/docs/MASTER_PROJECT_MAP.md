@@ -78,3 +78,8 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 - Control: **268/270**, macro-F1 0.9926; train-only stronger glare: **267/270**, macro-F1 0.9889. Glare recall both 26/28, augmentation no benefit versus matched continuation, and occlusion declined.
 - Task 5C formal protocol exact-retrain criterion remains **partial** because this is CPU/PyTorch continued training from a trained checkpoint, not an Ultralytics retrain from ImageNet and not 50/32/5/640.
 - 8 Nov 152-item master checklist is an historical snapshot; later work documented as an addendum, not retroactively inserted into original results.
+
+
+## Task 5D (9 Nov 2026) — partial real execution
+
+[Real ONNX artifact and CPU benchmark ZIP](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view); original/checkpoint integrity verified; forward-only CPU mean 8.651 ms PyTorch vs 2.965 ms ONNX; ONNX 5.501 MiB vs PT 2.826 MiB. Held-out private Test accuracy before/after export **not yet measured**; see [deployment report](../reports/bonus_deployment_memo.md).

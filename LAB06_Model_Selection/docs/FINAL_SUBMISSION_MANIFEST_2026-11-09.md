@@ -34,3 +34,11 @@ Do not alter raw image datasets, old checkpoints, original measured metrics or e
 - [Executed augmentation report](../reports/bonus_augmentation.md), [class/defect deltas](../results/bonus_augmentation_per_defect_delta.csv), [full reproducibility ZIP](https://drive.google.com/file/d/1HyxDmT2yJ7xX_wN4R76b0F8jREVrqfjM/view).
 - Two new trained checkpoints and 1,800 original image SHA-256 integrity checks included. Matched no-overlay control accuracy 99.26%; glare augmentation 98.89%; glare recall equal 26/28. **No improvement** attributable to augmentation.
 - Teacher protocol difference remains openly labeled; this is controlled checkpoint continuation, not fresh ImageNet-start Ultralytics training.
+
+
+## Task 5D export/CPU progress (9 November 2026)
+
+- [Actual ONNX+raw CPU benchmark ZIP in Drive](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view); [successful CI run](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42515991510).
+- [Measured memo](../reports/bonus_deployment_memo.md), [requirement audit](TASK5D_ONNX_2026-11-09_AUDIT.md).
+- Source 2.826 MiB, 8.651 ms forward-only; ONNX 5.501 MiB, 2.965 ms. ONNX parity checked on synthetic tensors only.
+- **Still pending:** held-out Test accuracy and actual drop on 270 original private images.

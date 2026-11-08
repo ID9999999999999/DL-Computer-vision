@@ -111,3 +111,12 @@ See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete ma
 - [Task 5C technical report](reports/bonus_augmentation.md) | [new comparison rows](results/bonus_augmentation_comparison.csv) | [per-defect deltas](results/bonus_augmentation_per_defect_delta.csv) | [training and verification scripts](scripts/task5c_glare_train.py).
 - [Complete original checkpoint + two new trained state_dicts, plots, SHA-verified manifest, histories and reproducibility package](https://drive.google.com/file/d/1HyxDmT2yJ7xX_wN4R76b0F8jREVrqfjM/view)
 - [Requirement-status addendum](docs/TASK5C_2026-11-09_AUDIT.md).
+
+
+## Task 5D real export and forward CPU results — 9 November 2026
+
+- [Executed ONNX model and raw CPU JSON ZIP on Drive](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view) | [Successful Actions run](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42515991510).
+- Checkpoint SHA verified; ONNX graph checked. Source 2.826 MiB / 8.651 ms, ONNX 5.501 MiB / 2.965 ms. Measurements are forward-only on one 4-thread CI CPU with 20 warm-ups and 100 timed calls.
+- 12 synthetic tensor pairs showed 0 classification disagreements. **Not a held-out Test accuracy result.**
+- [Detailed deployment report](reports/bonus_deployment_memo.md) | [Task 5D requirement audit](docs/TASK5D_ONNX_2026-11-09_AUDIT.md).
+- **Task 5D remains partial:** complete 270-image Test accuracy comparison still pending; Dataset A stays private.

@@ -1,40 +1,32 @@
-# Task 5D — Export & CPU benchmark: execution status
-**Prepared 9 November 2026.** **NOT YET EXECUTED** in the current environment.
+# Task 5D — ONNX export and CPU benchmark
+**9 November 2026. Status: ONNX export and forward-only CPU benchmark EXECUTED; original held-out Test accuracy parity pending.**
 
-## Scope and actual progress
-- Model to export: our **original YOLOv8n-cls** (not the classmate checkpoint, and not the Task 5C modified weights).
-- Original saved artifact: [Google Drive original best.pt](https://drive.google.com/file/d/1htkgf8oiox9QT-s-JWnvxJxRKJTpPNiL/view), documented size **2.83 MiB**.
-- Earlier native benchmark: **26.97 ms/image**, test accuracy **267/270 (98.89%)**. **These are historical values, not Task 5D measurements.**
-- New ONNX export artifact: **not yet generated**.
-- New CPU 20-warmup/100-run before/after measurements: **not yet performed**.
-- ONNX accuracy, size, latency and accuracy drop: **unknown** until execution.
-- This entry is a reproducible experiment implementation and truthful tracking record, **not a completed benchmark**.
+## Real execution and integrity
+- Original YOLOv8n-cls checkpoint SHA-256: c820e22debf8d3fe3c3ca41f7c10f55d9e7db0b2246fb90c92a8548a70a514f7.
+- Exported ONNX SHA-256: cf8f353758ab9b6562758537482b6ae4f898e3450cd41071a56b9133298dbf45.
+- [Successful GitHub Actions run and logs](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42515991510).
+- [ONNX model and raw benchmark JSON in a ZIP on Google Drive](https://drive.google.com/file/d/1xdHClyFQhvANfbYA2fs6r365yLawbvgR/view).
+- [Automated source script](../scripts/task5d_ci_export_smoke.py).
 
-## Exact run
-Open [Task5D_ONNX_Export_Benchmark.ipynb](../Task5D_ONNX_Export_Benchmark.ipynb) in Colab, run all cells with the existing Google Drive mount, and retain output directory
-\`MyDrive/Lab06_results/Task5D_2026-11-09/\`.
+## Measured paired CPU results
+| Measurement | Original PyTorch | ONNX |
+|---|---:|---:|
+| Bytes | 2,963,154 | 5,767,752 |
+| MiB | 2.826 | 5.501 |
+| Mean forward-only ms | 8.651 | 2.965 |
+| Warm-up calls | 20 | 20 |
+| Timed calls | 100 | 100 |
+| Threads | 4 | 4 |
 
-Alternatively install \`ultralytics onnx onnxruntime\` and run:
+ONNX was approximately **2.92x faster** for forward-only CPU inference on the same cloud machine, but is approximately **1.95x bigger** on disk. The export passed ONNX checker. Twelve identical synthetic 1x3x224x224 tensors had zero predicted-class disagreements and maximum absolute probability difference 3.5763e-7. These synthetic-tensor results are **not a document-quality accuracy metric**.
 
-\`\`\`bash
-python scripts/task5d_export_onnx_benchmark.py \
-  --checkpoint /path/to/Lab06_results/yolov8n/weights/best.pt \
-  --test /path/to/Lab06_results/yolo_data/test \
-  --manifest /path/to/Lab06_results/manifest.json \
-  --out /path/to/NEW_Task5D_results
-\`\`\`
+## What is still pending
+- The original 270-image held-out Test is private and was intentionally not uploaded or shared with the cloud CI runner.
+- **Before/after Test accuracy, Macro-F1, confusion matrices, and measured accuracy drop have not been produced. Do not report a zero drop.**
+- Historical source accuracy was 267/270 = 98.89%; this is from earlier tests, not a paired ONNX validation.
+- Existing [full-test Colab notebook](../Task5D_ONNX_Export_Benchmark.ipynb) and [paired Test benchmark](../scripts/task5d_export_onnx_benchmark.py) use the original private Test with a fixed 0.5 threshold. They have not been executed on the 270 images as part of Task 5D.
+- Benchmark is forward-only excluding disk IO and preprocessing and cannot be directly compared with the previous 26.97 ms pipeline timing. GitHub Actions CPU is not a real edge device.
+- No INT8/FP16 quantization. Such quantization can change confidence and decisions; it would require training/validation calibration and a fresh accuracy check.
 
-## Quality gates implemented
-1. Export from a staged copy (original checkpoint unaffected).
-2. ONNX checker validates structure; source/export SHA-256 and size recorded.
-3. Verify 270 original held-out test images and 135 good / 135 bad; verify SHA-256 if manifest supplied.
-4. Evaluate identical 224x224 preprocessed tensors before/after, fixed P(bad)>=0.50.
-5. Compare accuracy, macro-F1, per-class F1 and prediction disagreements; record probability differences.
-6. Measure **20 warm-up + 100 timed** CPU **forward-only** calls on each backend using ten preprocessed cached images, four threads.
-7. Auto-generate JSON, CSV prediction table, speed/size table and English memo.
-8. Check whether native result reproduces original 267/270. Flag mismatches without hiding them.
-
-**Limitations:** The benchmark excludes preprocessing/file IO; thus its latencies **cannot be directly compared** with archived 26.97ms end-to-end-preprocessed CPU latency. It is not a real edge-device benchmark. No quantization has been conducted, and quantization risk is discussed, not measured.
-
-## Instructor compliance
-Still pending: **actual ONNX bytes**, numeric export-vs-source benchmark, accuracy drop, and measured deployment conclusion. Do not mark Task 5D complete until these are produced and independently verified.
+## Deployment decision
+ONNX Runtime is a plausible CPU-server candidate because forward-only CPU latency was lower in this paired experiment, but the larger FP32 ONNX storage and unverified held-out accuracy preclude claiming full deployment readiness or edge suitability. **Task 5D remains partially completed pending original Test accuracy parity.**
