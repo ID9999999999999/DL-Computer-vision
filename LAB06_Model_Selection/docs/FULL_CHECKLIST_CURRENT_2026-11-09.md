@@ -314,7 +314,7 @@
   - *Evidence / note:* docs/MASTER_PROJECT_MAP.md and Drive START_HERE index.
 - 🟢 **S06** - Provide Task 5A final ZIP + weights in Google Drive.
 - 🟢 **S07** - Create verified Week 7/Week 8 Git tags.
-  - *Evidence:* [lab06-week7-verified](https://github.com/ID9999999999999/DL-Computer-vision/releases/tag/lab06-week7-verified) and [lab06-week8-verified](https://github.com/ID9999999999999/DL-Computer-vision/releases/tag/lab06-week8-verified), both annotated on original October 25 commit `d004cb9`. Both phases were archived together in one original commit; **not** two contemporaneous weekly commits. [Successful audit action](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42533227071).
+  - *Evidence:* [lab06-week7-verified](https://github.com/ID9999999999999/DL-Computer-vision/tree/lab06-week7-verified) and [lab06-week8-verified](https://github.com/ID9999999999999/DL-Computer-vision/tree/lab06-week8-verified), both annotated on original October 25 commit `d004cb9`. Both phases were archived together in one original commit; **not** two contemporaneous weekly commits. [Successful audit action](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42533227071).
 - 🟡 **S08** - Confirm that each deliverable matches exact teacher folder paths/names.
   - 🟡 **Difference:** Most compatibility paths and reports were added; physical weights remain in Drive by design, and some original script paths differ.
 - 🟡 **S09** - Prepare a clean final hand-in bundle once teacher clarifies exchange scope.
@@ -347,7 +347,7 @@
 - Optional Task 5E: own model card complete; unchanged peer inference README rerun executed on our Test, while peer's original training/holdout remains unavailable.
 - Submission: new staging ZIP and evidence map, not official submission.
 - Peer exchange: 270-image test of the classmate checkpoint on our data completed; no peer Dataset B or reciprocal result received.
-- Task 5C and 5D remain optional and not performed.
+- Tasks 5C and 5D are optional bonuses and were subsequently executed with documented limitations.
 ## Final evidence-audit update: 9 November 2026 (after Tasks 5C, 5D, 5E and tagging)
 
 - Recalculated directly from the **152 individual checklist markers**: **100 green, 25 yellow, 27 red**. The initial 8-Nov and early 9-Nov snapshots remain archived.

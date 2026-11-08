@@ -30,3 +30,5 @@ jobs:
           path: /tmp/lab06/
           if-no-files-found: error
           retention-days: 14
+
+# Source snapshot refreshed after final checklist QA and tag-link verification.

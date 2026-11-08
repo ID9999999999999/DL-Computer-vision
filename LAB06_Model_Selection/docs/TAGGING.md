@@ -7,8 +7,8 @@ This commit contains YOLOv8n-cls and YOLOv8s-cls evaluation records, EfficientNe
 
 The tags have been created as **annotated evidence labels**, both pointing to this one original experiment commit:
 
-- [lab06-week7-verified](https://github.com/ID9999999999999/DL-Computer-vision/releases/tag/lab06-week7-verified)
-- [lab06-week8-verified](https://github.com/ID9999999999999/DL-Computer-vision/releases/tag/lab06-week8-verified)
+- [lab06-week7-verified](https://github.com/ID9999999999999/DL-Computer-vision/tree/lab06-week7-verified)
+- [lab06-week8-verified](https://github.com/ID9999999999999/DL-Computer-vision/tree/lab06-week8-verified)
 
 [GitHub Actions creation / verified ref run](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42533227071) reported both `[new tag]` actions and validated exact target SHAs. Tags were **not** forced, moved or backdated. The `main` branch was not altered.
 
