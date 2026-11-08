@@ -43,3 +43,12 @@ All originals preserved. Historical Task 2–4 protocol differences remain: actu
 - Complete evidence (predictions per image, scores, figures, reproducibility scripts): https://drive.google.com/file/d/1CsRe-t3hDA8IH1ar4pQs8-zKg16JtKTF/view
 - **Next pending dependency:** classmate runs our model against an independent labeled Test of their data (or supplies that Test).
 - Checklist counts cited above are an **8 Nov snapshot**, not a revised 9 Nov audit.
+
+
+## 9 November submission-readiness update
+
+- Task 1 Word-formatted memo now stored under Drive `02_TASK_1_MODEL_SELECTION` (not proof of historical hand-in).
+- New `scripts/train_yolo_quality.py` and `scripts/collect_results.py` with synthetic utility tests; not a rerun of the original models.
+- Derived comparison CSV in `results/comparison_from_json.csv` uses only four saved standardized results.json sources.
+- Optional Task 5B validation-only threshold sweep, model card, and partial peer audit added.
+- [Final hand-in readiness and blockers](FINAL_HANDIN_STATUS_2026-11-09.md) is the current working status.

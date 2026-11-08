@@ -84,3 +84,14 @@ See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete ma
 ## Optional Task 5B — completed validation-only sensitivity analysis (9 November 2026)
 
 [Threshold sweep and cost memo](reports/bonus_threshold_memo.md) | [precision–recall curve](results/bonus_threshold_pr_curve.svg) | [sweep CSV](results/bonus_threshold_sweep_val.csv). On **validation only**, P(bad) threshold 0.10 achieved 270/270 compared with 268/270 at 0.50. This **does not change** historical 0.50-threshold test evidence and is not a verified deployment setting.
+
+
+## 9 November 2026 — audited submission additions
+
+- [Submission readiness with unresolved blockers](docs/FINAL_HANDIN_STATUS_2026-11-09.md)
+- [Model card](reports/model_card.md); [partial peer audit](reports/bonus_audit_note.md)
+- [Optional validation-only threshold sweep](reports/bonus_threshold_memo.md) (no test-set threshold tuning; historical threshold remains 0.5)
+- [Four-model CSV regenerated from source results.json](results/comparison_from_json.csv) and [generator](scripts/collect_results.py)
+- [New instructor-named YOLO training launcher](scripts/train_yolo_quality.py) with 50/32/5/640 configuration; no new training claimed
+- [Task 1 Word artifact](https://drive.google.com/file/d/1bbrB9GnlR-xrOtEAjCMAp_h5EUQbSOJC/view) converted from 19 October memo
+- [Peer-on-our-Test evaluation](reports/cross_dataset_evaluation_2026-11-09.md) (opposite direction still pending)
