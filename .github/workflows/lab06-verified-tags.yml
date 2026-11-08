@@ -1,0 +1,55 @@
+name: Lab06 Verify Historical Week 7 and Week 8 Tags
+on:
+  push:
+    branches: [lab06-model-selection-2473986-20261025]
+    paths:
+      - .github/workflows/lab06-verified-tags.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  tag-audited-original-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Assert original October 25 experiment contains both phases
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='d004cb9ef02c159f17b0761ffcfa4afa16efc36b'
+          git cat-file -e "${target}^{commit}"
+          for path in \
+            LAB06_Model_Selection/results/yolov8n/evaluation.json \
+            LAB06_Model_Selection/results/yolov8s/evaluation.json \
+            LAB06_Model_Selection/results/efficientnetb0/evaluation.json \
+            LAB06_Model_Selection/results/comparison.csv \
+            LAB06_Model_Selection/results/Final_Report.md; do
+              git cat-file -e "${target}:${path}" || { echo "MISSING: ${path}"; exit 1; }
+          done
+          echo "Both Week 7 (YOLO) and Week 8 (comparison/decision) archived in same Oct 25 commit."
+      - name: Create distinct immutable annotated tags on that same original commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='d004cb9ef02c159f17b0761ffcfa4afa16efc36b'
+          git config user.name 'Lab06 Evidence Tagger'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for tag in lab06-week7-verified lab06-week8-verified; do
+            if git ls-remote --tags origin "refs/tags/${tag}" | grep -q .; then
+              echo "Tag already exists: ${tag}; refusing to move/overwrite it"
+              git fetch --tags origin
+              existing=$(git rev-list -n 1 "${tag}")
+              test "${existing}" = "${target}" || exit 1
+              continue
+            fi
+            git tag -a "${tag}" "${target}" -m "Evidence label created 2026-11-09 for archived Lab 06 ${tag}: original experiments uploaded together 2026-10-25. Not evidence of distinct weekly commits."
+            git push origin "refs/tags/${tag}"
+          done
+          for tag in lab06-week7-verified lab06-week8-verified; do
+            git fetch --tags origin
+            sha=$(git rev-list -n 1 "${tag}")
+            test "${sha}" = "${target}"
+            echo "VERIFIED TAG ${tag} => ${sha}"
+          done
