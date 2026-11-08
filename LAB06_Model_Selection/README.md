@@ -80,3 +80,7 @@ See [docs/MASTER_PROJECT_MAP.md](docs/MASTER_PROJECT_MAP.md) for the complete ma
 - [Final submission Drive staging folder](https://drive.google.com/drive/folders/16ioAY5oTkkspCM5iKLnHtJ3XEbKKb_ml)
 
 **Compliance note:** the Tasks 2–4 protocol differences are preserved, not corrected by editing history. Tags and teacher submission cannot be claimed completed. The Task 5A notebook is a reproducible workflow, not an uploaded executed Colab notebook.
+
+## Optional Task 5B — completed validation-only sensitivity analysis (9 November 2026)
+
+[Threshold sweep and cost memo](reports/bonus_threshold_memo.md) | [precision–recall curve](results/bonus_threshold_pr_curve.svg) | [sweep CSV](results/bonus_threshold_sweep_val.csv). On **validation only**, P(bad) threshold 0.10 achieved 270/270 compared with 268/270 at 0.50. This **does not change** historical 0.50-threshold test evidence and is not a verified deployment setting.

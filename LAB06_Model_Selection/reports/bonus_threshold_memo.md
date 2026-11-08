@@ -14,5 +14,7 @@ Use recorded `results/yolov8n/predictions.json` **split=val** (n=270; 135 good/1
 A false accept (FN) allows a defective image into the next processing stage; a false reject (FP) asks the user to recapture a usable image. Therefore minimizing F1-related classification errors and minimizing a business cost are not always the same goal. The reported F1-optimal threshold is descriptive and must be validated prospectively on new external data before operational use.
 
 - Full numeric sweep: [threshold_sweep_val.csv](../results/bonus_threshold_sweep_val.csv).
-- Plot: [validation precision/recall vs threshold](../results/bonus_threshold_precision_recall.svg). This is a threshold-based precision/recall trace, not a separately measured deployment benchmark.
+- Plot: [validation precision/recall vs threshold](../results/bonus_threshold_precision_recall.svg), with selected 0.10 marked.
+- [Precision–recall curve](../results/bonus_threshold_pr_curve.svg), marking both default 0.50 and selected 0.10 points.
+- [Machine-readable threshold decision](../results/bonus_threshold_analysis.json). Neither figure is a measured deployment benchmark.
 - **Test results in the historical report remain at threshold 0.50.** We did not use the 270 test labels to choose a new threshold.

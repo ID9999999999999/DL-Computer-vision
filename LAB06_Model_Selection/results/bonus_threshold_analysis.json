@@ -1,0 +1,26 @@
+{
+  "task": "5B",
+  "date": "2026-11-09",
+  "model": "yolov8n",
+  "selection_split": "val",
+  "n_validation": 270,
+  "positive_class": "bad",
+  "original_threshold": 0.5,
+  "chosen_threshold": 0.1,
+  "criterion": "maximizes validation F1; tie prefer closest to 0.5",
+  "baseline": {
+    "tp": 133,
+    "fp": 0,
+    "tn": 135,
+    "fn": 2,
+    "f1": 0.9925373134328358
+  },
+  "selected": {
+    "tp": 135,
+    "fp": 0,
+    "tn": 135,
+    "fn": 0,
+    "f1": 1
+  },
+  "provenance": "results/yolov8n/predictions.json; no test evaluation or training changes; not a retroactive original selection rule"
+}
