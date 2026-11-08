@@ -28,7 +28,7 @@ jobs:
           python -m pip install 'ultralytics>=8.3,<9' 'onnx>=1.15' 'onnxruntime>=1.17' 'gdown>=5'
       - name: Download user's already-shared YOLOv8n model package
         run: |
-          gdown --fuzzy 'https://drive.google.com/file/d/1z6TeWfS5vy6tc0PDvZFl_3F2CIyvzINk/view' -O /tmp/peer_package.zip
+          gdown 'https://drive.google.com/uc?id=1z6TeWfS5vy6tc0PDvZFl_3F2CIyvzINk' -O /tmp/peer_package.zip
           unzip -q /tmp/peer_package.zip -d /tmp/peer_package
           test -f /tmp/peer_package/yolov8n_quality_gate/yolov8n_quality_gate.pt
           sha256sum /tmp/peer_package/yolov8n_quality_gate/yolov8n_quality_gate.pt
