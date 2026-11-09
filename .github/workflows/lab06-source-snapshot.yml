@@ -1,4 +1,4 @@
-name: Lab06 Immutable Submission Source Snapshot
+name: Lab06 Verified GitHub Source Snapshot
 on:
   push:
     branches:
@@ -6,29 +6,62 @@ on:
     paths:
       - .github/workflows/lab06-source-snapshot.yml
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   archive:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Create original-source archive from commit (no dataset or private weights)
+
+      - name: Build archive and verify paths and SHA-256
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/lab06
-          git archive --format=zip --prefix=LAB06_Model_Selection/ HEAD:LAB06_Model_Selection > /tmp/lab06/Lab06_GitHub_Source_Results_2026-11-09.zip
-          git rev-parse HEAD > /tmp/lab06/SOURCE_COMMIT_SHA.txt
-          unzip -t /tmp/lab06/Lab06_GitHub_Source_Results_2026-11-09.zip | tail -1
-          printf 'Source includes project code, reports, checklist, analysis and plots; heavy checkpoints and image dataset remain external.\n' > /tmp/lab06/README.txt
-      - uses: actions/upload-artifact@v4
-        with:
-          name: lab06-source-snapshot-20261109
-          path: /tmp/lab06/
-          if-no-files-found: error
-          retention-days: 14
+          out=/tmp/lab06_verified
+          mkdir -p "$out" /tmp/lab06_verify
+          archive="$out/Lab06_GitHub_Source_2026-11-09.zip"
+          git archive --format=zip --prefix=LAB06_Model_Selection/ HEAD:LAB06_Model_Selection > "$archive"
 
-# Source snapshot refreshed after final checklist QA and tag-link verification.
+          git rev-parse HEAD > "$out/SOURCE_COMMIT_SHA.txt"
+          git rev-parse HEAD:LAB06_Model_Selection > "$out/SOURCE_SUBTREE_SHA.txt"
+          unzip -tq "$archive"
+
+          git ls-tree -r --name-only HEAD:LAB06_Model_Selection |
+            sed 's|^|LAB06_Model_Selection/|' | LC_ALL=C sort > /tmp/lab06_verify/expected_paths.txt
+          unzip -Z1 "$archive" |
+            grep -v '/$' | LC_ALL=C sort > /tmp/lab06_verify/archived_paths.txt
+          diff -u /tmp/lab06_verify/expected_paths.txt /tmp/lab06_verify/archived_paths.txt
+
+          unzip -q "$archive" -d /tmp/lab06_verify/extracted
+          (
+            cd /tmp/lab06_verify/extracted
+            find LAB06_Model_Selection -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$out/SOURCE_FILES_SHA256.txt"
+          sha256sum "$archive" > "$out/SOURCE_ARCHIVE_SHA256.txt"
+          wc -l < /tmp/lab06_verify/expected_paths.txt > "$out/SOURCE_FILE_COUNT.txt"
+
+          cat > "$out/README.txt" <<'EOF'
+          Verified Lab06 source snapshot from the GitHub branch.
+          The inner Lab06_GitHub_Source_2026-11-09.zip is a git archive
+          of LAB06_Model_Selection at SOURCE_COMMIT_SHA.txt.
+          Full path comparison with git ls-tree and unzip CRC check passed.
+          SOURCE_FILES_SHA256.txt lists SHA-256 of every extracted source file.
+          SOURCE_ARCHIVE_SHA256.txt hashes the exact inner source ZIP.
+          Dataset images and model checkpoints are private and remain in Drive.
+          The outer GitHub Actions artifact ZIP includes these verification files.
+          This is not a professor submission receipt.
+          EOF
+
+      - name: Publish verified immutable source snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab06-verified-github-snapshot-20261109
+          path: /tmp/lab06_verified/
+          if-no-files-found: error
+          retention-days: 30
