@@ -55,6 +55,6 @@ def main():
             '- Do not choose the best size or hyperparameters using this previously inspected test set.',
             '', f'**Valid evaluated runs: {len(allrows)}/24.** Six of them are archived, and 18 are new runs requiring actual training and inference.',
             'No results are written for pending runs.']
-    (ROOT/'results/REPORT_EN.md').write_text('\n'.join(lines)+'\n')
+    (ROOT/'results/REPORT_EN.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
     print('REPORT:',ROOT/'results/REPORT_EN.md','real evaluations',len(allrows),'of 24')
 if __name__=='__main__':main()

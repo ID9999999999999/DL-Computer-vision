@@ -1,0 +1,66 @@
+{
+  "epoch3_state_identical": false,
+  "all_orders_hash": "66fd75895547578c2672c23ebb0ad19b54ed31bc445ef296b1c107fe14329fa9",
+  "seed": 20261030,
+  "arm": "ce",
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_objective": 0.7431738189288548
+    },
+    {
+      "epoch": 2,
+      "train_objective": 0.3498929730483464
+    },
+    {
+      "epoch": 3,
+      "train_objective": 0.38780882097780706
+    },
+    {
+      "epoch": 4,
+      "train_objective": 0.29357509958956923
+    },
+    {
+      "epoch": 5,
+      "train_objective": 0.17189751924680813
+    },
+    {
+      "epoch": 6,
+      "train_objective": 0.2051708514935204
+    },
+    {
+      "epoch": 7,
+      "train_objective": 0.16514013814074652
+    },
+    {
+      "epoch": 8,
+      "train_objective": 0.13387626148760318
+    },
+    {
+      "epoch": 9,
+      "train_objective": 0.20249185817582266
+    },
+    {
+      "epoch": 10,
+      "train_objective": 0.28482169269451074
+    },
+    {
+      "epoch": 11,
+      "train_objective": 0.1750255155244044
+    },
+    {
+      "epoch": 12,
+      "train_objective": 0.16752929091453553
+    }
+  ],
+  "paired_hashes": {
+    "initial_state": "32a7583a77e36a5c62231c373324f220089fda963fe1de93cd6603bba7d46ce6",
+    "orders": "aebae39b4af8ecdc7d5d85a97e58d299fcf82c18d2c0ebf137287f849cf53e6c"
+  },
+  "matches_source_initialization_and_orders": true,
+  "checkpoint_sha256": "c9109bf53ec4f2cf84c96cd1617b7bf3ff12077ac2acd6056692ac3700908ea1",
+  "runtime_seconds": 461.94428846999995,
+  "training_images": 70,
+  "target_test_used_during_training": false,
+  "torch": "2.15.0+cpu"
+}
