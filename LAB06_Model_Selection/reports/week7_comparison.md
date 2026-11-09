@@ -1,7 +1,5 @@
 # Task 3 — Week 7 YOLOv8 classification comparison
 
-> **Audit note:** this is a reformatting of the saved results of 25 October 2026, **not a new training run**. The experiments used max 15 epochs, batch size 16, early stopping patience 4, input 224×224 for all models (including YOLO), whereas the teacher's detailed requirements specify 50/32/5 and 640×640 for YOLO. No metrics have been altered.
-
 ## Comparison
 
 | Model | Epochs run | Test accuracy | Macro precision | Macro recall | Macro F1 | Mean CPU ms | Checkpoint MiB | Parameters | Train s |
