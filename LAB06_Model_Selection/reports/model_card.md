@@ -76,4 +76,4 @@ Document photos may contain sensitive personal information. Use authorized datas
 - [Task 5D: ONNX verification](bonus_deployment_memo.md)
 - [Task 5E: classmate reproducibility audit](bonus_audit_note.md)
 
-The classmate's model achieved **211/270** on our test set, but that **is not** a transfer-performance result for our own checkpoint. No new evaluation of our checkpoint on the classmate's original dataset is claimed.
+The classmate's model achieved **211/270** on Dataset A. This result concerns the classmate's checkpoint only. The selected project checkpoint has not been evaluated on the classmate's original dataset.
