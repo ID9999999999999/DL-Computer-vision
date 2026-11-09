@@ -1,3 +1,5 @@
+> **HISTORICAL 9 NOVEMBER CHECKLIST, NOT THE ACTIVE TO-DO LIST.** The counts below combine mandatory work, optional Tasks 5A–5E, a verbally discussed Dataset B exchange that the instructor subsequently waived, and administrative milestones. Current required work is summarized in [SUBMISSION_STATUS.md](SUBMISSION_STATUS.md); exact written-brief comparison is in [INSTRUCTOR_REQUIREMENTS_AUDIT.md](INSTRUCTOR_REQUIREMENTS_AUDIT.md). The 152 historical item markers are preserved for traceability, not recounted as outstanding obligations.
+
 # LAB 06 - COMPLETE MASTER CHECKLIST
 **Document Quality Classification | revised 9 November 2026**
 
