@@ -37,3 +37,9 @@
 - [Task5E requirement audit](../docs/TASK5E_2026-11-09_AUDIT.md).
 
 Do not claim teacher acceptance or pretend that a new adaptation/peer-side reverse test is complete.
+
+## Reflection on our README
+
+The documentation review found a practical barrier: the Windows launcher used the tracked `results/` directory by default, which could cause a dataset-path conflict instead of starting a fresh run. The launcher now creates a separate output directory per run. The project README also links the original dataset, lists its required folder structure, separates saved-result verification from retraining, and distinguishes the recommended local Python version from the actual Colab environment.
+
+These changes make the reproduction path easier to follow without altering the historical checkpoints or metrics. A full independent re-training and exact result match have **not** been verified by this documentation edit.
