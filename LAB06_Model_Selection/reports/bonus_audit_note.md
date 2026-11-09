@@ -1,45 +1,77 @@
-# Task 5E — Peer Reproducibility Audit and Model Card
-**9 November 2026 — original classmate `predict.py` successfully executed unchanged on our private 270-image Test.**
+# Task 5E — Peer Reproducibility Audit
 
-## Original peer README-based reproduction
-- Input package: classmate-supplied `yolov8n_quality_gate.zip`, containing README, binary YOLOv8n-cls model, and inference script. The original file bytes were preserved; Windows ZIP separators were normalized to extract on Linux.
-- In an Ultralytics 8.4.208 environment, we executed the **original script and README invocation**: `python predict.py --source <our private TEST> --out <private predictions.csv>`.
-- Result: **exit code 0**, 270 genuine per-image predictions generated; no code patch, no retraining, fixed decision threshold 0.50.
+**Date:** 9 November 2026  
+**Scope:** Reproduce one classmate's documented inference experiment using the supplied README and original files.
 
-| Original classmate script on our Dataset A Test | Result |
-|---|---:|
-| Images | 270 (135 good / 135 bad) |
-| Accuracy | **211/270 = 78.15%** |
-| Precision bad | 0.6959 |
-| Recall bad | 1.0000 |
-| F1 bad | 0.8207 |
-| Confusion matrix, rows true [good,bad], columns predicted [good,bad] | [[76,59],[0,135]] |
+## 1. Materials received
 
-- All **270 image-level class decisions** match the previous independent PyTorch compatibility evaluation (zero discrepancies). The original peer script rounds probabilities to 4 decimals; max deviation from previous unrounded adapter output was approximately **0.000051**.
-- Error pattern on our independent Test: 59 clean-image false rejects, no defective-image false accepts.
-- [Original script logs, raw predictions, accuracy report and SHA-256 integrity metadata — private Drive](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view).
+The classmate supplied `yolov8n_quality_gate.zip`, containing a YOLOv8n classification checkpoint, `README.md` and `predict.py`. The files were used for a private coursework review. No permission to republish the classmate's checkpoint has been verified, so it has not been published in this repository.
 
-## Gaps and limits (do not invent evidence)
-1. We reproduced the peer's **inference program on our independent Test**, **not** the peer's reported in-distribution 0.996 original-Test accuracy or their original training. Their own original labeled Test, hashes/source-group manifest, complete training code and reproducible environment lock are absent.
-2. Version drift: original package does not pin Ultralytics, Python and Torch precisely. We recorded the actual working Ultralytics version.
-3. Permission to publish peer weights publicly is not independently established. Therefore we saved only inference evidence, NOT the peer checkpoint or original private images.
-4. Domain shift between synthetic document templates can explain lower cross-test performance, but no definitive cause is demonstrated, and the result does not disprove the peer's reported own-domain score.
+The package did not provide the original training code, original held-out test images, split manifest or an exact dependency lock. These omissions limit reproduction of the **training experiment**, but not execution of the supplied **inference script**.
 
-## Own model card and documentation
-- [Our updated model card](model_card.md): intended use, train/validation/test, 267/270 original accuracy, false accepts, latency/size, limitations, privacy/ethics and generalization concerns.
-- Our own shared model's README command separately passed a clean Ubuntu GitHub Actions execution on four synthetic test inputs, documented [here](https://github.com/ID9999999999999/DL-Computer-vision/actions/runs/42516928052). That is a packaging smoke check, not a scientific accuracy experiment.
-- Task 5D now independently confirmed ONNX vs PyTorch **267/270 both** on our private Test, with 0 classification disagreements.
+## 2. What was reproduced
 
-## Completion status
-- **README-driven peer inference reproducibility: completed.**
-- **Full original peer training/own-test reproduction: remains unavailable without the peer's original dataset and experiment files.**
-- E01 explicit third-party sharing permission and E08 instructor's formal acceptance/defense are not verified.
-- [Task5E requirement audit](../docs/TASK5E_2026-11-09_AUDIT.md).
+We followed the supplied README invocation and ran the classmate's **unchanged `predict.py`** on our own independent 270-image Dataset A test partition.
 
-Do not claim teacher acceptance or pretend that a new adaptation/peer-side reverse test is complete.
+```bash
+python predict.py --source <private_test_directory> --out <private_predictions.csv>
+```
 
-## Reflection on our README
+- Runtime: Ultralytics **8.4.208** (the working version was recorded; the original peer environment was not fully pinned).
+- Test set: **270 images** — 135 `good`, 135 `bad`.
+- Decision threshold: **0.50**.
+- Script changes: **none**.
+- Result: **exit code 0**, with 270 per-image predictions.
 
-The documentation review found a practical barrier: the Windows launcher used the tracked `results/` directory by default, which could cause a dataset-path conflict instead of starting a fresh run. The launcher now creates a separate output directory per run. The project README also links the original dataset, lists its required folder structure, separates saved-result verification from retraining, and distinguishes the recommended local Python version from the actual Colab environment.
+| Metric on our Dataset A test set | Result |
+| --- | ---: |
+| Correct predictions | **211 / 270** |
+| Accuracy | **78.15%** |
+| Precision (`bad`) | **0.6959** |
+| Recall (`bad`) | **1.0000** |
+| F1 (`bad`) | **0.8207** |
+| Confusion matrix (true/predicted: good, bad) | **[[76, 59], [0, 135]]** |
 
-These changes make the reproduction path easier to follow without altering the historical checkpoints or metrics. A full independent re-training and exact result match have **not** been verified by this documentation edit.
+All 270 class predictions matched an earlier independent compatibility evaluation. The original script rounds scores to four decimals; the maximum observed score difference from the earlier unrounded output was approximately **0.000051**.
+
+[Execution log, raw predictions and integrity records (private Drive)](https://drive.google.com/file/d/1BmdQlk-aY5e97KGm7phdXk8P2pN6Aw2i/view)
+
+## 3. What worked, what was missing and what required a choice
+
+| Check | Observation |
+| --- | --- |
+| Read and run the supplied inference instructions | **Worked.** The original script ran unchanged and produced all 270 predictions. |
+| Load the supplied model | **Worked.** The checkpoint was usable with the recorded Ultralytics environment. |
+| Match a separate prediction implementation | **Worked.** Zero class-label disagreements across 270 images. |
+| Pin the original Python/Torch/Ultralytics environment | **Missing.** Exact original versions were not supplied as a complete lock. The working Ultralytics version is recorded above. |
+| Reproduce original training | **Blocked by missing inputs.** Complete training code, the original dataset and split information were not available. |
+| Reproduce the peer's reported own-test accuracy | **Not possible with the supplied files.** The original labeled test partition was unavailable. |
+| Evaluate on a substitute test set | **Explicit evaluation choice.** We used our own held-out Dataset A test images. This is a cross-dataset test, not reproduction of the peer's own-test result. |
+| Publish the peer checkpoint | **Not done.** Public redistribution permission was not verified. |
+
+**First blocking point:** the inference instructions worked. The first point preventing **full training reproducibility** was the absence of the original training procedure and corresponding dataset/split files. This is a missing-artifact limitation, **not** a claimed runtime exception from a training attempt.
+
+## 4. Interpretation and limitations
+
+The 59 errors are **good images predicted as bad** (false rejects). No `bad` image was predicted as `good` in this test. This result characterizes the classmate's model **on our Dataset A**, not on its original test distribution. Different document generation or capture conditions could contribute to the performance difference, but no specific cause has been established.
+
+The classmate's reported original-domain score and training procedure were **not independently reproduced**. No additional training or external dataset test is claimed.
+
+## 5. Review of our own documentation
+
+The same audit criteria were applied to our own repository:
+
+- **Dataset access:** the main [README](../README.md) now links the original dataset and explains the required `metadata.jsonl`, `good/` and `bad/` structure.
+- **Run isolation:** the Windows launcher now creates a fresh `runs/` output directory rather than writing into archived `results/`.
+- **Reproduction instructions:** the README separates saved-result verification from training all four models.
+- **Environment:** the recommended local Python version is distinguished from the actual recorded Colab environment.
+- **Experiment history:** recorded metrics, protocols, checkpoints and historical deviations remain unchanged.
+
+These documentation and launcher corrections have been committed. They improve usability but **do not substitute for an independently executed full retraining check**.
+
+## 6. Deliverables and conclusion
+
+- [Peer audit](bonus_audit_note.md) — this document.
+- [Own model card](model_card.md) — describes our selected YOLOv8n-cls classifier, measured results and limitations.
+
+**Outcome:** the README-based **inference run** was reproducible; the peer's **original training and original-test experiment** was not reproducible from the supplied materials. The distinction is explicit so the audit can be evaluated without assuming unavailable results.
