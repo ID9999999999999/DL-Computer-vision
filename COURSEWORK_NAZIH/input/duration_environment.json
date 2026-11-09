@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "machine": "x86_64",
+  "torch": "2.15.0+cpu",
+  "torchvision": "0.29.2+cpu",
+  "numpy": "2.5.4",
+  "pillow": "13.0.0",
+  "device": "cpu",
+  "torch_threads_per_process": 2,
+  "train_source_sha256": "381399aea4081614688599f47fa3371489b4f9f5daa51dc0dee72da7045ec47d",
+  "evaluation_source_sha256": "e025e7152072a086b70f04d607d8362f237004f9dd195b79d93728ef47fda42b"
+}

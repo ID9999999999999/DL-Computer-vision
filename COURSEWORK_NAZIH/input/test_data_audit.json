@@ -1,0 +1,10 @@
+{
+  "test_images": 1004,
+  "defective": 110,
+  "normal": 894,
+  "source_exact_hash_overlap": 0,
+  "duplicate_test_hashes": 0,
+  "archive_sha256": "edcdb486809b24f1d17b785e30c52fafc5999554dd5fe18ddf77b61ceb6f36a8",
+  "physical_identity": "not independently documented; official test split retained",
+  "source_url": "https://data.vicos.si/datasets/KSDD/KolektorSDD2.zip"
+}

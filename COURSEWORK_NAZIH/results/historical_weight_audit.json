@@ -1,0 +1,105 @@
+{
+  "historic_weights_verified": 12,
+  "epoch_3_count": 6,
+  "epoch_12_count": 6,
+  "all_checkpoint_byte_hashes_match_evaluation_metadata": true,
+  "baseline_70_retraining_required": false,
+  "members": [
+    {
+      "seed": 20261028,
+      "loss": "ce",
+      "epoch": 3,
+      "checkpoint_member": "duration_diagnosis/20261028_ce_epoch3.pt",
+      "sha256": "4154263830bff54b5ce35b2fa3f75c200ae5a34132739a566568f74a45050c3d",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261028,
+      "loss": "ce",
+      "epoch": 12,
+      "checkpoint_member": "duration_diagnosis/20261028_ce_recalibrated.pt",
+      "sha256": "662a89f3ce2e2933f3c80c50e4c5d1b6907fb4bd8b631c55d2931394813d48f4",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261028,
+      "loss": "poly1",
+      "epoch": 3,
+      "checkpoint_member": "duration_diagnosis/20261028_poly1_epoch3.pt",
+      "sha256": "a236679536354b00cde68c46c31029011ef408a4ce1fd81a9156f03821d3a788",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261028,
+      "loss": "poly1",
+      "epoch": 12,
+      "checkpoint_member": "duration_diagnosis/20261028_poly1_recalibrated.pt",
+      "sha256": "15b193abee16312f7716c94664265f305c5c10cb0b6e81a2ef036ee0aadf22c8",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261029,
+      "loss": "ce",
+      "epoch": 3,
+      "checkpoint_member": "duration_diagnosis/20261029_ce_epoch3.pt",
+      "sha256": "a9a9446222f4988c050a9849dc94e9a07c2056d2075bfe9175db3fd100e7cf1e",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261029,
+      "loss": "ce",
+      "epoch": 12,
+      "checkpoint_member": "duration_diagnosis/20261029_ce_recalibrated.pt",
+      "sha256": "7ac94cb857daf92245b616b8366423cc555a1bef45ab7721dfb7a7811d88e01b",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261029,
+      "loss": "poly1",
+      "epoch": 3,
+      "checkpoint_member": "duration_diagnosis/20261029_poly1_epoch3.pt",
+      "sha256": "ae357a6dc4201f3a73981fe0ff31acf48882e5a8f65a6f30b6623347fe47fcc7",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261029,
+      "loss": "poly1",
+      "epoch": 12,
+      "checkpoint_member": "duration_diagnosis/20261029_poly1_recalibrated.pt",
+      "sha256": "ebfe5812ccc69202994a4aea50bd8de1dee3fd907d950c94ac05b4e547fa8fdc",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261030,
+      "loss": "ce",
+      "epoch": 3,
+      "checkpoint_member": "duration_diagnosis/20261030_ce_epoch3.pt",
+      "sha256": "d64944b122cafaab205e77dccddc3f04b4a1d47fecee398e8b76c0a5618a08c3",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261030,
+      "loss": "ce",
+      "epoch": 12,
+      "checkpoint_member": "duration_diagnosis/20261030_ce_recalibrated.pt",
+      "sha256": "c9109bf53ec4f2cf84c96cd1617b7bf3ff12077ac2acd6056692ac3700908ea1",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261030,
+      "loss": "poly1",
+      "epoch": 3,
+      "checkpoint_member": "duration_diagnosis/20261030_poly1_epoch3.pt",
+      "sha256": "1c2e3aa1426ecab767936c73e83905eb073b58eeb01c60034a47a16eefde8594",
+      "matches_original_evaluation": true
+    },
+    {
+      "seed": 20261030,
+      "loss": "poly1",
+      "epoch": 12,
+      "checkpoint_member": "duration_diagnosis/20261030_poly1_recalibrated.pt",
+      "sha256": "1f5f3144a93c2a3f3a93660a0080802ca194baf9c715710356adbc16d0a5a7f6",
+      "matches_original_evaluation": true
+    }
+  ]
+}

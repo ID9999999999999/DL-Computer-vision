@@ -1,0 +1,492 @@
+[
+  {
+    "path": "failure_diagnosis/train/12103.png",
+    "zip_path": "train/12103.png",
+    "label": 0,
+    "sha256": "02af20bfcb57cbf26597e56c5d58a540272c10c1abd403d096cd61d15b8ed42a",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10328.png",
+    "zip_path": "train/10328.png",
+    "label": 0,
+    "sha256": "168622536f9dded6c3493c798e8e3c48139baf7213d1d51b191a24f640767714",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10598.png",
+    "zip_path": "train/10598.png",
+    "label": 0,
+    "sha256": "a9564474015d64361b7a872e29cb98d65ae6efef2d1e5a5e157b778be989c2d2",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10623.png",
+    "zip_path": "train/10623.png",
+    "label": 0,
+    "sha256": "d41fcf9d067a9e38e7ac7512865ac42a35cd18e0c6a63f0328ef3db4774ed39d",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10705.png",
+    "zip_path": "train/10705.png",
+    "label": 0,
+    "sha256": "3de5aaefac5ce3deb111e4d807b4b6c1bb677ba7e0a788676ed6590e2b6b6ab3",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/12046.png",
+    "zip_path": "train/12046.png",
+    "label": 0,
+    "sha256": "751fbab1e8871c6158f8cdd0f04dd71a6a8ca060396aa399791c3900394d567a",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10212.png",
+    "zip_path": "train/10212.png",
+    "label": 0,
+    "sha256": "3337eabaeba22a90bbe5e6a0721f800dff04d34adaa27c1a835ee962c6a8c5d4",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11952.png",
+    "zip_path": "train/11952.png",
+    "label": 0,
+    "sha256": "40d1a99a5f5119b366d969744022da91567b9d01175c491878f428f37496e0ab",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10278.png",
+    "zip_path": "train/10278.png",
+    "label": 0,
+    "sha256": "f2dc874c7e52b037395502e90ab34f782875da70c184a77a5e2c457bdb811c4f",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11084.png",
+    "zip_path": "train/11084.png",
+    "label": 0,
+    "sha256": "a3ea298b0ace3e82fdb8d4e51ce461b875e00b101bf8fdd7af54e6535b592b39",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11062.png",
+    "zip_path": "train/11062.png",
+    "label": 0,
+    "sha256": "81bb6b2c1aeaeeeaed8bbd7c8868440da7c21fc57993a8b575eb07e36645775b",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10342.png",
+    "zip_path": "train/10342.png",
+    "label": 0,
+    "sha256": "b28baf8986c88e69c59357c8ec6407720cb3dd063dc1870fd0c74b2a829e4f88",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10117.png",
+    "zip_path": "train/10117.png",
+    "label": 0,
+    "sha256": "293bf9e5a2a2755125769c1eae2a0d63aaf8e24d84b453d20dfa26a2937742bf",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11951.png",
+    "zip_path": "train/11951.png",
+    "label": 0,
+    "sha256": "4a55ebee8a4b7c736507ec472793601703b736e9aa346885b2cb18c49c014642",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10805.png",
+    "zip_path": "train/10805.png",
+    "label": 0,
+    "sha256": "77d0cd523f755b91bb9976ee511be143cab8a24cae449117bf5118feacfda3fc",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11314.png",
+    "zip_path": "train/11314.png",
+    "label": 0,
+    "sha256": "80310bc7ff65b6a9ac566cea07e6d0a7548eaf31935ce7e1b1a2c60115711a0c",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11079.png",
+    "zip_path": "train/11079.png",
+    "label": 0,
+    "sha256": "cbb85cfcc9c140ac40a568befe6f0820d95def4afd415d3bbf165c4e2e702d76",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10775.png",
+    "zip_path": "train/10775.png",
+    "label": 0,
+    "sha256": "74856b20992528a1096690047551c1ec7600f6d72433cf94020fad1943c4bacd",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11511.png",
+    "zip_path": "train/11511.png",
+    "label": 0,
+    "sha256": "9ff549c10d9c40e60453bc8ea95c5ead0b54e799ecea632eed8718c120d57623",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10862.png",
+    "zip_path": "train/10862.png",
+    "label": 0,
+    "sha256": "d202d377a8e78277da6b1efb7577b54496b1b38ab8a8b5a1dc392e44b03d666b",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11290.png",
+    "zip_path": "train/11290.png",
+    "label": 0,
+    "sha256": "348c5d02f6868bb99b444857af3e79d5f15748e6f4084e5f19591734c92580c2",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10340.png",
+    "zip_path": "train/10340.png",
+    "label": 0,
+    "sha256": "6f702f29b95c6abd98b73a83c18663824b4745d7b99fc256ae8336953f9323c0",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11830.png",
+    "zip_path": "train/11830.png",
+    "label": 0,
+    "sha256": "3b510914b86c76b1d685010294b5d8e9891d1f91f5bf5f2f57853bbb55bf32db",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10978.png",
+    "zip_path": "train/10978.png",
+    "label": 0,
+    "sha256": "2d3ab68377a694cf592c6787087448fdb922ef6e37751d7e45efce034aec5187",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10696.png",
+    "zip_path": "train/10696.png",
+    "label": 0,
+    "sha256": "a58f9607d0ad6b279410da63e68d06fa0762c9d7b2a870097996f586a9327e31",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10289.png",
+    "zip_path": "train/10289.png",
+    "label": 0,
+    "sha256": "4530aacfca550c9a355aad8547b6fcc77a2af8f0bba38480f018ab413de6c37d",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11420.png",
+    "zip_path": "train/11420.png",
+    "label": 0,
+    "sha256": "1d612444566a40297148a72fd426e92bad1eaee8e246a42ccdd48e55bbdefc03",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10323.png",
+    "zip_path": "train/10323.png",
+    "label": 0,
+    "sha256": "9ed8ee8c7678a2edfa7ab49574f4aa3f391f0da662abf2becb03e1b9b02953ad",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10996.png",
+    "zip_path": "train/10996.png",
+    "label": 0,
+    "sha256": "212ae4814ed8d4ee5419fb15ab3d72b7ae9cf59d8f488ac00232710757ead6b7",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11115.png",
+    "zip_path": "train/11115.png",
+    "label": 0,
+    "sha256": "b2195007662abc3d30c9f3b6b8cded33407f3fe7047870f05a2fabd3187cc1c0",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11424.png",
+    "zip_path": "train/11424.png",
+    "label": 0,
+    "sha256": "5963df20baedddaba59d2cdaa8b2dc56b3f0c787a2b77eb25b836878daf5f71c",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10692.png",
+    "zip_path": "train/10692.png",
+    "label": 0,
+    "sha256": "b2bde8c81cc0536012f32b705260e7a043ee0dfd97a0ea713a6eb42750b95d06",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10151.png",
+    "zip_path": "train/10151.png",
+    "label": 0,
+    "sha256": "a807f82e9111eb544ba6fe1910aa4430a4adccff30eac06aded0cd18bb6fcf9c",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/12021.png",
+    "zip_path": "train/12021.png",
+    "label": 0,
+    "sha256": "0a1dab8164ab303308ec57e90d2e6e82f635b2a8a96ee6ca3c1f713f9ef01999",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11737.png",
+    "zip_path": "train/11737.png",
+    "label": 0,
+    "sha256": "c8d446438780083588f86a257761ceafa3ba72ee2328dc21d30ac6ec60a4aa89",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10585.png",
+    "zip_path": "train/10585.png",
+    "label": 1,
+    "sha256": "9d336965d61e4c04bf9a0ea351eae289a889508b9140e698bb49b98843f2af4d",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10028.png",
+    "zip_path": "train/10028.png",
+    "label": 1,
+    "sha256": "18d3157a3e6b26f30d793709eb6f5268be225129757126b95606f18b5f33c387",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/12160.png",
+    "zip_path": "train/12160.png",
+    "label": 1,
+    "sha256": "647841be2d121a211a54d1b3b9c40c75af31d828d720be92084f479dd7a10668",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10654.png",
+    "zip_path": "train/10654.png",
+    "label": 1,
+    "sha256": "dfe6ccff4364fb45ac1d4b734bf3f04e9d8f4c4a511634715e1fae81ddcdfc68",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10846.png",
+    "zip_path": "train/10846.png",
+    "label": 1,
+    "sha256": "9731bcbaee82a518cd0aa5fc32ef44e8de6f3a953fcf04400604a1141b9844e5",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10661.png",
+    "zip_path": "train/10661.png",
+    "label": 1,
+    "sha256": "212f8342c8037bd680e5b9721fccb9d9f03b36e9a808b2fff690c1dd359b1268",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10060.png",
+    "zip_path": "train/10060.png",
+    "label": 1,
+    "sha256": "9bb9ee952622490cbf0b5e9e4b8514fbb6acb8e5be43b8a5eab51ac60541bf22",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/12081.png",
+    "zip_path": "train/12081.png",
+    "label": 1,
+    "sha256": "ea66dfae89d105cdc18d5fd5ae44165796a2e7964d356c6eb090476060d71049",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11169.png",
+    "zip_path": "train/11169.png",
+    "label": 1,
+    "sha256": "8401c274258969b56dd84bbce9aabbf317ec604180278e6cf0e129fa5f8ec5d8",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11432.png",
+    "zip_path": "train/11432.png",
+    "label": 1,
+    "sha256": "1662cbc6bf4b272b529751a145b61a456f60dad1109089ca50f2ee809c1b60de",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11739.png",
+    "zip_path": "train/11739.png",
+    "label": 1,
+    "sha256": "1fc11d1352aed01b591b20693f9f6d1f048ae19864dc9046020b40f12bbf0092",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10821.png",
+    "zip_path": "train/10821.png",
+    "label": 1,
+    "sha256": "b36bc87c9f409c0fff4542a7775111f255f4c79a6e93b577b8c68b87faef889e",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11755.png",
+    "zip_path": "train/11755.png",
+    "label": 1,
+    "sha256": "4492846e37bfb02ff1f85a1eddf6cbee72d4787cb67978d492d8c70d05e56045",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10711.png",
+    "zip_path": "train/10711.png",
+    "label": 1,
+    "sha256": "fe91d8e70272c50f5cdb3806cc68fc397ae13e9fbc36fbe431deab87e481eb10",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10774.png",
+    "zip_path": "train/10774.png",
+    "label": 1,
+    "sha256": "bef0d81a2c141d1089c50b19207e47ab283a96161fdc68c4db45201324a57fd8",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10618.png",
+    "zip_path": "train/10618.png",
+    "label": 1,
+    "sha256": "4e52877fc94019381ac05533556eb28c9c374c58ed255bf366135ea973fff6d7",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10045.png",
+    "zip_path": "train/10045.png",
+    "label": 1,
+    "sha256": "a72094299cec4428a6be82b00840a3a646ea2b7d2e630cfd85fa4bdf362421de",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10306.png",
+    "zip_path": "train/10306.png",
+    "label": 1,
+    "sha256": "7fe1f1024c2ef6158e354d2a413f40bf1934aa48585b377f7cdb6ca28ab6ac03",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10516.png",
+    "zip_path": "train/10516.png",
+    "label": 1,
+    "sha256": "e5aea122913ce01745678fd1cc58ab2ae4238bb5bc0def43a93a3b8b07da920a",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11195.png",
+    "zip_path": "train/11195.png",
+    "label": 1,
+    "sha256": "a8f09f9e6bd4a877a27e3e5b4654a908f0cd60ffdd87ac0613dac5d416894c99",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/12301.png",
+    "zip_path": "train/12301.png",
+    "label": 1,
+    "sha256": "691ae0fe705e83c8af8d1afacf12f88dedb2dff2a5154e3274b1e98c383c18ff",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10223.png",
+    "zip_path": "train/10223.png",
+    "label": 1,
+    "sha256": "9d8d0a44a4de770626a633c0a76f758d3126859982804d893f551f6170dbebaa",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10345.png",
+    "zip_path": "train/10345.png",
+    "label": 1,
+    "sha256": "cc64e1c2ed15dfb358af65376f793ae852ec585807eb9cfa90db2e88c7650f00",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10499.png",
+    "zip_path": "train/10499.png",
+    "label": 1,
+    "sha256": "75748093c77e1cf26af1996c61b5530d67ba75e69da088ec3ff94824b0db0c10",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11052.png",
+    "zip_path": "train/11052.png",
+    "label": 1,
+    "sha256": "6a88a35480936891afcf5dd4be23ae8a2d1eb40bd5b3a887b8b4493e417d3864",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11543.png",
+    "zip_path": "train/11543.png",
+    "label": 1,
+    "sha256": "cd9a440a22d81d74eca89a17059d68054e07fed7929c9582975b07286e67fe7b",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11139.png",
+    "zip_path": "train/11139.png",
+    "label": 1,
+    "sha256": "b4b8dbc3adcc6fab51f7269f7743f6ba4ba1042a18a9af84a7156f555f7fad5b",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11969.png",
+    "zip_path": "train/11969.png",
+    "label": 1,
+    "sha256": "716915888eb4466d5b3fc05693a96169efe043f3b8d0f45fc642c7bc16676104",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/10301.png",
+    "zip_path": "train/10301.png",
+    "label": 1,
+    "sha256": "29ceeb9311153c1526ca7e623912d6f25da072738ffa62a8ccb37e2a7535403e",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11350.png",
+    "zip_path": "train/11350.png",
+    "label": 1,
+    "sha256": "a052f5561b0bb701d9c4121fdbedfa03ce7914729c70b99657276b777d2b6b38",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11549.png",
+    "zip_path": "train/11549.png",
+    "label": 1,
+    "sha256": "6914727b2a6833a6ce056ab0f29600b2e451e6b9a8bc848b6949cc7440866d04",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/12245.png",
+    "zip_path": "train/12245.png",
+    "label": 1,
+    "sha256": "6a12b2073d12eb4102c84366673e4e032e31e44d5b0f00364f5a2cc6b53e59e6",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11800.png",
+    "zip_path": "train/11800.png",
+    "label": 1,
+    "sha256": "51ca920059f69a2c22dca9691e8a636ae8dbd6af855300d6c3167044fedfaf3e",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11002.png",
+    "zip_path": "train/11002.png",
+    "label": 1,
+    "sha256": "c2f4b937046808428dad7114d7f669ec3c34ebc4f515a396b707099693a5a1db",
+    "split": "train"
+  },
+  {
+    "path": "failure_diagnosis/train/11616.png",
+    "zip_path": "train/11616.png",
+    "label": 1,
+    "sha256": "833f13867048dd3bb003e8cb01782415398fcd765d51ae3a682a033f44b57243",
+    "split": "train"
+  }
+]

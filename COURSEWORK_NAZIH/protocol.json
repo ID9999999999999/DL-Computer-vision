@@ -1,0 +1,71 @@
+{
+  "name": "KSDD2 training-set-size intervention; exploratory reused test",
+  "created": "2026-11-08",
+  "reuses_70_reference_from": "Training_Duration_Results.zip, epoch12, no retraining of 70",
+  "target_archive_sha256": "edcdb486809b24f1d17b785e30c52fafc5999554dd5fe18ddf77b61ceb6f36a8",
+  "target_archive_url": "https://data.vicos.si/datasets/KSDD/KolektorSDD2.zip",
+  "official_training_images": 2331,
+  "official_training_class_counts": {
+    "0": 2085,
+    "1": 246
+  },
+  "official_test_images": 1004,
+  "official_test_classes": {
+    "0": 894,
+    "1": 110
+  },
+  "sizes": [
+    70,
+    140,
+    280,
+    420
+  ],
+  "new_training_sizes": [
+    140,
+    280,
+    420
+  ],
+  "extra_selection_seed": 20261108,
+  "seeds": [
+    20261028,
+    20261029,
+    20261030
+  ],
+  "arms": {
+    "ce": 0.0,
+    "poly1": 1.0
+  },
+  "epochs": "12 rounds of 70 training exposures; for N>70 these are NOT 12 full-dataset epochs",
+  "image_side": 448,
+  "preprocessing": "PIL RGB resize((448,448),Image.Resampling.BICUBIC), ImageNet mean/std",
+  "initialization": "torchvision ResNet18 IMAGENET1K_V1, fc=Linear(512,2)",
+  "pretrained_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "AdamW",
+  "batch_size": 4,
+  "updates_per_epoch": 18,
+  "images_per_epoch": 70,
+  "examples_per_class_per_epoch": 35,
+  "sampling": "balanced cyclic permutation within each class; 35+35 total per epoch; separate RNG from model RNG; 70 images unchanged baseline",
+  "bn_calibration": "exactly 70 training images per checkpoint, 35/class; BN running stats reset, momentum=None; not test",
+  "training_device": "cpu",
+  "threads": 2,
+  "strict_reference_environment": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0"
+  },
+  "purpose": "isolate training diversity at identical 216 optimization updates, 12 epochs, class exposure and train evaluation budget",
+  "interpretation": "exploratory recycled 1004-image test, no claims of independent confirmation; no physical-part identity proof",
+  "no_tuning": "size ladder and metrics fixed before evaluation; do not use test for model/threshold selection",
+  "rounds": 12,
+  "effective_full_dataset_passes": {
+    "70": 12,
+    "140": 6,
+    "280": 3,
+    "420": 2
+  },
+  "numerical_caveat": "Previous nominally matched 3-epoch runs did not reproduce bitwise-identical checkpoints. Reusing 70 baseline prevents proving exact one-factor causal isolation."
+}

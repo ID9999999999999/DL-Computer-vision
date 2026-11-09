@@ -1,0 +1,24 @@
+{
+  "official_train_canonical_images": 2331,
+  "labels": {
+    "0": 2085,
+    "1": 246
+  },
+  "selected": 70,
+  "selected_normal": 35,
+  "selected_defective": 35,
+  "sampling_seed": 20261107,
+  "official_train_test_exact_hash_overlap": 0,
+  "excluded_duplicate_copy_files": {
+    "train/10301 (copy).png": {
+      "same_bytes_as": "train/10301.png",
+      "identical": true
+    },
+    "train/10301_GT (copy).png": {
+      "same_bytes_as": "train/10301_GT.png",
+      "identical": true
+    }
+  },
+  "source_target_label_order_identical": true,
+  "physical_specimen_mapping": "unverified; official split retained"
+}

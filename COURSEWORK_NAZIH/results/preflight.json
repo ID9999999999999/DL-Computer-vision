@@ -1,0 +1,13 @@
+{
+  "source_train_images_verified": 70,
+  "historical_baseline_12epoch_evaluations_verified": 6,
+  "test_images_metadata_verified": 1004,
+  "baseline_macro_f1_mean": {
+    "ce": 0.7664031194545776,
+    "poly1": 0.7571886437120338
+  },
+  "new_training_completed": false,
+  "requires_original_zip_for_new_sizes": true,
+  "strict_device": "cpu",
+  "interpretation": "Exploratory only; 1004 test examples already reused."
+}
