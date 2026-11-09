@@ -11,7 +11,7 @@ The package did not provide the original training code, original held-out test i
 
 ## 2. What was reproduced
 
-We followed the supplied README invocation and ran the classmate's **unchanged `predict.py`** on our own independent 270-image Dataset A test partition.
+The classmate's **unchanged `predict.py`** was executed using the supplied README instructions on the project's independent 270-image Dataset A test partition.
 
 ```bash
 python predict.py --source <private_test_directory> --out <private_predictions.csv>
@@ -23,7 +23,7 @@ python predict.py --source <private_test_directory> --out <private_predictions.c
 - Script changes: **none**.
 - Result: **exit code 0**, with 270 per-image predictions.
 
-| Metric on our Dataset A test set | Result |
+| Metric on Dataset A test set | Result |
 | --- | ---: |
 | Correct predictions | **211 / 270** |
 | Accuracy | **78.15%** |
@@ -46,20 +46,20 @@ All 270 class predictions matched an earlier independent compatibility evaluatio
 | Pin the original Python/Torch/Ultralytics environment | **Missing.** Exact original versions were not supplied as a complete lock. The working Ultralytics version is recorded above. |
 | Reproduce original training | **Blocked by missing inputs.** Complete training code, the original dataset and split information were not available. |
 | Reproduce the peer's reported own-test accuracy | **Not possible with the supplied files.** The original labeled test partition was unavailable. |
-| Evaluate on a substitute test set | **Explicit evaluation choice.** We used our own held-out Dataset A test images. This is a cross-dataset test, not reproduction of the peer's own-test result. |
+| Evaluate on a substitute test set | **Explicit evaluation choice.** The project's held-out Dataset A test images were used. This is a cross-dataset test, not reproduction of the peer's own-test result. |
 | Publish the peer checkpoint | **Not done.** Public redistribution permission was not verified. |
 
 **First blocking point:** the inference instructions worked. The first point preventing **full training reproducibility** was the absence of the original training procedure and corresponding dataset/split files. This is a missing-artifact limitation, **not** a claimed runtime exception from a training attempt.
 
 ## 4. Interpretation and limitations
 
-The 59 errors are **good images predicted as bad** (false rejects). No `bad` image was predicted as `good` in this test. This result characterizes the classmate's model **on our Dataset A**, not on its original test distribution. Different document generation or capture conditions could contribute to the performance difference, but no specific cause has been established.
+The 59 errors are **good images predicted as bad** (false rejects). No `bad` image was predicted as `good` in this test. This result characterizes the classmate's model **on Dataset A**, not on its original test distribution. Different document generation or capture conditions could contribute to the performance difference, but no specific cause has been established.
 
 The classmate's reported original-domain score and training procedure were **not independently reproduced**. No additional training or external dataset test is claimed.
 
-## 5. Review of our own documentation
+## 5. Project documentation review
 
-The same audit criteria were applied to our own repository:
+The same audit criteria were applied to the project repository:
 
 - **Dataset access:** the main [README](../README.md) now links the original dataset and explains the required `metadata.jsonl`, `good/` and `bad/` structure.
 - **Run isolation:** the Windows launcher now creates a fresh `runs/` output directory rather than writing into archived `results/`.
@@ -72,6 +72,6 @@ These documentation and launcher corrections have been committed. They improve u
 ## 6. Deliverables and conclusion
 
 - [Peer audit](bonus_audit_note.md) — this document.
-- [Own model card](model_card.md) — describes our selected YOLOv8n-cls classifier, measured results and limitations.
+- [Selected model card](model_card.md) — describes the selected YOLOv8n-cls classifier, measured results and limitations.
 
 **Outcome:** the README-based **inference run** was reproducible; the peer's **original training and original-test experiment** was not reproducible from the supplied materials. The distinction is explicit so the audit can be evaluated without assuming unavailable results.
