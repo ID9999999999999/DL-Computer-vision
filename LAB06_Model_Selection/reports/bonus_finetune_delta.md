@@ -4,7 +4,7 @@
 
 ## What changed
 
-The pretrained MobileNetV2 **original frozen checkpoint** (SHA256 `014226cd942aee422a04b19835eba9bf89c198939b996a88cf14b955eeed854e`) was reloaded. We unfroze the final 30 named backbone layers, retained batch-normalization layers frozen for stable statistics, and kept the custom binary head trainable. Adam learning rate **1e-5**, max **50 epochs**, early-stopping **patience 5**, **effective batch size 32** (four microbatches of 8 because of the runtime memory cap). The teacher calls 1e-5 “10 times smaller”; relative to the original head-learning rate 1e-3, it is mathematically **100 times smaller**. Our experiment follows the explicit numeric value 1e-5.
+The pretrained MobileNetV2 **original frozen checkpoint** (SHA256 `014226cd942aee422a04b19835eba9bf89c198939b996a88cf14b955eeed854e`) was reloaded. The final 30 named backbone layers were selected for fine-tuning, while batch-normalization layers remained frozen for stable statistics and the custom binary head remained trainable. Adam learning rate **1e-5**, max **50 epochs**, early-stopping **patience 5**, **effective batch size 32** (four microbatches of 8 because of the runtime memory cap). The teacher calls 1e-5 “10 times smaller”; relative to the original head-learning rate 1e-3, it is mathematically **100 times smaller**. The actual experiment used the explicit numeric learning rate 1e-5.
 
 ## Frozen vs fine-tuned (same 270-image test set)
 
