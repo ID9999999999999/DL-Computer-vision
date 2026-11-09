@@ -1,7 +1,5 @@
 # Task 4 — Five-part deployment decision memo
 
-> **Audit note:** this is a reformatting of the saved results of 25 October 2026, **not a new training run**. The experiments used max 15 epochs, batch size 16, early stopping patience 4, input 224×224 for all models (including YOLO), whereas the teacher's detailed requirements specify 50/32/5 and 640×640 for YOLO. No metrics have been altered.
-
 ## 1. Decision
 
 Select **YOLOv8n-cls** as a **provisional** document-quality gate under the established validation-and-cost rule.
@@ -20,8 +18,8 @@ All observed test mistakes were glare-related false accepts. The chosen model mi
 
 ## 5. Deployment plan
 
-Start with the existing CPU-server quality gate. A later mobile/edge experiment may export to **ONNX or TFLite**; record model size, CPU inference time after warm-up and any accuracy drop before deciding whether the exported model is usable. No such export was executed in the saved experiments.
+Start with the existing CPU-server quality gate. An **ONNX export was subsequently completed in optional Task 5D**: the exported model preserved all 270 class predictions, and the same-host CPU forward-only benchmark improved from 6.104 ms (PyTorch) to 2.451 ms (ONNX). These timings are not full pipeline or edge-device benchmarks. See [Task 5D deployment memo](bonus_deployment_memo.md).
 
 ## Submission audit
 
-See [corrected experiment results](comparison.md), [four-slide presenter script](../presentation/Presentation_4slides.md) and [repair audit](../docs/Submission_Repairs_2026-11-08.md). These reports preserve the original experiment and disclose protocol differences.
+See [full comparison](comparison.md), [four-slide speaking script](../presentation/Final_4_Slide_Script.md) and the [instructor requirement audit](../docs/INSTRUCTOR_REQUIREMENTS_AUDIT.md). Original measurements are unchanged.
