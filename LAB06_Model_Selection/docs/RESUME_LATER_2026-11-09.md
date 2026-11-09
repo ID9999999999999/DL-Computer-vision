@@ -14,8 +14,13 @@ Task 1 memo/Word; Task 2 frozen MobileNetV2; Task 3 YOLOv8n/s; Task 4 EfficientN
 ## Next session — do not repeat completed tasks
 1. Check if classmate supplied Dataset B / reciprocal result of our original checkpoint evaluated on their held-out Test. **Do not claim it arrived until observed.**
 2. If Dataset B exists, verify permissions, source grouping, labels and overlap, then evaluate our checkpoint on B before any adaptation. Confirm teacher scope before optional B fine-tuning.
-3. If no Dataset B, verify the actual original executed Colab Notebook and discuss historical Tasks 2–4 protocol mismatch (actual 15/16/4/224 versus detailed specification 50/32/5/640) before any new training.
+3. If no Dataset B, verify the actual original executed Colab Notebook. **Do not rerun Tasks 2–4 solely to match 50/32/5/640:** the student confirms the instructor said the historical setup is acceptable.
 4. Recheck exact paths / real error gallery constraints without generating fabricated errors.
 5. Only after new evidence update the checklist/ZIP. Submit formally, present 4-slide defense, obtain actual professor receipt/acceptance.
 
 **Critical integrity:** Never modify raw Test or use it for tuning; don't retroactively relabel prior runs; 5B threshold 0.10 is validation-only; 5C is checkpoint continuation and did not improve glare vs control; 5D speed is forward-only; 5E did not reproduce peer original training; the current ZIP has not been officially handed in.
+
+
+## Teacher's clarification — reported by student, 9 November 2026
+
+The student confirms that the instructor **explicitly said the original training-configuration differences for Tasks 2–4 are not a problem**. Accordingly **no rerun is required for the 50 epochs / batch 32 / patience 5 / YOLO 640 mismatch on that basis**. Preserve actual original run settings and metrics without edits. Keep any yellow checklist markers where they describe literal differences from the printed sheet; these are **not outstanding actionable blockers** after the instructor's reported waiver. This verbal clarification is user-reported; a written instructor receipt is not available. It is separate from formal project submission, defense and acceptance.

@@ -334,7 +334,7 @@
 4. Verify the instructor presentation, questions and official hand-in/acceptance.
 5. Treat Tasks 5B-5E as optional bonuses unless the instructor explicitly assigns them.
 
-**Historical protocol deviations not erased:** Tasks 2-4: teacher specifies 50 max epochs / patience 5 / batch 32 / YOLO 640; our original runs used 15 / 4 / 16 / 224. Task 5A separately used max 50, patience 5, effective batch 32 via 4×8, Keras-PyTorch CPU backend, and the final 30 layer region with BN frozen.
+**Historical protocol differences preserved, but instructor reportedly approved them:** Tasks 2–4 written sheet specifies 50 max epochs / patience 5 / batch 32 / YOLO 640; our original runs used 15 / 4 / 16 / 224. Student confirms the instructor said these differences are not a problem; no retraining is pending for that reason. Task 5A separately used max 50, patience 5, effective batch 32 via 4×8, Keras-PyTorch CPU backend, and the final 30 layer region with BN frozen.
 
 
 ---
@@ -355,4 +355,9 @@
 - Task 5D: **7 green**, including actual 270-image PyTorch/ONNX Test parity and 20+100 CPU forward benchmark.
 - Task 5E: **5 green / 3 yellow**, peer original predict.py executed on our data, but training/holdout, permission scope and defense are still unverified.
 - Week 7/8 tags: verified on the same Oct 25 combined-experiment commit, created as evidence labels in November, not backdated.
-- Remaining major dependencies: classmate Dataset B reciprocal evaluation, original Task 2-4 training-settings deviations and potential teacher-requested reruns, actual defense/official submission and acceptance.
+- Remaining major dependencies: classmate Dataset B reciprocal evaluation, original executed Notebook evidence, actual defense/official submission and acceptance. Teacher was reported to have accepted the original Task 2–4 training settings, so reruns for the 50/32/5/640 differences are **not** pending.
+
+
+## Teacher's clarification — reported by student, 9 November 2026
+
+The student confirms that the instructor **explicitly said the original training-configuration differences for Tasks 2–4 are not a problem**. Accordingly **no rerun is required for the 50 epochs / batch 32 / patience 5 / YOLO 640 mismatch on that basis**. Preserve actual original run settings and metrics without edits. Keep any yellow checklist markers where they describe literal differences from the printed sheet; these are **not outstanding actionable blockers** after the instructor's reported waiver. This verbal clarification is user-reported; a written instructor receipt is not available. It is separate from formal project submission, defense and acceptance.

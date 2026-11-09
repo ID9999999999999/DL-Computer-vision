@@ -143,3 +143,8 @@ Original classmate `predict.py` was run unchanged using Ultralytics on **our** o
 **Final 152-point checklist:** [PDF](https://drive.google.com/file/d/1WcQMktdHFhZoAA6aFcGUDLVGKWnFhD60/view), [Markdown](https://drive.google.com/file/d/1QVYsMvIponyR7Tel9B8dKKsrSjkY14ey/view): **100 completed / 25 partial / 27 open**. Full backup in the ZIP. Original Dataset A images (about 399 MB) are referenced but not bundled.
 
 **Open dependencies:** classmate's independent Dataset B reciprocal evaluation, original training settings (15/16/4/224 vs later 50/32/5/640), original executed Colab training notebook verification, and the instructor's oral presentation / acknowledgment. Two verified Week7/8 tags point to one authentic Oct 25 commit; no backdating. **Archive creation is not formal submission or acceptance.**
+
+
+## Teacher's clarification — reported by student, 9 November 2026
+
+The student confirms that the instructor **explicitly said the original training-configuration differences for Tasks 2–4 are not a problem**. Accordingly **no rerun is required for the 50 epochs / batch 32 / patience 5 / YOLO 640 mismatch on that basis**. Preserve actual original run settings and metrics without edits. Keep any yellow checklist markers where they describe literal differences from the printed sheet; these are **not outstanding actionable blockers** after the instructor's reported waiver. This verbal clarification is user-reported; a written instructor receipt is not available. It is separate from formal project submission, defense and acceptance.
