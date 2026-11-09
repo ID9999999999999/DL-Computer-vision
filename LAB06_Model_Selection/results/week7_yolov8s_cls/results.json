@@ -1,0 +1,191 @@
+{
+  "experiment": "Lab06 document-quality model selection",
+  "week": 7,
+  "model": "yolov8s-cls",
+  "regime": "full_fine_tuning",
+  "input_size": [
+    224,
+    224
+  ],
+  "seed": 2473986,
+  "device": "Tesla T4 for training; CPU 4 threads for latency",
+  "epochs_planned": 15,
+  "epochs_run": 7,
+  "batch_size": 16,
+  "early_stopping_patience": 4,
+  "train_time_s": 175.99003267199987,
+  "latency_ms_per_image": 51.06716488,
+  "latency_protocol": {
+    "warmup": 20,
+    "timed": 100,
+    "batch": 1
+  },
+  "model_size_mb": 10.255954,
+  "model_size_mib": 9.780839920043945,
+  "params": 5083298,
+  "test_samples": 270,
+  "metrics": {
+    "accuracy": 0.9925925925925926,
+    "precision_macro": 0.9927007299270073,
+    "recall_macro": 0.9925925925925926,
+    "f1_macro": 0.9925921861281826,
+    "per_class": {
+      "good": {
+        "precision": 0.9854014598540146,
+        "recall": 1,
+        "support": 135,
+        "f1": 0.9926470588235294
+      },
+      "bad": {
+        "precision": 1,
+        "recall": 0.9851851851851852,
+        "support": 135,
+        "f1": 0.9925373134328358
+      }
+    }
+  },
+  "confusion_matrix": [
+    [
+      135,
+      0
+    ],
+    [
+      2,
+      133
+    ]
+  ],
+  "history": {
+    "source_file": "results/yolov8s/results.csv",
+    "rows": [
+      {
+        "epoch": 1,
+        "time": 21.7748,
+        "train/loss": 0.34289,
+        "metrics/accuracy_top1": 0.98889,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.11511,
+        "lr/pg0": 0.0000329114,
+        "lr/pg1": 0.0000329114,
+        "lr/pg2": 0.0671215
+      },
+      {
+        "epoch": 2,
+        "time": 43.3197,
+        "train/loss": 0.14335,
+        "metrics/accuracy_top1": 0.98889,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.05192,
+        "lr/pg0": 0.0000662447,
+        "lr/pg1": 0.0000662447,
+        "lr/pg2": 0.0338215
+      },
+      {
+        "epoch": 3,
+        "time": 68.1825,
+        "train/loss": 0.07152,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.03335,
+        "lr/pg0": 0.0000995781,
+        "lr/pg1": 0.0000995781,
+        "lr/pg2": 0.000521519
+      },
+      {
+        "epoch": 4,
+        "time": 93.1336,
+        "train/loss": 0.04383,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.02274,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 5,
+        "time": 117.677,
+        "train/loss": 0.03814,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.01907,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 6,
+        "time": 142.971,
+        "train/loss": 0.03286,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.02648,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 7,
+        "time": 168.068,
+        "train/loss": 0.021,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.01724,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      }
+    ]
+  },
+  "validation_metrics": {
+    "accuracy": 0.9925925925925926,
+    "precision_macro": 0.9927007299270073,
+    "recall_macro": 0.9925925925925926,
+    "f1_macro": 0.9925921861281826,
+    "per_class": {
+      "good": {
+        "precision": 0.9854014598540146,
+        "recall": 1,
+        "support": 135,
+        "f1": 0.9926470588235294
+      },
+      "bad": {
+        "precision": 1,
+        "recall": 0.9851851851851852,
+        "support": 135,
+        "f1": 0.9925373134328358
+      }
+    }
+  },
+  "checkpoint": {
+    "path": "/content/drive/MyDrive/Lab06_results/yolov8s/weights/best.pt",
+    "sha256": "522a3d5c141a058b3e0f1a2e11264b42318876a834358076f9344369efeaecca"
+  },
+  "provenance": {
+    "status": "derived from saved measurements; no rerun",
+    "source_files": [
+      "results/yolov8s/evaluation.json",
+      "results/yolov8s/training.json",
+      "results/yolov8s/results.csv"
+    ]
+  },
+  "instructor_protocol_deviation": {
+    "requested": {
+      "epochs_planned": 50,
+      "batch_size": 32,
+      "early_stopping_patience": 5,
+      "input_size": [
+        640,
+        640
+      ]
+    },
+    "used": {
+      "epochs_planned": 15,
+      "batch_size": 16,
+      "early_stopping_patience": 4,
+      "input_size": [
+        224,
+        224
+      ]
+    }
+  }
+}

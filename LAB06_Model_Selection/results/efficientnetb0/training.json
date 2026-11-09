@@ -1,0 +1,10 @@
+{
+  "model": "efficientnetb0",
+  "regime": "frozen ImageNet base, train head",
+  "training_seconds": 272.35360677000017,
+  "parameters": 4213668,
+  "trainable_parameters": 164097,
+  "epochs_run": 15,
+  "selection": "lowest validation loss",
+  "checkpoint": "/content/drive/MyDrive/Lab06_results/efficientnetb0/best.keras"
+}

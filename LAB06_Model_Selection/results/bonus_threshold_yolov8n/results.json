@@ -1,0 +1,44 @@
+{
+  "experiment": "Lab06 Task 5B validation-only threshold exploration",
+  "model": "yolov8n-cls",
+  "original_results": "../yolov8n/results.json",
+  "source_predictions": "../yolov8n/predictions.json",
+  "validation_samples": 270,
+  "sweep": {
+    "min": 0.1,
+    "max": 0.9,
+    "step": 0.05
+  },
+  "default_threshold": 0.5,
+  "proposed_validation_threshold": 0.1,
+  "candidate_selected_by": "minimize illustrative cost = 5 * false accept (bad -> good) + false reject (good -> bad), ties choose first grid threshold",
+  "policy_costs": {
+    "false_accept_bad_as_good": 5,
+    "false_reject_good_as_bad": 1
+  },
+  "threshold_0_5": {
+    "threshold": 0.5,
+    "TP": 133,
+    "TN": 135,
+    "FP": 0,
+    "FN": 2,
+    "precision_bad": 1,
+    "recall_bad": 0.9851851851851852,
+    "f1_bad": 0.9925373134328358,
+    "cost_5x_FN_plus_1x_FP": 10
+  },
+  "threshold_0_1": {
+    "threshold": 0.1,
+    "TP": 135,
+    "TN": 135,
+    "FP": 0,
+    "FN": 0,
+    "precision_bad": 1,
+    "recall_bad": 1,
+    "f1_bad": 1,
+    "cost_5x_FN_plus_1x_FP": 0
+  },
+  "provenance": "Computed from existing validation predictions only. Original test metrics/model choice unchanged. Do not treat proposed threshold as deployed or real-world approved.",
+  "chosen_threshold": 0.1,
+  "chosen_threshold_status": "exploratory validation-only choice, not the historical model's deployed/reference threshold"
+}

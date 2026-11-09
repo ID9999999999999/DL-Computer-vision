@@ -40,3 +40,7 @@ conflict with the existing SVM Lab 05 folder:
 
 It contains the audit script, PyTorch Dataset/DataLoader, verified audit report,
 DataLoader test output, dependencies, dataset summary, and short report.
+
+## Lab 06: document quality and model selection
+
+[LAB06_Model_Selection](LAB06_Model_Selection/README.md) contains the completed Colab experiment: four trained classifiers, source-grouped 70/15/15 splits, final test metrics, CPU benchmarks, an executed results-review notebook, and the five-minute presentation. Seed: 2473986. Raw images and checkpoint weights remain external.

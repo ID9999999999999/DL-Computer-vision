@@ -1,0 +1,39 @@
+{
+  "task": "5D",
+  "evaluated": "2026-11-09",
+  "status": "verified paired original held-out Test",
+  "checkpoint": "original YOLOv8n-cls best.pt",
+  "checkpoint_sha256": "c820e22debf8d3fe3c3ca41f7c10f55d9e7db0b2246fb90c92a8548a70a514f7",
+  "onnx_sha256": "cf8f353758ab9b6562758537482b6ae4f898e3450cd41071a56b9133298dbf45",
+  "test_n": 270,
+  "valid_source_hashes": 270,
+  "grouped_test_sources": 45,
+  "threshold_p_bad": 0.5,
+  "original_pt": {
+    "correct": 267,
+    "accuracy": 0.9888888888888889,
+    "macro_f1": 0.9888875,
+    "file_bytes": 2963154,
+    "file_mib": 2.8258838653564453,
+    "cpu_forward_mean_ms": 6.104,
+    "cpu_threads": 4
+  },
+  "onnx": {
+    "correct": 267,
+    "accuracy": 0.9888888888888889,
+    "macro_f1": 0.9888875,
+    "file_bytes": 5767752,
+    "file_mib": 5.500556945800781,
+    "cpu_forward_mean_ms": 2.451,
+    "cpu_threads": 4
+  },
+  "accuracy_drop": 0,
+  "changed_class_predictions": 0,
+  "cpu_warmup": 20,
+  "cpu_timed": 100,
+  "benchmark_scope": "forward only, preprocessed inputs; excludes IO, preprocessing and model initialization",
+  "quantization": "none, optional",
+  "source_results": "https://drive.google.com/file/d/1zIEXnesFzi4JPrzxuNRbYaemqEUEbQ0w/view",
+  "scope_limitation": "not a real edge device or full end-to-end service",
+  "annotation": "Add-on record; original historical results unchanged"
+}

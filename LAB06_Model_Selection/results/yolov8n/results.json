@@ -1,0 +1,235 @@
+{
+  "experiment": "Lab06 document-quality model selection",
+  "week": 7,
+  "model": "yolov8n-cls",
+  "regime": "full_fine_tuning",
+  "input_size": [
+    224,
+    224
+  ],
+  "seed": 2473986,
+  "device": "Tesla T4 for training; CPU 4 threads for latency",
+  "epochs_planned": 15,
+  "epochs_run": 11,
+  "batch_size": 16,
+  "early_stopping_patience": 4,
+  "train_time_s": 232.29209373799995,
+  "latency_ms_per_image": 26.96986677,
+  "latency_protocol": {
+    "warmup": 20,
+    "timed": 100,
+    "batch": 1
+  },
+  "model_size_mb": 2.963154,
+  "model_size_mib": 2.8258838653564453,
+  "params": 1440850,
+  "test_samples": 270,
+  "metrics": {
+    "accuracy": 0.9888888888888889,
+    "precision_macro": 0.9891304347826086,
+    "recall_macro": 0.9888888888888889,
+    "f1_macro": 0.9888875169774046,
+    "per_class": {
+      "good": {
+        "precision": 0.9782608695652174,
+        "recall": 1,
+        "support": 135,
+        "f1": 0.989010989010989
+      },
+      "bad": {
+        "precision": 1,
+        "recall": 0.9777777777777777,
+        "support": 135,
+        "f1": 0.9887640449438202
+      }
+    }
+  },
+  "confusion_matrix": [
+    [
+      135,
+      0
+    ],
+    [
+      3,
+      132
+    ]
+  ],
+  "history": {
+    "source_file": "results/yolov8n/results.csv",
+    "rows": [
+      {
+        "epoch": 1,
+        "time": 20.9361,
+        "train/loss": 0.40985,
+        "metrics/accuracy_top1": 0.87037,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.27182,
+        "lr/pg0": 0.0000329114,
+        "lr/pg1": 0.0000329114,
+        "lr/pg2": 0.0671215
+      },
+      {
+        "epoch": 2,
+        "time": 41.1626,
+        "train/loss": 0.20411,
+        "metrics/accuracy_top1": 0.93333,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.13476,
+        "lr/pg0": 0.0000662447,
+        "lr/pg1": 0.0000662447,
+        "lr/pg2": 0.0338215
+      },
+      {
+        "epoch": 3,
+        "time": 61.0886,
+        "train/loss": 0.1281,
+        "metrics/accuracy_top1": 0.96667,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.08638,
+        "lr/pg0": 0.0000995781,
+        "lr/pg1": 0.0000995781,
+        "lr/pg2": 0.000521519
+      },
+      {
+        "epoch": 4,
+        "time": 81.0459,
+        "train/loss": 0.09062,
+        "metrics/accuracy_top1": 0.98148,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.0496,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 5,
+        "time": 101.023,
+        "train/loss": 0.08376,
+        "metrics/accuracy_top1": 0.98889,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.03794,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 6,
+        "time": 121.033,
+        "train/loss": 0.06963,
+        "metrics/accuracy_top1": 0.98519,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.04907,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 7,
+        "time": 140.344,
+        "train/loss": 0.04964,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.0238,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 8,
+        "time": 160.135,
+        "train/loss": 0.03871,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.02169,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 9,
+        "time": 180.145,
+        "train/loss": 0.04096,
+        "metrics/accuracy_top1": 0.98889,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.03098,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 10,
+        "time": 200.046,
+        "train/loss": 0.0372,
+        "metrics/accuracy_top1": 0.98889,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.03003,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      },
+      {
+        "epoch": 11,
+        "time": 220.075,
+        "train/loss": 0.02931,
+        "metrics/accuracy_top1": 0.99259,
+        "metrics/accuracy_top5": 1,
+        "val/loss": 0.02142,
+        "lr/pg0": 0.0001,
+        "lr/pg1": 0.0001,
+        "lr/pg2": 0.0001
+      }
+    ]
+  },
+  "validation_metrics": {
+    "accuracy": 0.9925925925925926,
+    "precision_macro": 0.9927007299270073,
+    "recall_macro": 0.9925925925925926,
+    "f1_macro": 0.9925921861281826,
+    "per_class": {
+      "good": {
+        "precision": 0.9854014598540146,
+        "recall": 1,
+        "support": 135,
+        "f1": 0.9926470588235294
+      },
+      "bad": {
+        "precision": 1,
+        "recall": 0.9851851851851852,
+        "support": 135,
+        "f1": 0.9925373134328358
+      }
+    }
+  },
+  "checkpoint": {
+    "path": "/content/drive/MyDrive/Lab06_results/yolov8n/weights/best.pt",
+    "sha256": "c820e22debf8d3fe3c3ca41f7c10f55d9e7db0b2246fb90c92a8548a70a514f7"
+  },
+  "provenance": {
+    "status": "derived from saved measurements; no rerun",
+    "source_files": [
+      "results/yolov8n/evaluation.json",
+      "results/yolov8n/training.json",
+      "results/yolov8n/results.csv"
+    ]
+  },
+  "instructor_protocol_deviation": {
+    "requested": {
+      "epochs_planned": 50,
+      "batch_size": 32,
+      "early_stopping_patience": 5,
+      "input_size": [
+        640,
+        640
+      ]
+    },
+    "used": {
+      "epochs_planned": 15,
+      "batch_size": 16,
+      "early_stopping_patience": 4,
+      "input_size": [
+        224,
+        224
+      ]
+    }
+  }
+}
