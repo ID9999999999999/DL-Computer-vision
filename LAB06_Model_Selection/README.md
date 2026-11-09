@@ -1,5 +1,7 @@
 # Lab 06 — Document Quality Classification
 
+> **Submission and instructor requirement status:** [single status page](docs/SUBMISSION_STATUS.md) · [requirement-by-requirement audit](docs/INSTRUCTOR_REQUIREMENTS_AUDIT.md). The older 152-point checklist includes optional items and a waived Dataset B exchange; it is not the current missing-work list.
+
 **Experiment:** 25 October 2026 · **Seed:** `2473986` · **Classes:** `good` / `bad`
 
 This project compares four pretrained image classifiers for deciding whether a document photograph is usable or defective. It includes the training code, saved evaluation records, reports and presentation. Original images and trained checkpoints are stored separately in Google Drive.
