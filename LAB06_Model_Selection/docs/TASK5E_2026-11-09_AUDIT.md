@@ -2,7 +2,7 @@
 
 | Instructor criterion | Status | Evidence |
 | --- | --- | --- |
-| Re-run one peer experiment from the README | **Partially satisfied** | The peer's original inference script ran unchanged on our 270-image test set; the original training experiment could not be reproduced from the supplied package. |
+| Re-run one peer experiment from the README | **Partially satisfied** | The peer's original inference script ran unchanged on the 270-image Dataset A test set; the original training experiment could not be reproduced from the supplied package. |
 | Concrete audit gaps | **Documented** | [Audit note](../reports/bonus_audit_note.md): absent original training code, dataset/splits and exact environment lock |
 | State what worked and what had to be chosen | **Documented** | Working inference run, exit code 0, choice of substitute held-out test dataset, recorded environment |
 | Explain the first obstacle | **Documented** | No inference runtime failure; missing training artifacts are the first obstacle to full original-experiment reproduction |
