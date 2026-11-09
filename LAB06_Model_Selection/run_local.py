@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import sys
 import venv
+from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent
 
@@ -38,8 +39,14 @@ def main():
         subprocess.run([str(python), "-m", "pip", "install", "--upgrade", "pip"], check=True)
         subprocess.run([str(python), "-m", "pip", "install", "-r", str(ROOT / "requirements.txt")], check=True)
         marker.write_text(requirements, encoding="utf-8")
-    subprocess.run([str(python), str(ROOT / "lab06.py"), "run", "--dataset", str(dataset)], cwd=ROOT, check=True)
-    print("Finished. Open results/Final_Report.md and results/Presentation_5min.md.", flush=True)
+    output = ROOT / "runs" / datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    print(f"New results folder: {output}", flush=True)
+    subprocess.run(
+        [str(python), str(ROOT / "lab06.py"), "run", "--dataset", str(dataset), "--out", str(output)],
+        cwd=ROOT,
+        check=True,
+    )
+    print(f"Finished. Report: {output / 'Final_Report.md'}", flush=True)
 
 
 if __name__ == "__main__":
