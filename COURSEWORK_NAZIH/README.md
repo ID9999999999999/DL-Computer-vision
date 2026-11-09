@@ -1,6 +1,6 @@
 # COURSEWORK_NAZIH — CANONICAL PROJECT INDEX
 
-**Status as of 10 November 2026:** The user reported 18/18 new training runs and 18/18 new evaluations completed. Six earlier 70-image training/evaluation records were restored locally. The cross-condition report was generated locally from 24/24 evaluations. The GitHub branch and Drive have **not yet been fully synchronized** with those new local outputs. Do not treat the older README_EN.md status as current.
+**Cross-platform status as of 10 November 2026:** The user completed 18/18 new trainings, 18/18 new evaluations, restored six historical 70-image reference pairs, and committed 41 project files in commit `62f565df51447a3e553982bc877c6f96c86b469d`. A live Google Drive audit found 36 training files, 21 evaluation/CSV files, 12 historical JSON files, three final top-level deliverables, four figures, two audit files, and one 853,126,555-byte official dataset ZIP. All 76 project artifacts listed in the local SHA256 manifest are present on Drive with **matching filenames and byte lengths**. **This is not an independent byte-for-byte SHA256 verification of uploaded Drive copies**; the user previously verified local files and initial backup files in Colab. The older `README_EN.md` contains pre-execution status and must not be read as the current state. See `REMOTE_INVENTORY_AUDIT_2026-11-10.md`.
 
 ## One project; three storage roles
 
@@ -17,11 +17,11 @@ The original GitHub branch is `nazih-training-set-size-20261109` in the existing
 ```text
 Nazih_Coursework/
   Training_Size_Results/       # EXISTING; 18 .pt + 18 .json; retained in place
-  01_Historical_70/            # 12 original JSON records; not yet uploaded
-  02_Evaluation_Results/       # 18 eval JSON + validated summary CSV; not yet uploaded
-  03_Final_Deliverables/       # report, figures, slides; not yet uploaded
-  04_Integrity_And_Audits/     # generated local checksums and status; not yet uploaded
-  05_Official_Dataset/        # verified original dataset ZIP if space permits; not yet uploaded
+  01_Historical_70/            # 12 original JSON records; uploaded and inventory-checked
+  02_Evaluation_Results/       # 18 eval JSON + three CSV files; uploaded and inventory-checked
+  03_Final_Deliverables/       # three reports/decks + four PNG figures; uploaded and inventory-checked
+  04_Integrity_And_Audits/     # integrity manifest and status; uploaded and inventory-checked
+  05_Official_Dataset/        # official dataset ZIP; uploaded, size checked, cloud SHA256 still unverified
 ```
 
 Folder existence alone is not proof of content synchronization.
