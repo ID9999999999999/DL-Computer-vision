@@ -18,7 +18,7 @@ The epoch-inclusive CSV was reconstructed from the original model training histo
 
 ## Error analysis
 
-The models made **1, 3, 3 and 2 errors** respectively, all being false accepts of defective **glare** images. There are only seven distinct misclassified test images, because the two YOLO variants share some errors. For YOLOv8n, glare recall was **25/28 = 89.29%**; the other four defect groups were correctly detected in the saved test split. We did **not** invent five separate mistakes for models making fewer than five. Genuine error JPEG files are in a [private Drive archive](https://drive.google.com/drive/folders/1D157EQQNOM6LMtnOGUvuvVyjS0v8PuOv), with model-specific links under `results/<model>/errors/`.
+The models made **1, 3, 3 and 2 errors** respectively, all being false accepts of defective **glare** images. There are only seven distinct misclassified test images, because the two YOLO variants share some errors. For YOLOv8n, glare recall was **25/28 = 89.29%**; the other four defect groups were correctly detected in the saved test split. Because each model made fewer than five mistakes, the gallery contains authentic errors only; additional errors have not been fabricated. Genuine error JPEG files are in a [private Drive archive](https://drive.google.com/drive/folders/1D157EQQNOM6LMtnOGUvuvVyjS0v8PuOv), with model-specific links under `results/<model>/errors/`.
 
 Potential future risk reduction includes train-only augmentation targeted at glare, fixed-split validation of a new threshold and a genuinely independent real-world test set. The 1,800 synthetic images are variants of only 300 documents, so the measured differences should not be treated as robust evidence about unseen field data.
 
