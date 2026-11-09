@@ -2,7 +2,7 @@
 
 **9 November 2026 · NO RETRAINING · no test-based threshold optimization**
 
-The default operating point for our YOLOv8n classification gate was **P(bad) >= 0.50**. We recomputed a grid of 17 thresholds (0.10–0.90 in 0.05 increments) from the model's saved **270 validation** probabilities. The official historical model decision and test report are not changed.
+The original YOLOv8n classifier used **P(bad) >= 0.50**. A grid of 17 thresholds was evaluated (0.10–0.90 in 0.05 increments) from the model's saved **270 validation** probabilities. The official historical model decision and test report are not changed.
 
 ## Operating policy (illustrative, not supplied by instructor)
 
