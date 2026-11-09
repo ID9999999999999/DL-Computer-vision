@@ -1,7 +1,5 @@
 # Task 2 — MobileNetV2 baseline
 
-> **Audit note:** this is a reformatting of the saved results of 25 October 2026, **not a new training run**. The experiments used max 15 epochs, batch size 16, early stopping patience 4, input 224×224 for all models (including YOLO), whereas the teacher's detailed requirements specify 50/32/5 and 640×640 for YOLO. No metrics have been altered.
-
 ## Method
 
 ImageNet-pretrained MobileNetV2, base frozen, shared custom head (global average pooling → Dense(128, ReLU) → Dropout(0.3) → Dense(1, sigmoid)). Dataset split by source document: 1,260 train, 270 validation and 270 test images; seed **2473986**, positive class **bad**. RGB images 224×224, Adam learning rate 0.001.
