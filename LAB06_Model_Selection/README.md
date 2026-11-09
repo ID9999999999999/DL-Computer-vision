@@ -82,7 +82,7 @@ The historical experiment used **224 × 224 model inputs, batch size 16, maximum
 | [reports/](reports/) | Main task reports and optional experiments |
 | [docs/](docs/) | Project map, audit and submission notes |
 
-**Optional tasks:** [5A fine-tuning](reports/bonus_finetune_delta.md) · [5B validation threshold analysis](reports/bonus_threshold_memo.md) · [5C glare augmentation](reports/bonus_augmentation.md) · [5D ONNX benchmark](reports/bonus_deployment_memo.md) · [5E peer reproducibility audit](reports/bonus_audit_note.md) and [own model card](reports/model_card.md). The peer's original inference script was reproduced on our 270-image test set; their original training experiment and own test data were not available.
+**Optional tasks:** [5A fine-tuning](reports/bonus_finetune_delta.md) · [5B validation threshold analysis](reports/bonus_threshold_memo.md) · [5C glare augmentation](reports/bonus_augmentation.md) · [5D ONNX benchmark](reports/bonus_deployment_memo.md) · [5E peer reproducibility audit](reports/bonus_audit_note.md) and [selected model card](reports/model_card.md). The peer's original inference script was reproduced on the 270-image Dataset A test set; the peer's original training experiment and test data were not available.
 
 ## Submission and scope
 
