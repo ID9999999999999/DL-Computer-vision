@@ -1,0 +1,69 @@
+{
+  "size": 420,
+  "seed": 20261029,
+  "loss": "poly1",
+  "epochs": 12,
+  "reference70_unchanged": true,
+  "initial_state_sha256": "edc0043e221006fea2d8cfae402fea132708828a09145d0c0d359dfc5cc49920",
+  "original_epoch_orders_sha256": "7f8d3c29c82e6bdd0b4d9016b4ff46fad41543809512ce7a06e85fc99892c4af",
+  "source_archive_sha256": "edcdb486809b24f1d17b785e30c52fafc5999554dd5fe18ddf77b61ceb6f36a8",
+  "training_manifest_sha256": "a5c51cca306a8d66bec0dbd5e4ecbe24df71fb331aa2afec023fdc4518ae44cf",
+  "train_history": [
+    {
+      "epoch": 1,
+      "train_objective": 1.249397873878479
+    },
+    {
+      "epoch": 2,
+      "train_objective": 0.9579889059066773
+    },
+    {
+      "epoch": 3,
+      "train_objective": 0.8494806885719299
+    },
+    {
+      "epoch": 4,
+      "train_objective": 0.7916330908026014
+    },
+    {
+      "epoch": 5,
+      "train_objective": 1.089774351460593
+    },
+    {
+      "epoch": 6,
+      "train_objective": 0.7410383181912559
+    },
+    {
+      "epoch": 7,
+      "train_objective": 0.5465712811265673
+    },
+    {
+      "epoch": 8,
+      "train_objective": 0.5317945092916488
+    },
+    {
+      "epoch": 9,
+      "train_objective": 0.7094399720430374
+    },
+    {
+      "epoch": 10,
+      "train_objective": 0.5465695943151202
+    },
+    {
+      "epoch": 11,
+      "train_objective": 0.5581465742417744
+    },
+    {
+      "epoch": 12,
+      "train_objective": 0.5060141569801739
+    }
+  ],
+  "checkpoint_sha256": "4e6b845a523e3a1a8444457162cbb772cfbef9bd44f5791835ab5fc737ea0a9e",
+  "calibration_images": "original70 in original order, independent of size",
+  "training_unique_images": 420,
+  "total_optimizer_steps": 216,
+  "reference_equivalent_rounds": 12,
+  "effective_full_data_passes": 2.0,
+  "runtime_seconds": 595.4363138610006,
+  "status": "trained; external evaluation prohibited until all 18 models frozen"
+}
