@@ -1,0 +1,32 @@
+{
+  "version": "extended_full_epoch_pilot_v1_20261110",
+  "pilot_size": 420,
+  "seeds": [
+    20261028,
+    20261029,
+    20261030
+  ],
+  "losses": [
+    "ce",
+    "poly1"
+  ],
+  "full_epochs": 30,
+  "checkpoint_interval": 5,
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "dataset_sha256": "edcdb486809b24f1d17b785e30c52fafc5999554dd5fe18ddf77b61ceb6f36a8",
+  "pretrained_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "validation_selection_seed": 20261110,
+  "val_normal": 162,
+  "val_defective": 18,
+  "validation_note": "180 unused official training images, disjoint from all size-420 sources, no official test images read. No specimen-identity metadata confirmed.",
+  "optimizer_steps_per_full_epoch": 105,
+  "full_epoch_image_exposures": 420,
+  "model": "torchvision ResNet18 ImageNet V1 full finetuning, Linear(512,2)",
+  "resize": "448x448 RGB bicubic",
+  "normalization": "ImageNet mean std",
+  "optimizer": "AdamW",
+  "primary_selection": "validation macro F1, candidates epoch 5,10,15,20,25,30 only",
+  "purpose": "Pilot whether 30 full epochs produce stable validation improvement; old fixed-216-step results preserved; not a claim about optimal epochs"
+}
