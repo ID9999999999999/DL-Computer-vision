@@ -13,6 +13,7 @@ The old results/, protocol.json, and checkpoints are never modified.
 """
 from __future__ import annotations
 import argparse
+import collections
 import hashlib
 import io
 import json
@@ -21,11 +22,13 @@ import random
 import sys
 import time
 import zipfile
+import re
 from pathlib import Path
 
 import numpy as np
 from PIL import Image
 import torch
+import torchvision
 from torch import nn
 from torch.nn import functional as F
 from torchvision.models import resnet18, ResNet18_Weights
@@ -39,6 +42,79 @@ STD = torch.tensor([.229, .224, .225])[:, None, None]
 PILOT_VERSION = "full_epochs_v1_validation_from_train_20261110"
 SEED_VALIDATION = 20261110
 VAL_COUNTS = {0: 150, 1: 30}
+FROZEN_SIZE_MANIFEST_SHA256 = "a5c51cca306a8d66bec0dbd5e4ecbe24df71fb331aa2afec023fdc4518ae44cf"
+
+
+def verified_size_manifests(archive: Path):
+    """Reuse the old manifest, or reproduce it EXACTLY from official train/ only.
+
+    The original manifest may be untracked on a fresh Colab clone. Rebuilding
+    it is permitted only when the SHA256 matches the historically frozen one.
+    No existing original results/ file is modified.
+    """
+    old = ROOT / "results" / "size_manifests.json"
+    generated = ROOT / "data" / "full_epoch_pilot" / "reference_size_manifests.json"
+    if old.is_file():
+        assert sha_file(old) == FROZEN_SIZE_MANIFEST_SHA256, (
+            "Existing training manifest no longer matches the frozen study"
+        )
+        return read_json(old), FROZEN_SIZE_MANIFEST_SHA256
+    if generated.is_file():
+        assert sha_file(generated) == FROZEN_SIZE_MANIFEST_SHA256, (
+            "Locally reconstructed manifest is corrupted"
+        )
+        return read_json(generated), FROZEN_SIZE_MANIFEST_SHA256
+
+    protocol = read_json(ROOT / "protocol.json")
+    original70 = read_json(ROOT / "input" / "target_manifest.json")
+    assert len(original70) == 70
+    by_path = {r["zip_path"]: r for r in original70}
+    assert len(by_path) == 70
+    extra = {0: [], 1: []}
+    counts = collections.Counter()
+    found_original = 0
+    with zipfile.ZipFile(archive) as z:
+        names = sorted(n for n in z.namelist()
+                       if re.fullmatch(r"train/[0-9]+\.png", n))
+        assert len(names) == 2331
+        for name in names:
+            raw = z.read(name)
+            file_hash = hashlib.sha256(raw).hexdigest()
+            with Image.open(io.BytesIO(z.read(name[:-4] + "_GT.png"))) as gt:
+                label = int(np.asarray(gt).max() > 0)
+            counts[label] += 1
+            if name in by_path:
+                ref = by_path[name]
+                assert ref["sha256"] == file_hash and ref["label"] == label
+                found_original += 1
+            else:
+                extra[label].append({
+                    "zip_path": name, "sha256": file_hash, "label": label,
+                    "from_original70": False
+                })
+    assert found_original == 70 and counts == {0: 2085, 1: 246}, counts
+    baseline = [{
+        "zip_path": r["zip_path"], "sha256": r["sha256"],
+        "label": r["label"], "from_original70": True
+    } for r in original70]
+    rng = random.Random(protocol["extra_selection_seed"])
+    for label in (0, 1):
+        rng.shuffle(extra[label])
+    pools = {"70": baseline}
+    for size in (140, 280, 420):
+        take = size // 2 - 35
+        rows = baseline + extra[0][:take] + extra[1][:take]
+        assert len(rows) == size
+        assert len({r["sha256"] for r in rows}) == size
+        pools[str(size)] = rows
+    reconstructed = (json.dumps(pools, indent=2) + "\n").encode("utf-8")
+    assert hashlib.sha256(reconstructed).hexdigest() == FROZEN_SIZE_MANIFEST_SHA256, (
+        "Reconstruction failed to match the frozen experimental population"
+    )
+    generated.parent.mkdir(parents=True, exist_ok=True)
+    generated.write_bytes(reconstructed)
+    print("✅ FROZEN TRAINING POOLS EXACTLY RECONSTRUCTED")
+    return pools, FROZEN_SIZE_MANIFEST_SHA256
 
 
 def atomic_torch_save(value, path: Path):
@@ -69,13 +145,9 @@ def atomic_json_save(value, path: Path):
 
 def fixed_splits(archive: Path, size: int):
     """Only train/ files; labels from corresponding train/*_GT.png; never test/."""
-    manifest_path = ROOT / "results" / "size_manifests.json"
     protocol = read_json(ROOT / "protocol.json")
     assert size in (140, 280, 420), "Only existing experimental pools may be used"
-    assert sha_file(manifest_path) == "a5c51cca306a8d66bec0dbd5e4ecbe24df71fb331aa2afec023fdc4518ae44cf", (
-        "Training population has changed; stop"
-    )
-    pools = read_json(manifest_path)
+    pools, manifest_hash = verified_size_manifests(archive)
     train_rows = pools[str(size)]
     assert len(train_rows) == size
     assert sum(r["label"] == 0 for r in train_rows) == size // 2
@@ -123,7 +195,7 @@ def fixed_splits(archive: Path, size: int):
     val_names = {r["zip_path"] for r in validation}
     assert not train_names & val_names
     # Dataset coverage across train and validation remains from official train only.
-    return list(train_rows), validation, sha_file(manifest_path)
+    return list(train_rows), validation, manifest_hash
 
 
 class ZipImageReader:
@@ -251,6 +323,13 @@ def train(args):
         "optimizer": "AdamW lr=1e-4 weight_decay=1e-4",
         "validation_selection": "best macro-F1, first epoch on ties",
         "split_manifest_sha256": manifest_hash,
+        "environment": {
+            "torch": torch.__version__,
+            "torchvision": torchvision.__version__,
+            "numpy": np.__version__,
+            "pillow": Image.__version__,
+            "cuda_device": (torch.cuda.get_device_name(0) if device == "cuda" else None),
+        },
     }
     history = []
     best_metric = -1.0
