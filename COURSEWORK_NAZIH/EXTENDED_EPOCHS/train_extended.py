@@ -107,7 +107,7 @@ def create_validation_manifest(archive, study):
     assert len(rows) == CFG["val_normal"] + CFG["val_defective"]
     assert len({r["sha256"] for r in rows}) == len(rows)
     assert set(x["zip_path"] for x in rows).isdisjoint(train_paths)
-    assert collections.Counter(r["label"] for r in rows) == {0: 162, 1: 18}
+    assert collections.Counter(r["label"] for r in rows) == {0: 270, 1: 30}
     manifest = {
         "protocol_version": CFG["version"],
         "source_sha256": CFG["dataset_sha256"],
@@ -379,7 +379,7 @@ def run(args):
         "best_model_sha256": chosen_sha,
         "best_model_filename": chosen.name,
         "snapshots": [f"epoch_{e:03d}.pt" for e in range(5, 31, 5)],
-        "warning": "small exploratory validation (18 defective); physical-part isolation unverified; prior official test already examined; do not claim independent test improvement"
+        "warning": "small exploratory validation (30 defective); physical-part isolation unverified; prior official test already examined; do not claim independent test improvement"
     }
     atomic_json(completion, result)
     print("PILOT COMPLETE; best val epoch:", best["epoch"], "weights SHA256:", chosen_sha)
