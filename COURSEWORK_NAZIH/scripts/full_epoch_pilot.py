@@ -121,7 +121,16 @@ def atomic_torch_save(value, path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name(path.name + ".partial")
     if temporary.exists():
-        raise FileExistsError(f"Refusing ambiguous partial file: {temporary}")
+        # On a previous Colab disconnection, an incomplete temporary file
+        # might remain. Preserve it for inspection; never treat it as a
+        # valid checkpoint and never overwrite a completed result.
+        abandoned = temporary.with_name(
+            temporary.name + f".interrupted_{int(time.time())}_{os.getpid()}"
+        )
+        if abandoned.exists():
+            raise FileExistsError(f"Cannot preserve interrupted file: {abandoned}")
+        temporary.replace(abandoned)
+        print(f"PRESERVED INTERRUPTED TEMP FILE: {abandoned}", flush=True)
     try:
         torch.save(value, temporary)
         os.replace(temporary, path)
@@ -134,7 +143,16 @@ def atomic_json_save(value, path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name(path.name + ".partial")
     if temporary.exists():
-        raise FileExistsError(f"Refusing ambiguous partial file: {temporary}")
+        # On a previous Colab disconnection, an incomplete temporary file
+        # might remain. Preserve it for inspection; never treat it as a
+        # valid checkpoint and never overwrite a completed result.
+        abandoned = temporary.with_name(
+            temporary.name + f".interrupted_{int(time.time())}_{os.getpid()}"
+        )
+        if abandoned.exists():
+            raise FileExistsError(f"Cannot preserve interrupted file: {abandoned}")
+        temporary.replace(abandoned)
+        print(f"PRESERVED INTERRUPTED TEMP FILE: {abandoned}", flush=True)
     try:
         temporary.write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8")
         os.replace(temporary, path)
