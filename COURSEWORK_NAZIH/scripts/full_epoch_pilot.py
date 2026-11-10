@@ -255,6 +255,7 @@ def train(args):
     history = []
     best_metric = -1.0
     best_epoch = None
+    best_state = None
     first_epoch = 1
     if state_file.exists():
         state = torch.load(state_file, map_location="cpu", weights_only=False)
@@ -264,9 +265,15 @@ def train(args):
         history = state["history"]
         best_metric = state["best_metric"]
         best_epoch = state["best_epoch"]
+        best_state = state["best_state"]
         first_epoch = state["finished_epoch"] + 1
         assert len(history) == first_epoch - 1
-        assert (best_file.exists() if best_epoch is not None else True)
+        if best_epoch is not None:
+            assert best_state is not None, "Resumable best model missing from state"
+            # Restore exactly the BEST corresponding to last COMMITTED epoch.
+            # If interrupted after writing best_model.pt but before resume state,
+            # the newer uncommitted checkpoint cannot silently become the winner.
+            atomic_torch_save(best_state, best_file)
         print(f"RESUMING at full epoch {first_epoch}")
 
     reader = ZipImageReader(archive, train_rows + val_rows)
@@ -313,7 +320,8 @@ def train(args):
             if metric["macro_f1"] > best_metric:
                 best_metric = metric["macro_f1"]
                 best_epoch = epoch
-                atomic_torch_save({k: v.detach().cpu() for k, v in model.state_dict().items()}, best_file)
+                best_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
+                atomic_torch_save(best_state, best_file)
 
             # Crash-safe, epoch-boundary recovery; never touches legacy results.
             atomic_torch_save({
@@ -321,6 +329,7 @@ def train(args):
                 "model": {k: v.detach().cpu() for k, v in model.state_dict().items()},
                 "optimizer": optimizer.state_dict(), "history": history,
                 "best_metric": best_metric, "best_epoch": best_epoch,
+                "best_state": best_state,
             }, state_file)
             atomic_json_save({"identity": identity, "history": history,
                               "best_epoch": best_epoch, "best_validation_macro_f1": best_metric,
