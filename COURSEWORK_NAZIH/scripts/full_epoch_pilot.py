@@ -309,6 +309,11 @@ def train(args):
         torch.backends.cudnn.deterministic = True
 
     model = resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
+    official_weights = Path(torch.hub.get_dir()) / "checkpoints" / "resnet18-f37072fd.pth"
+    assert official_weights.is_file(), "The original ImageNet1K V1 pretrained weights were not downloaded"
+    assert sha_file(official_weights) == read_json(ROOT / "protocol.json")["pretrained_sha256"], (
+        "Pretrained ImageNet weights differ from the frozen original protocol"
+    )
     model.fc = nn.Linear(512, 2)
     model.to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4, weight_decay=1e-4)
@@ -381,9 +386,14 @@ def train(args):
 
             model.eval()
             valid_labels, valid_preds = [], []
+            validation_loss_sum = 0.0
             with torch.inference_mode():
                 for x, y in batches(val_rows, reader, args.batch_size, range(len(val_rows))):
-                    logits = model(x.to(device))
+                    x, y_gpu = x.to(device), y.to(device)
+                    logits = model(x)
+                    validation_objective = (F.cross_entropy(logits, y_gpu) if args.loss == "ce"
+                                            else poly1(logits, y_gpu, epsilon=1.0))
+                    validation_loss_sum += float(validation_objective) * len(y)
                     valid_labels.extend(y.tolist())
                     valid_preds.extend(logits.argmax(1).cpu().tolist())
             metric = scores(valid_labels, valid_preds)
@@ -392,6 +402,7 @@ def train(args):
                 "training_samples_seen": len(train_rows),
                 "training_optimizer_steps": steps_each,
                 "train_objective": total_objective / total_examples,
+                "validation_objective": validation_loss_sum / len(val_rows),
                 "validation": metric,
                 "epoch_seconds": round(time.monotonic() - t0, 2),
             }
