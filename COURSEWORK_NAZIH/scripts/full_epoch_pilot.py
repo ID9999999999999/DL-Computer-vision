@@ -176,7 +176,12 @@ def fixed_splits(archive: Path, size: int):
     # Actual official test images and labels are never accessed from the archive.
     test_hashes = {r["sha256"] for r in read_json(ROOT / "input" / "test_manifest.json")}
     assert not {r["sha256"] for r in train_rows} & test_hashes
-    pool_paths = {r["zip_path"] for r in train_rows}
+    # All size arms must use the SAME frozen validation rows. The reference
+    # 420-image pool contains every smaller nested training population.
+    # Exclude the FULL 420-image pool, not just this size's training rows.
+    pool_paths = {r["zip_path"] for r in pools["420"]}
+    assert {r["zip_path"] for r in train_rows}.issubset(pool_paths)
+    assert len(pool_paths) == 420
     all_train_names = sorted(n for n in zipfile.ZipFile(archive).namelist()
                              if n.startswith("train/") and n.endswith(".png")
                              and not n.endswith("_GT.png")
