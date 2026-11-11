@@ -164,7 +164,7 @@ def atomic_json_save(value, path: Path):
 def fixed_splits(archive: Path, size: int):
     """Only train/ files; labels from corresponding train/*_GT.png; never test/."""
     protocol = read_json(ROOT / "protocol.json")
-    assert size in (140, 280, 420), "Only existing experimental pools may be used"
+    assert size in (70, 140, 280, 420), "Only frozen existing experimental pools may be used"
     pools, manifest_hash = verified_size_manifests(archive)
     train_rows = pools[str(size)]
     assert len(train_rows) == size
