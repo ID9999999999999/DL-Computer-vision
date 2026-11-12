@@ -1,42 +1,26 @@
-# Deep Learning for Computer Vision — Labs
+# Industrial Surface Defect Classification
 
-## Run the notebooks
+**Student:** YASSER IDBOUZKRI · **Group:** иикб-24  
+**Course:** AI Implementation Technologies · **Dataset:** KolektorSDD2
 
-Install the dependencies in your Python environment:
+## Contents
+
+- `REPORT.pdf` — final scientific report.
+- `PRESENTATION.pptx` — final defense slides.
+- `PROJECT/CODE/CODE.zip` — Python source, frozen configuration, test scripts and reproducibility instructions.
+- `PROJECT/RESULTS/RESULTS.zip` — original evaluations, training histories, validation splits, reproducible audit, and traceable error analysis.
+- `PROJECT/MODELS/` — 18 original and eight full-epoch checkpoints, plus the historical checkpoint archive (Google Drive submission).
+
+## Verify results from a clean directory
+
+Extract `CODE.zip` and `RESULTS.zip` side by side. With Python 3.11+, run:
 
 ```bash
-python -m pip install -r requirements.txt
+python CODE/scripts/audit_submission.py --results RESULTS --out AUDIT
 ```
 
-Open the noteboo in Jupyter or VS Code, select that Python environment, and
-run all cells from the beginning. Keep the repository folder structure intact:
-the notebooks import their local implementation and the shared `dlcv2026`
-package. Save the notebook after running it so the results remain visible.
+This **CPU-only, standard-library** check regenerates error cases, confirms the 18 new and six historical evaluation records, validates the eight 30-epoch run histories, and checks common validation splits. The exact steps to restore source images and inspect training are in `CODE/README.md`.
 
-| Lab | Notebook | Implementation |
-| --- | --- | --- |
-| 01 | `LAB01/Practice_01.ipynb` | `LAB01/pytorch101.py` |
-| 02 | `LAB02/knn.ipynb` | `LAB02/knn.py` |
-| 03 | `LAB03/knn.ipynb` | `LAB03/knn.py` |
-| 04 | `LAB04/lab04_svm_loss.ipynb` | `LAB04/linear_classifier.py` |
-| 05 | `LAB05/lab05_svm_training.ipynb` | `LAB05/linear_classifier.py` |
+## Scope and limitations
 
-LAB02 and LAB03 download the real CIFAR-10 dataset on their first run and reuse
-it from the ignored `data/` directory. To use an existing dataset cache, set
-the `DLCV_DATA_DIR` environment variable to its directory. LAB04 runs on CPU
-with `reg=0.0` and checks its analytic gradient with finite differences.
-
-LAB05 implements the vectorized regularized SVM loss and gradient. Its notebook
-includes executed outputs, training and regularization experiments, and wrap-up
-answers. The local `LAB05/dlcv2026` utilities keep it self-contained. See
-[LAB05/README.md](LAB05/README.md) for run commands and validation results.
-
-## Data Loading, Validation, and Dataset Auditing
-
-The completed dataset-auditing assignment is kept separately so it does not
-conflict with the existing SVM Lab 05 folder:
-
-[LAB05_Data_Loading_Validation_Dataset_Auditing](LAB05_Data_Loading_Validation_Dataset_Auditing/README.md)
-
-It contains the audit script, PyTorch Dataset/DataLoader, verified audit report,
-DataLoader test output, dependencies, dataset summary, and short report.
+The original comparison used 216 updates per run. The follow-up completed **eight real 30-full-epoch trainings**, comparing Cross-Entropy and Poly-1 at 70, 140, 280 and 420 images (seed 20261028). Both 420-image models attained **98.00% selected internal validation Macro-F1**, not independent test accuracy. The official test was previously inspected; physical-specimen independence and clean GPU retraining are not established.
