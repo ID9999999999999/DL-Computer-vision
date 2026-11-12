@@ -1,42 +1,20 @@
-# Deep Learning for Computer Vision — Labs
+# Industrial Surface Defect Classification
 
-## Run the notebooks
+**Student:** YASSER IDBOUZKRI  
+**Group:** иикб-24  
+**Course:** AI Implementation Technologies  
+**Dataset:** KolektorSDD2  
+**Final date:** 12 November 2026
 
-Install the dependencies in your Python environment:
+## Submission
 
-```bash
-python -m pip install -r requirements.txt
-```
+- `REPORT.pdf` — methodology, results, limitations and references.
+- `PRESENTATION.pptx` — 12-slide summary of the completed work.
 
-Open the noteboo in Jupyter or VS Code, select that Python environment, and
-run all cells from the beginning. Keep the repository folder structure intact:
-the notebooks import their local implementation and the shared `dlcv2026`
-package. Save the notebook after running it so the results remain visible.
+## Verified experimental scope
 
-| Lab | Notebook | Implementation |
-| --- | --- | --- |
-| 01 | `LAB01/Practice_01.ipynb` | `LAB01/pytorch101.py` |
-| 02 | `LAB02/knn.ipynb` | `LAB02/knn.py` |
-| 03 | `LAB03/knn.ipynb` | `LAB03/knn.py` |
-| 04 | `LAB04/lab04_svm_loss.ipynb` | `LAB04/linear_classifier.py` |
-| 05 | `LAB05/lab05_svm_training.ipynb` | `LAB05/linear_classifier.py` |
+- **Study A:** 24 exploratory evaluations, with three seeds and 216 optimizer updates per run. The official test set had been inspected previously.
+- **Study B:** eight completed 30-full-epoch runs, comparing Cross-Entropy and Poly-1 at 70, 140, 280 and 420 training images, using seed 20261028.
+- **Validation:** a fixed 180-image holdout from the official training partition. At 420 training images, both losses achieved **98.00% best internal validation Macro-F1**, not independent test accuracy.
 
-LAB02 and LAB03 download the real CIFAR-10 dataset on their first run and reuse
-it from the ignored `data/` directory. To use an existing dataset cache, set
-the `DLCV_DATA_DIR` environment variable to its directory. LAB04 runs on CPU
-with `reg=0.0` and checks its analytic gradient with finite differences.
-
-LAB05 implements the vectorized regularized SVM loss and gradient. Its notebook
-includes executed outputs, training and regularization experiments, and wrap-up
-answers. The local `LAB05/dlcv2026` utilities keep it self-contained. See
-[LAB05/README.md](LAB05/README.md) for run commands and validation results.
-
-## Data Loading, Validation, and Dataset Auditing
-
-The completed dataset-auditing assignment is kept separately so it does not
-conflict with the existing SVM Lab 05 folder:
-
-[LAB05_Data_Loading_Validation_Dataset_Auditing](LAB05_Data_Loading_Validation_Dataset_Auditing/README.md)
-
-It contains the audit script, PyTorch Dataset/DataLoader, verified audit report,
-DataLoader test output, dependencies, dataset summary, and short report.
+**Reproducibility:** [Source code, protocols and raw evaluation records](https://github.com/ID9999999999999/DL-Computer-vision/tree/nazih-training-set-size-20261109/COURSEWORK_NAZIH) · [Original data and saved model checkpoints](https://drive.google.com/drive/folders/1OI3zrAtmA9ZfwH3l_DB3IiwFBK2P1_ny).
