@@ -3,22 +3,24 @@
 **Student:** YASSER IDBOUZKRI · **Group:** иикб-24  
 **Course:** AI Implementation Technologies · **Dataset:** KolektorSDD2
 
-## Submission
+## Contents
 
-- **REPORT.pdf** — experimental methodology and findings.
-- **PRESENTATION.pptx** — final defense slides.
-- **PROJECT/CODE/CODE.zip** — executable source, locked settings and reference data.
-- **PROJECT/RESULTS/RESULTS.zip** — original evaluation records, 30-epoch histories and verified error cases.
-- **PROJECT/MODELS/** — 26 verified checkpoints and historical archive.
+- `REPORT.pdf` — final scientific report.
+- `PRESENTATION.pptx` — final defense slides.
+- `PROJECT/CODE/CODE.zip` — Python source, frozen configuration, test scripts and reproducibility instructions.
+- `PROJECT/RESULTS/RESULTS.zip` — original evaluations, training histories, validation splits, reproducible audit, and traceable error analysis.
+- `PROJECT/MODELS/` — 18 original and eight full-epoch checkpoints, plus the historical checkpoint archive (Google Drive submission).
 
-## Check
+## Verify results from a clean directory
 
-Extract both ZIPs into their named folders. From `PROJECT/CODE`, run:
+Extract `CODE.zip` and `RESULTS.zip` side by side. With Python 3.11+, run:
 
 ```bash
-python scripts/verify_submission.py --results-zip ../RESULTS/RESULTS.zip
+python CODE/scripts/audit_submission.py --results RESULTS --out AUDIT
 ```
 
-Add `--models-dir ../MODELS` to verify all 26 checkpoint SHA256 values. This reproducibility audit was successfully run from a fresh extraction without retraining. The 30-epoch scores are **internal validation**, not independent test accuracy. The earlier official test was already inspected.
+This **CPU-only, standard-library** check regenerates error cases, confirms the 18 new and six historical evaluation records, validates the eight 30-epoch run histories, and checks common validation splits. The exact steps to restore source images and inspect training are in `CODE/README.md`.
 
-**Full technical provenance:** [research source](https://github.com/ID9999999999999/DL-Computer-vision/tree/nazih-training-set-size-20261109/COURSEWORK_NAZIH). The official dataset is distributed separately under CC BY-NC-SA 4.0.
+## Scope and limitations
+
+The original comparison used 216 updates per run. The follow-up completed **eight real 30-full-epoch trainings**, comparing Cross-Entropy and Poly-1 at 70, 140, 280 and 420 images (seed 20261028). Both 420-image models attained **98.00% selected internal validation Macro-F1**, not independent test accuracy. The official test was previously inspected; physical-specimen independence and clean GPU retraining are not established.
