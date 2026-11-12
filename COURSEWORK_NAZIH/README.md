@@ -6,6 +6,8 @@
 **Experimental freeze:** **12 November 2026**  
 **Status:** **Research and final deliverables completed for the adopted scope.** No additional training is scheduled or required by this project closeout; formal grading and submission requirements must be checked against the professor's rubric.
 
+**Google Drive entry point:** [00_START_HERE.md](https://drive.google.com/file/d/1GIpHK4-fB5P9Mj7Dxa6gZdqheAoTs5Gc/view) — one-page map of canonical deliverables and preserved evidence.
+
 ## 1. Canonical submission files
 
 All final files are in [`results/`](results/). Older drafts are **not** the submission versions.
