@@ -1,5 +1,7 @@
 # Full-Epoch Follow-up Study — Separate protocol v1 (10 Nov 2026)
 
+> **Final status — 12 November 2026.** This is the original design protocol, retained for reproducibility. The adopted follow-up scope has now been **completed at eight 30-full-epoch runs**: sizes 70, 140, 280, 420 × CE/Poly-1 × seed 20261028. No additional seeds were trained, and the proposed 16 further runs are **not required work in the frozen submission scope**. The definitive account is [results/FINAL_ACADEMIC_REPORT_EN.md](results/FINAL_ACADEMIC_REPORT_EN.md). The pilot-era imperative instructions below are historical; do not interpret them as a current request to start more training.
+
 ## Why a second experiment is necessary
 
 The original 24 evaluation results (6 archived 70-image references + 18 new runs) are preserved exactly. The original run uses **12 rounds of 70 image exposures per run**, **216 optimizer steps** in total, and deliberately fixes compute rather than counting complete passes over the dataset. For training sizes 70/140/280/420, this is **12/6/3/2 effective complete dataset passes** respectively. Increasing a reported `epochs` field or extending the old runs would be scientifically misleading. This new experiment must never overwrite old models/results or retroactively rename 12 rounds as 12 full epochs.
