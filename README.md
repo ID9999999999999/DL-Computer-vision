@@ -5,15 +5,20 @@
 
 ## Submission
 
-- **REPORT.pdf** — experimental method, results, limitations and references.
-- **PRESENTATION.pptx** — 12-slide project defense.
-- **PROJECT/** — source, models and original observed results:
-  - **CODE/** — runnable source archive and the full-epoch training script.
-  - **MODELS/** — 26 checkpoints: 18 fixed-budget models and eight 30-epoch models.
-  - **RESULTS/** — original evaluations, historical records and new training histories.
+- **REPORT.pdf** — experimental methodology and findings.
+- **PRESENTATION.pptx** — final defense slides.
+- **PROJECT/CODE/CODE.zip** — executable source, locked settings and reference data.
+- **PROJECT/RESULTS/RESULTS.zip** — original evaluation records, 30-epoch histories and verified error cases.
+- **PROJECT/MODELS/** — 26 verified checkpoints and historical archive.
 
-## Verified scope
+## Check
 
-Fixed-budget study: 24 exploratory evaluations, 216 optimizer updates per model. Full-epoch study: eight genuine 30-epoch trainings (70–420 images; CE and Poly-1; seed 20261028). At 420 images, both losses achieved **98.00% best internal validation Macro-F1**; this is not independent test accuracy.
+Extract both ZIPs into their named folders. From `PROJECT/CODE`, run:
 
-**Code and results:** also versioned in GitHub. **Binary checkpoints:** stored in the linked Google Drive submission because of their size. Original research evidence and dataset remain preserved in the research archive.
+```bash
+python scripts/verify_submission.py --results-zip ../RESULTS/RESULTS.zip
+```
+
+Add `--models-dir ../MODELS` to verify all 26 checkpoint SHA256 values. This reproducibility audit was successfully run from a fresh extraction without retraining. The 30-epoch scores are **internal validation**, not independent test accuracy. The earlier official test was already inspected.
+
+**Full technical provenance:** [research source](https://github.com/ID9999999999999/DL-Computer-vision/tree/nazih-training-set-size-20261109/COURSEWORK_NAZIH). The official dataset is distributed separately under CC BY-NC-SA 4.0.
