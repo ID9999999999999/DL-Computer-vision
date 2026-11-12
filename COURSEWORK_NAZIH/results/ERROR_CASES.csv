@@ -1,0 +1,14 @@
+image,image_sha256,actual_label,group,ce_prediction,ce_logit_margin,poly1_prediction,poly1_logit_margin
+test/20043.png,54af326e477c316d8e05afaff59e80863bd8f5e8f426dfc3dda5f51ac4e836fd,False Positive,Both wrong,Defective,0.031831,Defective,1.119434
+test/20652.png,fcb1866c8a76aa0e940220676733ed3aafa929bbd738b1468cba071ea47475e5,False Positive,Both wrong,Defective,0.279818,Defective,0.769618
+test/20651.png,c1e440ae053d26710f2ef41da168e1444f1b2659c5d936931f7fb48f5b50ff99,False Positive,Both wrong,Defective,5.579267,Defective,4.259851
+test/20523.png,9b07a502a312760975480be396c7fab1ae80b11f41fbd238775b2403a36a604e,False Negative,Both wrong,Normal,-0.024225,Normal,-0.774176
+test/20259.png,67d42a597782806c050bdeadf2eb9f8c36632700c8f3c8f48ef6f142759edc16,False Negative,Both wrong,Normal,-0.358909,Normal,-0.118467
+test/20236.png,f6ea0442fe7253b8d609d6e6622c0bfc3b32e565259fd45da3b8a043fbf9fd69,False Negative,Both wrong,Normal,-4.322944,Normal,-5.580507
+test/20759.png,ddf3bb941d5affcf7545e61a4edbf1cf1607c4417c44cd768085c35e7628e607,False Positive,CE wrong / Poly-1 correct,Defective,0.017007,Normal,-0.022937
+test/20793.png,3c8a71f6690e84a4805ca1e16295321e90c3f327b0b985d317599f3cc7765a98,False Positive,CE wrong / Poly-1 correct,Defective,0.150651,Normal,-0.425847
+test/20633.png,d5948e89a308a9dda3d33d5b3bdbfef6e453a7c4a7b23391cc989a8f81184bb9,False Positive,CE wrong / Poly-1 correct,Defective,1.969234,Normal,-0.07218
+test/20719.png,a67b48669c42db1c686986078be9cc5ad29e4813bed5c5f8c8a3e4ddc908b186,False Positive,CE correct / Poly-1 wrong,Normal,-0.018004,Defective,0.221542
+test/20224.png,80598e0c34149978887254d3ac7d3d9d86be5b1e30637aab13b24d464799e584,False Positive,CE correct / Poly-1 wrong,Normal,-0.421675,Defective,1.148909
+test/20772.png,f6abb09b0ba737fe073ec7304320dab975a3014d9d541963d78a0f579b5e55e6,False Negative,CE correct / Poly-1 wrong,Defective,1.263774,Normal,-0.042257
+test/20738.png,d6a5c079cd47041b3281f042d1e0fa8dd2dff8d744e3b5d40f82baa060215bd7,False Negative,CE correct / Poly-1 wrong,Defective,1.355058,Normal,-0.394252
